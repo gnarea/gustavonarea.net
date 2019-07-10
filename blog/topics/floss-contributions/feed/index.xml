@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Free Software contributions &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/topics/floss-contributions/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>How docker-dev Makes Docker Rock in Development, Plus An Example With Python</title>
+		<link>/blog/posts/docker-dev-python/</link>
+		<pubDate>Thu, 31 Aug 2017 00:00:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=1001</guid>
+		<description><![CDATA[Docker is a great tool to deploy your application to staging and production environments, but the current ecosystem make it much less pleasant to use in development. Docker Compose does help a lot, but things could be more efficient -- Even for the most common tasks, you still have to pass additional options to <em>docker</em> and <em>docker-compose</em>, and resort to utilities like <em>awk</em> and <em>xargs</em>.]]></description>
+		</item>
+		<item>
+		<title>Records: A New Pythonic Data Type for Your Toolbox</title>
+		<link>/blog/posts/pyrecord-announcement/</link>
+		<comments>/blog/posts/pyrecord-announcement/#comments</comments>
+		<pubDate>Sun, 09 Nov 2014 19:59:34 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=825</guid>
+		<description><![CDATA[namedtuple, classes and dictionaries are no longer the only options to represent a key/value mapping where all they keys are known upfront: Records may be a better alternative and they&#8217;re now available in Python via PyRecord. This implementation is meant to be a highly improved version of namedtuple, but not yet a replacement. Features include:... <a class="more-link" href="/blog/posts/pyrecord-announcement/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/pyrecord-announcement/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Getting back on track</title>
+		<link>/blog/posts/getting-back-on-track/</link>
+		<pubDate>Tue, 17 Nov 2009 23:38:59 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Work]]></category>
+		<category><![CDATA[2degrees]]></category>
+		<category><![CDATA[Django]]></category>
+		<category><![CDATA[Madrid]]></category>
+		<category><![CDATA[Oxford]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spain]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[UK]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=285</guid>
+		<description><![CDATA[Yes, I&#8217;m alive. Since the second half of last summer I&#8217;ve been inactive in the Free Software arena. No commits, no emails from me in the last few months which may indicate that the projects are dead. So I wanted to write to let you know that I have no plans to stop maintaining any... <a class="more-link" href="/blog/posts/getting-back-on-track/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The repoze.who LDAP plugin will be an official plugin</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/</link>
+		<comments>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/#comments</comments>
+		<pubDate>Mon, 27 Oct 2008 00:15:01 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[LDAP]]></category>
+		<category><![CDATA[Repoze]]></category>
+		<category><![CDATA[repoze.who]]></category>
+
+		<guid isPermaLink="false">/?p=145</guid>
+		<description><![CDATA[Some weeks ago I was invited to make repoze.who.plugins.ldap an official repoze.who plugin, which means that: The license will change. It will use Repoze&#8217;s. The development tools will be migrated from Launchpad (bug tracker, repository, etc). The LDAP plugin&#8217;s documentation will be included into repoze.who&#8217;s. It will be maintained by Repoze commiters, and I&#8217;m one... <a class="more-link" href="/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Enable LDAP authentication in your WSGI applications!</title>
+		<link>/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/</link>
+		<pubDate>Mon, 08 Sep 2008 23:50:15 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[LDAP]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=119</guid>
+		<description><![CDATA[repoze.who.plugins.ldap is an straightforward yet powerful solution to enable LDAP authentication in your WSGI application. It enables you to have LDAP authentication working in your new or existing applications, in few minutes and with few lines of code! It&#8217;s a plugin for the repoze.who framework, featuring not only an LDAP authenticator, but also related utilities.... <a class="more-link" href="/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>Joining the development of TurboGears</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/</link>
+		<comments>/blog/posts/joining-the-development-of-turbogears/#comments</comments>
+		<pubDate>Mon, 18 Aug 2008 17:23:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[TurboGears]]></category>
+
+		<guid isPermaLink="false">/?p=91</guid>
+		<description><![CDATA[I&#8217;ve had the great pleasure of being invited by the TurboGears team to become an official committer for the great TurboGears framework. This is because I&#8217;ve been contributing patches for TurboGears 2 and other packages used by Animador (a TurboGears 2 application), since I started its development, in order to fix bugs and/or add new... <a class="more-link" href="/blog/posts/joining-the-development-of-turbogears/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/joining-the-development-of-turbogears/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

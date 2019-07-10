@@ -1,0 +1,659 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>Server load: DreamHost vs WebFaction | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Server load: DreamHost vs WebFaction Comments Feed" href="/blog/posts/server-load-dreamhost-vs-webfaction/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Enable LDAP authentication in your WSGI applications!' href='/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/' />
+<link rel='next' title='The repoze.who LDAP plugin will be an official plugin' href='/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/server-load-dreamhost-vs-webfaction/" />
+<link rel='shortlink' href='/?p=125' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Fserver-load-dreamhost-vs-webfaction%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Fserver-load-dreamhost-vs-webfaction%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="Server load: DreamHost vs WebFaction">
+<meta property="og:description" content="I got tired of the slowness of DreamHost servers and its consequences, such as sites being down or extremely slow from time to time. So ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-125 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-125" class="clearfix post-125 post type-post status-publish format-standard hentry category-uncategorized tag-dreamhost tag-webfaction">
+								<header class="entry-header">
+																		<h1 class="entry-title" >Server load: DreamHost vs WebFaction</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/uncategorized/" rel="category tag">Uncategorized</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="10:35 am" href="/blog/posts/server-load-dreamhost-vs-webfaction/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">September 13, 2008</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/server-load-dreamhost-vs-webfaction/&media=&description=Server load: DreamHost vs WebFaction" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p>I got tired of the slowness of DreamHost servers and its consequences, such as sites being down or extremely slow from time to time. So I decided to migrate progressively over the next weeks to <a href="http://www.webfaction.com/?affiliate=gnarea" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.webfaction.com?affiliate=gnarea', 'WebFaction');">WebFaction</a> because:</p>
+<ol>
+<li>The costs are the same.</li>
+<li>They don&#8217;t overload their servers.</li>
+<li>They have an excellent reputation in the TurboGears community.</li>
+</ol>
+<p>So here I offer a comparison on the server load in my DreamHost shared host vs my <a href="http://www.webfaction.com/?affiliate=gnarea" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.webfaction.com?affiliate=gnarea', 'WebFaction');">WebFaction</a> shared host.<br />
+<span id="more-125"></span></p>
+<h2>Server load itself</h2>
+<h3>DreamHost</h3>
+<p><a href="https://media.gustavonarea.net/dreamhost_load.png"><img class="size-full wp-image-126" title="DreamHost server load" src="//media.gustavonarea.net/dreamhost_load.png" alt="Server load at a DreamHost machine" srcset="//media.gustavonarea.net/dreamhost_load-300x99.png 300w, //media.gustavonarea.net/dreamhost_load.png 545w" sizes="(max-width: 545px) 100vw, 545px" /></a></p>
+<p><strong>2.83</strong> of mean load during the last 15 minutes!</p>
+<p>Please note that <strong>DreamHost is hiding the actual amount of connected users</strong>.</p>
+<h3>WebFaction</h3>
+<p><a href="https://media.gustavonarea.net/webfaction_load.png"><img class="size-full wp-image-129" title="WebFaction server load" src="//media.gustavonarea.net/webfaction_load.png" alt="Server load under a WebFaction host" srcset="//media.gustavonarea.net/webfaction_load-300x142.png 300w, //media.gustavonarea.net/webfaction_load.png 544w" sizes="(max-width: 544px) 100vw, 544px" /></a></p>
+<p><strong>0.44</strong> of mean load during the last 15 minutes! Of course, WebFaction has nothing to hide.</p>
+<h2>Users per server</h2>
+<p>The conclusive proof to demostrate that DreamHost overloads their servers, while WebFaction cares about their servers&#8217; load, is the amount of users per server:</p>
+<h3>DreamHost</h3>
+<p><code>[trans-am]$ wc -l /etc/passwd<br />
+875 /etc/passwd</code></p>
+<p>875 users at the same host!</p>
+<h3>WebFaction</h3>
+<p><code>[gnarea@web51 ~]$ wc -l /etc/passwd<br />
+178 /etc/passwd</code></p>
+<p><strong>178 users on a server that is much better than DreamHost&#8217;s!</strong></p>
+<h2>Server specs</h2>
+<p>Before somebody comes up and say &#8220;That&#8217;s not a conclusive proof, DreamHost&#8217;s hardware may be capable of handling more users than WebFaction&#8217;s&#8221;, here you have some specifications for every server — guess what? This WebFaction server is better than my shared host at DreamHost!</p>
+<h3>DreamHost</h3>
+<p><code>[trans-am]$ free -m<br />
+total       used       free     shared    buffers     cached<br />
+Mem:          4039       3851        188          0        127       1855<br />
+-/+ buffers/cache:       1868       2170<br />
+Swap:         6165        544       5621<br />
+[trans-am]$ cat /proc/cpuinfo<br />
+processor       : 0<br />
+vendor_id       : AuthenticAMD<br />
+cpu family      : 15<br />
+model           : 67<br />
+model name      : Dual-Core AMD Opteron(tm) Processor 1218 HE<br />
+stepping        : 3<br />
+cache size      : 1024 KB<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 1<br />
+wp              : yes<br />
+flags           : fpu vme de pse msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall mmxext lm 3dnowext 3dnow pni<br />
+bogomips        : 2588.67<br />
+#<br />
+processor       : 1<br />
+vendor_id       : AuthenticAMD<br />
+cpu family      : 15<br />
+model           : 67<br />
+model name      : Dual-Core AMD Opteron(tm) Processor 1218 HE<br />
+stepping        : 3<br />
+cache size      : 1024 KB<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 1<br />
+wp              : yes<br />
+flags           : fpu vme de pse msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall mmxext lm 3dnowext 3dnow pni<br />
+bogomips        : 2588.67</code></p>
+<h3>WebFaction</h3>
+<p><code>[gnarea@web51 ~]$ free -m<br />
+total       used       free     shared    buffers     cached<br />
+Mem:          4054       3869        185          0        103       1371<br />
+-/+ buffers/cache:       2394       1660<br />
+Swap:         1992        487       1505<br />
+[gnarea@web51 ~]$ cat /proc/cpuinfo<br />
+processor       : 0<br />
+vendor_id       : GenuineIntel<br />
+cpu family      : 6<br />
+model           : 15<br />
+model name      : Intel(R) Xeon(R) CPU           X3210  @ 2.13GHz<br />
+stepping        : 11<br />
+cpu MHz         : 2133.601<br />
+cache size      : 4096 KB<br />
+physical id     : 0<br />
+siblings        : 4<br />
+core id         : 0<br />
+cpu cores       : 4<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 10<br />
+wp              : yes<br />
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr lahf_lm<br />
+bogomips        : 4269.19<br />
+#<br />
+processor       : 1<br />
+vendor_id       : GenuineIntel<br />
+cpu family      : 6<br />
+model           : 15<br />
+model name      : Intel(R) Xeon(R) CPU           X3210  @ 2.13GHz<br />
+stepping        : 11<br />
+cpu MHz         : 2133.601<br />
+cache size      : 4096 KB<br />
+physical id     : 0<br />
+siblings        : 4<br />
+core id         : 1<br />
+cpu cores       : 4<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 10<br />
+wp              : yes<br />
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr lahf_lm<br />
+bogomips        : 4266.80<br />
+#<br />
+processor       : 2<br />
+vendor_id       : GenuineIntel<br />
+cpu family      : 6<br />
+model           : 15<br />
+model name      : Intel(R) Xeon(R) CPU           X3210  @ 2.13GHz<br />
+stepping        : 11<br />
+cpu MHz         : 2133.601<br />
+cache size      : 4096 KB<br />
+physical id     : 0<br />
+siblings        : 4<br />
+core id         : 2<br />
+cpu cores       : 4<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 10<br />
+wp              : yes<br />
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr lahf_lm<br />
+bogomips        : 4266.83<br />
+#<br />
+processor       : 3<br />
+vendor_id       : GenuineIntel<br />
+cpu family      : 6<br />
+model           : 15<br />
+model name      : Intel(R) Xeon(R) CPU           X3210  @ 2.13GHz<br />
+stepping        : 11<br />
+cpu MHz         : 2133.601<br />
+cache size      : 4096 KB<br />
+physical id     : 0<br />
+siblings        : 4<br />
+core id         : 3<br />
+cpu cores       : 4<br />
+fdiv_bug        : no<br />
+hlt_bug         : no<br />
+f00f_bug        : no<br />
+coma_bug        : no<br />
+fpu             : yes<br />
+fpu_exception   : yes<br />
+cpuid level     : 10<br />
+wp              : yes<br />
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr lahf_lm<br />
+bogomips        : 4266.81</code></p>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+																			<footer class="entry-meta post-tags">
+												<a href="/blog/tags/dreamhost/" rel="tag">Dreamhost</a>, <a href="/blog/tags/webfaction/" rel="tag">WebFaction</a>											</footer>
+											<!-- end .entry-meta -->
+																	</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/" rel="prev"><span class="meta-nav">&#8592;</span> Enable LDAP authentication in your WSGI applications!</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/" rel="next">The repoze.who LDAP plugin will be an official plugin <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+					<h2 class="comments-title">
+					5 Comments <span class="on">&#8594;</span> <span>Server load: DreamHost vs WebFaction</span>				</h2>
+				<!-- end .comments-title -->
+				
+				<ol class="commentlist">
+										
+					<li class="comment even thread-even depth-1" id="li-comment-27411">
+						<article id="comment-27411" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/200d035ac17bdf04856b7dde5a1d1fbb?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/200d035ac17bdf04856b7dde5a1d1fbb?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.nybergh.net/' rel='external nofollow' class='url'>Thomas N.</a> </cite><a href="/blog/posts/server-load-dreamhost-vs-webfaction/#comment-27411"><time datetime="2008-10-09T09:47:21+00:00">October 9, 2008 at 9:47 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I&#8217;m on the same DH server as you (I found your blog when i googled for trans-am.dreamhost.com users :P) and I pretty much agree with you&#8230; DH&#8217;s servers tend to be a bit crowded and busy. However, I think I&#8217;m staying for a number of reasons (including my own laziness and DH&#8217;s terms of service which are among the better ones among cheap hosts).. but I can&#8217;t say I&#8217;m hosting anything important either (but i keep an account on <a href="https://www.nearlyfreespeech.net/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'https://www.nearlyfreespeech.net', 'https://www.nearlyfreespeech.net');" rel="nofollow">https://www.nearlyfreespeech.net</a> for stuff I&#8217;d like to keep online more reliably)</p>
+<p>It remains to be seen how much reliability improvement will come from this<br />
+<a href="http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/', 'http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/');" rel="nofollow">http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/</a><br />
+change of server architecture. Changes include local storage for better I/O and (i presume) 64 bit Linux systems with more than 4 gigs of ram.</p>
+<p>At the moment DH uses separate file and mysql boxes (probably with some network latency as a consequence). </p>
+<p>How is your machine @webfaction configured? are the /home dirs NFS mounts, or do they use local raid 6 for /home (the latter being what DH will migrate to)?</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-37650">
+						<article id="comment-37650" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/d4080dfa0d89bb9f99559c3d064a186f?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/d4080dfa0d89bb9f99559c3d064a186f?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Kevin </cite><a href="/blog/posts/server-load-dreamhost-vs-webfaction/#comment-37650"><time datetime="2008-12-19T23:42:29+00:00">December 19, 2008 at 11:42 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I switched from Dreamhost to Webfaction a year ago, and my initial review would have looked much like yours. My sites were MUCH faster at Webfaction.</p>
+<p>Then, my sites got slower and slower, and when I complained, they said I should move my web sites to a different server. My sites were fast again, for a few months, and then they got slower, and slower&#8230; and it looks like I will have to go through the hassle of moving to a different server again.</p>
+<p>Right now my Webfaction server has a load of 12 and it takes between five and thirty seconds to load a page where it used to take less than one second. So I have to disagree with the claim that &#8220;They don&#8217;t overload their servers.&#8221; The statistics on the Google Webmaster tools show steadily deteriorating performance with an average page load going from less than one second to more than four seconds over the last three months.</p>
+<p>After 60 days there are no refunds so be careful about signing up with them for a long term contract. I&#8217;m tired of arguing with them about speed issues but at this point I don&#8217;t have any alternative except to abandon the money I&#8217;ve already paid them.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-38675">
+						<article id="comment-38675" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/346a2ccf9a5a5ddf9aa7f354c63092b7?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/346a2ccf9a5a5ddf9aa7f354c63092b7?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">jay </cite><a href="/blog/posts/server-load-dreamhost-vs-webfaction/#comment-38675"><time datetime="2008-12-29T02:48:47+00:00">December 29, 2008 at 2:48 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I switched from dreamhost to webfaction, mainly for the speed increase. I tested using a drupal install with devel to document load times and webfaction was 4 times or more faster (in miliseconds) than dreamhost. Of course milliseconds won&#8217;t even be visible to the human eye, but it all adds up. The fact dreamhost datacenter is in CA and webfaction is in dallas, where I live, it might not be totally fair.</p>
+<p>The day before my dreamhost account ended this happened: <a href="http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/', 'http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/');" rel="nofollow">http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/</a>. So that was another incentive to leave DH. Dreamhost operates their own datacenter I thought, which I would think make repairs faster. </p>
+<p>The webfaction panel is very simplified compared to dreamhost which I think is a plus, but has fewer built in features. Webfaction is pretty cheap and their month to month pricing/billing is really good for a host. </p>
+<p>If it is true that servers are overloaded down the road after the &#8220;trial period&#8221;, then they will ultimately screw themselves. They will start getting bad press like above that doesn&#8217;t go away. But being a shared host inherently means trouble. You need to be lucky enough to get on a shared server with others who are not abusing it. </p>
+<p>There will always be alternatives to both dreamhost and webfaction. For now webfaction seems okay for me, but that could change. A website owners end goal should be to eventually move to a dedicated server or VPS.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-71667">
+						<article id="comment-71667" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/5c58c6536c4d3b02dbaa789e7f601d76?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/5c58c6536c4d3b02dbaa789e7f601d76?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.pore-cleanser.info/' rel='external nofollow' class='url'>Eva Campbell</a> </cite><a href="/blog/posts/server-load-dreamhost-vs-webfaction/#comment-71667"><time datetime="2010-05-19T08:31:03+00:00">May 19, 2010 at 8:31 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Can anyone suggest a reliable Dedicated Server hosting that is not very expensive?,`&#8217;</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-74084">
+						<article id="comment-74084" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/7df530aaa37b700b7b768c93a1b0535c?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/7df530aaa37b700b7b768c93a1b0535c?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.titaniumearrings.org/' rel='external nofollow' class='url'>Kian Gray</a> </cite><a href="/blog/posts/server-load-dreamhost-vs-webfaction/#comment-74084"><time datetime="2010-07-16T04:43:34+00:00">July 16, 2010 at 4:43 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Dedicated servers are the best when you want a stable webhost. .;:</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+				</ol>
+				<!-- end .commentlist -->
+				
+								
+											<p class="nocomments">Comments are closed.</p>
+										
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

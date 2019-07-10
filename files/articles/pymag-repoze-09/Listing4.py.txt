@@ -1,0 +1,21 @@
+@expose()
+@require(is_anonymous(msg='Only one account per user is ' \
+                          'allowed'))
+def add_user(self, username, fullname, email, passwd):
+    # Defining the row
+    user = model.User()
+    user.user_name = username
+    user.display_name = fullname
+    user.email_address = email
+    user.password = passwd
+    # Including her in the "posters" group:
+    query = DBSession.query(model.Group)\
+            .filter(model.Group.group_name==u'posters')
+    posters = query.one()
+    posters.users.append(user)
+    # Saving the row:
+    DBSession.add(user)
+    # Redirecting to the login form with a notification
+    # message:
+    flash('Account created! Please log in')
+    redirect(url('/login'))

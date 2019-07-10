@@ -1,0 +1,477 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>The Software Practitioner&#8217;s Digest: October 2011 | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; The Software Practitioner&#8217;s Digest: October 2011 Comments Feed" href="/blog/posts/tspd-2011-10/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='&#8220;WSGI from Start to Finish&#8221; materials available' href='/blog/posts/wsgi-from-start-to-finish-materials-available/' />
+<link rel='next' title='The Software Practitioner&#8217;s Digest: November 2011' href='/blog/posts/tspd-2011-11/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/tspd-2011-10/comment-page-1/#comments" />
+<link rel='shortlink' href='/?p=440' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Ftspd-2011-10%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Ftspd-2011-10%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="The Software Practitioner&#8217;s Digest: October 2011">
+<meta property="og:description" content="&lt;em&gt;Hello, World!&lt;/em&gt; You&#039;re reading the first issue of &lt;a href=&quot;/tspd/&quot;&gt;&lt;em&gt;The Software ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-440 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-440" class="clearfix post-440 post type-post status-publish format-standard hentry category-tspd">
+								<header class="entry-header">
+																		<h1 class="entry-title" >The Software Practitioner&#8217;s Digest: October 2011</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/tspd/" rel="category tag">The Software Practitioner's Digest</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="12:23 am" href="/blog/posts/tspd-2011-10/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">November 15, 2011</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/tspd-2011-10/&media=&description=The Software Practitioner&#8217;s Digest: October 2011" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p><em>Hello, World!</em> You&#8217;re reading the first issue of <a href="/tspd/"><em>The Software Practitioner&#8217;s Digest</em></a>, covering resources published during October 2011.<span id="more-440"></span></p>
+<h2>Computer</h2>
+<p><a href="http://www.computer.org/csdl/mags/co/2011/10/index.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/csdl/mags/co/2011/10/index.html', 'The October issue of Computer');" rel="nofollow">The October issue of Computer</a> features articles on Software Engineering and how it meets other fields.</p>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.305" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.305', 'Can Practitioners Neglect Theory and Theoreticians Neglect Practice?');" rel="nofollow">Can Practitioners Neglect Theory and Theoreticians Neglect Practice?</a></h3>
+<p><a href="http://en.wikipedia.org/wiki/Manfred_Broy" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Manfred_Broy', 'Manfred Broy');" rel="nofollow">Manfred Broy</a> explains the importance of theory in software development and why it is often not applied in practice.</p>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.268" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.268', 'Software Engineering &#8211; Missing in Action: A Personal Perspective');" rel="nofollow">Software Engineering &#8211; Missing in Action: A Personal Perspective</a></h3>
+<p>In this thought-provoking and controversial article, <a href="http://en.wikipedia.org/wiki/David_Parnas" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/David_Parnas', 'David Parnas');" rel="nofollow">David Parnas</a> explains why software development should &#8212; but hasn’t yet &#8212; become an engineering discipline and mentions key impediments that need to be overcome for this to happen.</p>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.266" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.266', 'Open Source Software: Lessons from and for Software Engineering');" rel="nofollow">Open Source Software: Lessons from and for Software Engineering</a></h3>
+<p><a href="http://www.csis.ul.ie/staff/BF/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.csis.ul.ie/staff/BF/', 'Brian Fitzgerald');" rel="nofollow">Brian Fitzgerald</a> discusses the best practices commonly leveraged by FLOSS projects and highlights ideas which could be borrowed by the broader software development community, while also considering inherent limitations and common shortcomings in this environment like the lack of feedback on design issues.</p>
+<p>The author starts by claiming that FLOSS advocates consider this model a “silver bullet”, but provides no references to support such claims, and that made me read the rest of the article with caution. This was unfortunate as the rest of the article was fairly objective and based on sound research.</p>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.267" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.267', 'Software Engineering Meets Services and Cloud Computing');" rel="nofollow">Software Engineering Meets Services and Cloud Computing</a></h3>
+<p>This is a very good overview of Service-Oriented Software Engineering and Cloud Computing. The authors, <a href="http://homepages.math.uic.edu/~yau/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://homepages.math.uic.edu/~yau/', 'Stephen Yau');" rel="nofollow">Stephen Yau</a> and Ho An, also identify seven challenges in these paradigms and discuss approaches to deal with them.</p>
+<p>I was confused by the term &#8220;Service-Oriented Software Engineering&#8221; as it sounded like what I knew as &#8220;Component-Base Software Engineering&#8221;. <a href="http://doi.ieeecomputersociety.org/10.1109/EUROMICRO.2007.25" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/EUROMICRO.2007.25', 'A paper from EUROMICRO 2007');" rel="nofollow">A paper from EUROMICRO 2007</a> was the only document I could find that explains the difference: Put simply (and inaccurately), both are paradigms for building software that consume services provided by independent and external applications, but in SOSE your software determines which external applications to use at runtime (among the ones proving the services it needs), while in CBSE the services to be used are bound during construction. The two paradigms can be combined as they&#8217;re not mutually exclusive.</p>
+<p>SESO and CBSE are indeed not that different and much of this <em>Computer</em> magazine article also applies to CBSE.</p>
+<h4>Related reading:</h4>
+<ul>
+<li><a href="http://www.cs.st-andrews.ac.uk/%7Eifs/Books/SE9/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.cs.st-andrews.ac.uk/%7Eifs/Books/SE9/', 'Software Engineering');" title="Software Engineering 9"  rel="nofollow">Software Engineering</a> by <a href="http://en.wikipedia.org/wiki/Ian_Sommerville_%28academic%29" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Ian_Sommerville_%28academic%29', 'Ian Sommerville');" rel="nofollow">Ian Sommerville</a> has a chapter dedicated to CBSE. I think this is a very good introduction to the subject.</li>
+<li><a href="http://doi.ieeecomputersociety.org/10.1109/MS.2011.51" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2011.51', 'Developing Cloud Business Models: A Case Study on Cloud Gaming');" rel="nofollow">Developing Cloud Business Models: A Case Study on Cloud Gaming</a> by <a href="http://users.jyu.fi/~arojala/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://users.jyu.fi/~arojala/', 'Arto Ojala');" rel="nofollow">Arto Ojala</a> and <a href="http://users.jyu.fi/~pttyrvai/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://users.jyu.fi/~pttyrvai/', 'Pasi Tyrväinen');" rel="nofollow">Pasi Tyrväinen</a>. This article, published in the July issue of IEEE Software, explores Cloud Computing from a business perspective.</li>
+</ul>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.263" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.263', 'Software Engineering Meets Evolutionary Computation');" rel="nofollow">Software Engineering Meets Evolutionary Computation</a></h3>
+<p>In this article, <a href="http://www.cs.ucl.ac.uk/staff/mharman/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.cs.ucl.ac.uk/staff/mharman/', 'Mark Harman');" rel="nofollow">Mark Harman</a> talks about successful applications of <a href="http://en.wikipedia.org/wiki/Evolutionary_computation" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Evolutionary_computation', 'Evolutionary Computation');" rel="nofollow">Evolutionary Computation</a> and <a href="http://en.wikipedia.org/wiki/Search-based_software_engineering" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Search-based_software_engineering', 'Search-based Software Engineering');" rel="nofollow">Search-based Software Engineering</a> in general. I think the introduction to the subject isn&#8217;t very good and it&#8217;s fair to say that the author assumed prior knowledge.</p>
+<h4>Related reading:</h4>
+<ul>
+<li><a href="http://doi.ieeecomputersociety.org/10.1109/TSE.2010.106" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/TSE.2010.106', 'Search Based Software Engineering: Introduction to the Special Issue of the IEEE Transactions on Software Engineering');" rel="nofollow">Search Based Software Engineering: Introduction to the Special Issue of the IEEE Transactions on Software Engineering</a>. This is a better introduction to the subject, for those who are not familiar with it. It was co-authored by the same person who wrote this article in <em>Computer</em>.</li>
+</ul>
+<h2>IEEE Software</h2>
+<p>The theme of <a href="http://www.computer.org/csdl/mags/so/2011/05/index.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/csdl/mags/so/2011/05/index.html', 'the September/October issue of IEEE Software');" rel="nofollow">the September/October issue of IEEE Software</a> was games development, which means that a group of articles were related to this.</p>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MS.2011.97" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2011.97', 'Gardening Your Architecture, Part 2: Reengineering and Rewriting');" rel="nofollow">Gardening Your Architecture, Part 2: Reengineering and Rewriting</a></h3>
+<p>This is the last of the two-part series by Frank Buschmann, covering three key techniques to improving an existing system&#8217;s architecture: Refactoring, Reengineering and Rewriting. <strong>This definitely is a must-read</strong> for software developers.</p>
+<h4>Related reading:</h4>
+<ul>
+<li><a href="http://doi.ieeecomputersociety.org/10.1109/MS.2011.76" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2011.76', 'Gardening Your Architecture, Part 1: Refactoring');" rel="nofollow">Gardening Your Architecture, Part 1: Refactoring</a>.</li>
+</ul>
+<h3><a href="http://doi.ieeecomputersociety.org/10.1109/MS.2010.112" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2010.112', 'Strategies Facilitating Software Product Transfers');" rel="nofollow">Strategies Facilitating Software Product Transfers</a></h3>
+<p><a href="http://web.mac.com/darja.smite/Darjas_Website/Home.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://web.mac.com/darja.smite/Darjas_Website/Home.html', 'Darja Smite');" rel="nofollow">Darja Smite</a> and <a href="http://www.wohlin.eu/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.wohlin.eu/', 'Claes Wohlin');" rel="nofollow">Claes Wohlin</a> present their findings in the process of transferring the development of a software product from one team to another, from their studies on offshore transfers at <a href="http://en.wikipedia.org/wiki/Ericsson" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Ericsson', 'Ericsson');" rel="nofollow">Ericsson</a>, including the circumstances in which transfers should ideally be made.</p>
+<h2>It&#8217;s a wrap!</h2>
+<p>After going through the time-consuming and exhausting process of moving home a few weeks ago, I wasn&#8217;t intending on starting this digest in November given that I couldn&#8217;t read a third of the sources I follow in the past month. But then I felt motivated by the articles published in <em>Computer</em>, which address the very reason why I am doing this. I just couldn&#8217;t let them slip by.</p>
+<p>Future issues of <a href="/tspd/"><em>The Software Practitioner&#8217;s Digest</em></a> will not be limited to articles from IEEE-CS magazines and will cover different aspects of software development in addition to construction-related ones, like <a href="http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction', 'HCI');" rel="nofollow">HCI</a> and business considerations.</p>
+<p>I guess <a href="http://en.wikipedia.org/wiki/Release_early,_release_often" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Release_early,_release_often', 'RERO');" title="Release early, release often"  rel="nofollow">RERO</a> advocates would be proud of me &#8212; Don&#8217;t let them down and <a href="/contact/">tell me</a> what you liked and disliked about this digest and why!</p>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+															</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/wsgi-from-start-to-finish-materials-available/" rel="prev"><span class="meta-nav">&#8592;</span> &#8220;WSGI from Start to Finish&#8221; materials available</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/tspd-2011-11/" rel="next">The Software Practitioner&#8217;s Digest: November 2011 <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+					<h2 class="comments-title">
+					3 Comments <span class="on">&#8594;</span> <span>The Software Practitioner&#8217;s Digest: October 2011</span>				</h2>
+				<!-- end .comments-title -->
+				
+				<ol class="commentlist">
+										
+					<li class="comment even thread-even depth-1" id="li-comment-112763">
+						<article id="comment-112763" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/61bee5e2fe28e3ab3c397eec277c35ef?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/61bee5e2fe28e3ab3c397eec277c35ef?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">davidk </cite><a href="/blog/posts/tspd-2011-10/comment-page-1/#comment-112763"><time datetime="2011-11-15T15:48:10+00:00">November 15, 2011 at 3:48 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Your SOSE vs CBSE differentiation is only describing late vs early binding.  Component based systems often use late-binding (ex. plug-ins).  So either there is something else important about SOSE or folks are just recycling the same old ideas to write new papers.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-112781">
+						<article id="comment-112781" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> <span></span></cite><a href="/blog/posts/tspd-2011-10/comment-page-1/#comment-112781"><time datetime="2011-11-15T21:49:52+00:00">November 15, 2011 at 9:49 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@davidk, you&#8217;re correct in that the differentiation I offered is is limited, hence I started by saying that my explanation was inaccurate. I was afraid to diverge too much by offering a more accurate explanation and I thought that binding time was the most significant difference.</p>
+<p>In the EUROMICRO paper I mentioned above, the authors point out that late binding is also possible in CBSE and cite <a href="http://en.wikipedia.org/wiki/Component_Object_Model" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://en.wikipedia.org/wiki/Component_Object_Model', 'COM');" rel="nofollow">COM</a> as an example. They cover other differences which, in my opinion, are not as significant as binding time.</p>
+<p>Looked from another perspective, services in SOSE are black boxes for their clients, while CBSE allows components to be used as white, gray or black boxes. I&#8217;d imagine this distinction can be useful in areas like critical systems development, where redundancy and diversity strategies like <a href="http://en.wikipedia.org/wiki/N-version_programming" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://en.wikipedia.org/wiki/N-version_programming', 'NVP');" rel="nofollow">NVP</a> are used and SOSE could potentially be deemed the only acceptable paradigm.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-112917">
+						<article id="comment-112917" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/61bee5e2fe28e3ab3c397eec277c35ef?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/61bee5e2fe28e3ab3c397eec277c35ef?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">davidk </cite><a href="/blog/posts/tspd-2011-10/comment-page-1/#comment-112917"><time datetime="2011-11-17T19:32:18+00:00">November 17, 2011 at 7:32 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@Gustavo Thanks to the reference to the EUROMICRO paper.  Although I only skimmed the paper it seems to me looser-coupling is the main difference.   I take away that SOSE is a subset of CBSE with some design flexibility removed by sticking to the same choice for certain thing (like location independence). If SOSE is a &#8216;good&#8217; paradigm then the removed flexibility was in areas where people frequently made poor choices or always he same choice.  Hopefully we&#8217;ve learned something from CBSE and taken the best parts/practices forwards to make SOSE. [Although personally I think it&#8217;s just a new name for making the obviously correct choices when building software.]</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+				</ol>
+				<!-- end .commentlist -->
+				
+								
+											<p class="nocomments">Comments are closed.</p>
+										
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

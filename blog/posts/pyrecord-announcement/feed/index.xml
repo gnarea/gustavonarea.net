@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Records: A New Pythonic Data Type for Your Toolbox</title>
+	<atom:link href="/blog/posts/pyrecord-announcement/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/pyrecord-announcement/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/pyrecord-announcement/comment-page-1/#comment-113385</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 10 Dec 2014 13:07:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=825#comment-113385</guid>
+		<description><![CDATA[Thanks, Volodymyr!
+
+Yes, indeed immutability is one thing PyRecord is missing. I have had needed it at least twice since I created the library. I&#039;m hoping to work on it after the Christmas break.
+
+I too dislike having to repeat the name of the record type. I spent a long time researching and prototyping alternatives, but came to the conclusion that namedtuple&#039;s approach (repeating the type name) was the best compromise.
+
+One of the options I considered was very similar to what you&#039;re proposing, but I found two problems with it: It wouldn&#039;t be correct to imply that PyRecord has a class named &quot;Point&quot; and it would not be good for static code analysis (inc. code completion in IDEs).
+
+I also considered exposing a second way to create record types, but then I remembered one point in the Zen of Python: &quot;There should be one-- and preferably only one --obvious way to do it&quot;.]]></description>
+		<content:encoded><![CDATA[<p>Thanks, Volodymyr!</p>
+<p>Yes, indeed immutability is one thing PyRecord is missing. I have had needed it at least twice since I created the library. I&#8217;m hoping to work on it after the Christmas break.</p>
+<p>I too dislike having to repeat the name of the record type. I spent a long time researching and prototyping alternatives, but came to the conclusion that namedtuple&#8217;s approach (repeating the type name) was the best compromise.</p>
+<p>One of the options I considered was very similar to what you&#8217;re proposing, but I found two problems with it: It wouldn&#8217;t be correct to imply that PyRecord has a class named &#8220;Point&#8221; and it would not be good for static code analysis (inc. code completion in IDEs).</p>
+<p>I also considered exposing a second way to create record types, but then I remembered one point in the Zen of Python: &#8220;There should be one&#8211; and preferably only one &#8211;obvious way to do it&#8221;.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Volodymyr Vitvitskyi</title>
+		<link>/blog/posts/pyrecord-announcement/comment-page-1/#comment-113384</link>
+		<dc:creator><![CDATA[Volodymyr Vitvitskyi]]></dc:creator>
+		<pubDate>Mon, 08 Dec 2014 20:27:34 +0000</pubDate>
+		<guid isPermaLink="false">/?p=825#comment-113384</guid>
+		<description><![CDATA[Hi Gustavo, very neat library you developed.
+
+I like `collections.namedtuple` a lot for their immutability and `_replace` method =) Very often redefine `__new__` in them to make some fields optional, with default value.
+
+Regarding passing name of the record type explicitly, have you considered to make a sugar for that ?
+
+For instance, `pyrecord.new.Point(&quot;x&quot;, &quot;y&quot;)`  or  `pyrecord.type.Point`.
+Also you can check `sh` library they make a wrapper for the module so you can do something like this
+
+&lt;code&gt;
+from pyrecord import PointDef
+&#160;
+Point = PointDef(&#039;x&#039;, &#039;y&#039;)
+# or 
+Point = pyrecord.Point(&#039;x&#039;, &#039;y&#039;) 
+&lt;/code&gt;
+
+I tried this approach. 
+
+&lt;code&gt;
+class RecordNameProxy:
+    def __getattr__(self, name):
+        return lambda *args, **kwargs: Record.create_type(name, *args, **kwargs)
+&#160;
+type = RecordNameProxy()
+&lt;/code&gt;]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo, very neat library you developed.</p>
+<p>I like `collections.namedtuple` a lot for their immutability and `_replace` method =) Very often redefine `__new__` in them to make some fields optional, with default value.</p>
+<p>Regarding passing name of the record type explicitly, have you considered to make a sugar for that ?</p>
+<p>For instance, `pyrecord.new.Point(&#8220;x&#8221;, &#8220;y&#8221;)`  or  `pyrecord.type.Point`.<br />
+Also you can check `sh` library they make a wrapper for the module so you can do something like this</p>
+<p><code><br />
+from pyrecord import PointDef<br />
+&nbsp;<br />
+Point = PointDef('x', 'y')<br />
+# or<br />
+Point = pyrecord.Point('x', 'y')<br />
+</code></p>
+<p>I tried this approach. </p>
+<p><code><br />
+class RecordNameProxy:<br />
+    def __getattr__(self, name):<br />
+        return lambda *args, **kwargs: Record.create_type(name, *args, **kwargs)<br />
+&nbsp;<br />
+type = RecordNameProxy()<br />
+</code></p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: &#8220;WSGI from Start to Finish&#8221; materials available</title>
+	<atom:link href="/blog/posts/wsgi-from-start-to-finish-materials-available/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/wsgi-from-start-to-finish-materials-available/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-87632</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Sat, 12 Mar 2011 18:19:36 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-87632</guid>
+		<description><![CDATA[Hello, Dharmavirsinh.
+
+It&#039;s hosted at &lt;a href=&quot;http://www.linode.com/?r=5d1565e30bb93355e48d162c1a1ce49fa6bc638c&quot; rel=&quot;nofollow&quot;&gt;Linode&lt;/a&gt;, which, by the way, I would highly recommend to anyone.
+
+HTH.
+
+ - Gustavo.]]></description>
+		<content:encoded><![CDATA[<p>Hello, Dharmavirsinh.</p>
+<p>It&#8217;s hosted at <a href="http://www.linode.com/?r=5d1565e30bb93355e48d162c1a1ce49fa6bc638c" rel="nofollow">Linode</a>, which, by the way, I would highly recommend to anyone.</p>
+<p>HTH.</p>
+<p> &#8211; Gustavo.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Dharmavirsinh Jhala</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-87533</link>
+		<dc:creator><![CDATA[Dharmavirsinh Jhala]]></dc:creator>
+		<pubDate>Thu, 10 Mar 2011 21:25:38 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-87533</guid>
+		<description><![CDATA[Hi,
+
+Asking you a question about hosting, as read your past post about webfaction.com
+Your website is pretty fast do you still host it with webfaction.com?
+
+if not where?
+
+Kudos.]]></description>
+		<content:encoded><![CDATA[<p>Hi,</p>
+<p>Asking you a question about hosting, as read your past post about webfaction.com<br />
+Your website is pretty fast do you still host it with webfaction.com?</p>
+<p>if not where?</p>
+<p>Kudos.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-74198</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 21 Jul 2010 21:54:14 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-74198</guid>
+		<description><![CDATA[@Graham:
+
+Thanks for the note on chunked request content! I&#039;ve just updated the slides.
+
+BTW, WebOb&#039;s request wrapper sets CONTENT_LENGTH to &quot;-1&quot; when people set the body of the request to a file-like object; if it&#039;s a string, its length is used.
+
+Cheers.]]></description>
+		<content:encoded><![CDATA[<p>@Graham:</p>
+<p>Thanks for the note on chunked request content! I&#8217;ve just updated the slides.</p>
+<p>BTW, WebOb&#8217;s request wrapper sets CONTENT_LENGTH to &#8220;-1&#8221; when people set the body of the request to a file-like object; if it&#8217;s a string, its length is used.</p>
+<p>Cheers.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Graham Dumpleton</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-74183</link>
+		<dc:creator><![CDATA[Graham Dumpleton]]></dc:creator>
+		<pubDate>Wed, 21 Jul 2010 00:46:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-74183</guid>
+		<description><![CDATA[One comment about your slides.
+
+Under &#039;No unknown length wsgi.input&#039; you state &#039;Some libraries use “-1”.&#039; and &#039;Others use “0”, which actually means “there are no bytes in wsgi.input”.&#039;. If any WSGI hosting mechanism is using &#039;-1&#039; then they are likely violating both CGI and WSGI specifications and would also probably break any WSGI applications. The use of &#039;-1&#039; has only ever been a suggestion as far as I know for a future version of WSGI and not actually used.
+
+Where chunked request content is used, there is no Content-Length header. Technically there should also probably thus be no CONTENT_LENGTH variable at all in the WSGI environment and WSGI specification allows for it to be missing, but wouldn&#039;t be surprised if some WSGI adapters always populate it with 0 even though no such header supplied.
+
+The only one way of really knowing if have unknown length request content is to have no CONTENT_LENGTH and check HTTP_TRANSFER_ENCODING for &#039;chunked&#039;. The only WSGI hosting mechanism I know of that supports that is Apache/mod_wsgi and even then you have to set the WSGIChunkedRequest directive to allow handling of chunked request content, given that it sits outside of the WSGI specification.]]></description>
+		<content:encoded><![CDATA[<p>One comment about your slides.</p>
+<p>Under &#8216;No unknown length wsgi.input&#8217; you state &#8216;Some libraries use “-1”.&#8217; and &#8216;Others use “0”, which actually means “there are no bytes in wsgi.input”.&#8217;. If any WSGI hosting mechanism is using &#8216;-1&#8217; then they are likely violating both CGI and WSGI specifications and would also probably break any WSGI applications. The use of &#8216;-1&#8217; has only ever been a suggestion as far as I know for a future version of WSGI and not actually used.</p>
+<p>Where chunked request content is used, there is no Content-Length header. Technically there should also probably thus be no CONTENT_LENGTH variable at all in the WSGI environment and WSGI specification allows for it to be missing, but wouldn&#8217;t be surprised if some WSGI adapters always populate it with 0 even though no such header supplied.</p>
+<p>The only one way of really knowing if have unknown length request content is to have no CONTENT_LENGTH and check HTTP_TRANSFER_ENCODING for &#8216;chunked&#8217;. The only WSGI hosting mechanism I know of that supports that is Apache/mod_wsgi and even then you have to set the WSGIChunkedRequest directive to allow handling of chunked request content, given that it sits outside of the WSGI specification.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-74180</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 20 Jul 2010 20:41:36 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-74180</guid>
+		<description><![CDATA[@eGlyph: I think so. It should be available once EuroPython is over.]]></description>
+		<content:encoded><![CDATA[<p>@eGlyph: I think so. It should be available once EuroPython is over.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: eGlyph</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-74177</link>
+		<dc:creator><![CDATA[eGlyph]]></dc:creator>
+		<pubDate>Tue, 20 Jul 2010 19:14:19 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-74177</guid>
+		<description><![CDATA[Thank you good sir, it&#039;s a very nice presentation. Will there be video available?]]></description>
+		<content:encoded><![CDATA[<p>Thank you good sir, it&#8217;s a very nice presentation. Will there be video available?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software development &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/topics/software-development/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Web Site Security With repoze.who and repoze.what</title>
+		<link>/blog/posts/repoze-auth/</link>
+		<comments>/blog/posts/repoze-auth/#comments</comments>
+		<pubDate>Tue, 01 Jun 2010 14:41:13 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Publications]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Python Magazine]]></category>
+		<category><![CDATA[repoze.what]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=294</guid>
+		<description><![CDATA[This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the article are only applicable to repoze.who 1.0 and repoze.what 1.0, not repoze.who 2 and repoze.what 1.1 which are under development as of this writing. Have you ever created a Web application? If so, it&#8217;s... <a class="more-link" href="/blog/posts/repoze-auth/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/repoze-auth/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Koren&#8217;s SVD++ Python Implementation</title>
+		<link>/blog/posts/korens-svd-python-implementation/</link>
+		<comments>/blog/posts/korens-svd-python-implementation/#comments</comments>
+		<pubDate>Wed, 29 Jul 2009 12:01:30 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Software development]]></category>
+		<category><![CDATA[booleano]]></category>
+		<category><![CDATA[Netflix Prize]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Recommender System]]></category>
+
+		<guid isPermaLink="false">/?p=274</guid>
+		<description><![CDATA[I recently had to implement a recommender system for the Netflix Prize. Out of the best known models, I chose Yehuda Koren&#8217;s SVD++ model as published on the paper entitled &#8220;Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model&#8221; (the version that doesn&#8217;t take into account temporal effects; I&#8217;d have implemented the complete model, but... <a class="more-link" href="/blog/posts/korens-svd-python-implementation/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/korens-svd-python-implementation/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Announcing Booleano</title>
+		<link>/blog/posts/announcing-booleano/</link>
+		<pubDate>Fri, 17 Jul 2009 21:26:27 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Software development]]></category>
+		<category><![CDATA[boolean]]></category>
+		<category><![CDATA[booleano]]></category>
+		<category><![CDATA[natural language processing]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=264</guid>
+		<description><![CDATA[I am proud to announce the first alpha release of Booleano, a Python-based interpreter of boolean expressions: Booleano is an interpreter of boolean expressions, a library to define and run filters available as text (e.g., in a natural language) or in Python code. In order to handle text-based filters, Booleano ships with a fully-featured parser... <a class="more-link" href="/blog/posts/announcing-booleano/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>Enable LDAP authentication in your WSGI applications!</title>
+		<link>/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/</link>
+		<pubDate>Mon, 08 Sep 2008 23:50:15 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[LDAP]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=119</guid>
+		<description><![CDATA[repoze.who.plugins.ldap is an straightforward yet powerful solution to enable LDAP authentication in your WSGI application. It enables you to have LDAP authentication working in your new or existing applications, in few minutes and with few lines of code! It&#8217;s a plugin for the repoze.who framework, featuring not only an LDAP authenticator, but also related utilities.... <a class="more-link" href="/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+	</channel>
+</rss>

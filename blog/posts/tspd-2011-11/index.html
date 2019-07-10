@@ -1,0 +1,419 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>The Software Practitioner&#8217;s Digest: November 2011 | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Software Practitioner&#8217;s Digest: October 2011' href='/blog/posts/tspd-2011-10/' />
+<link rel='next' title='The Software Practitioner&#8217;s Digest: December 2011' href='/blog/posts/tspd-2011-12/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/tspd-2011-11/" />
+<link rel='shortlink' href='/?p=542' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Ftspd-2011-11%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Ftspd-2011-11%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="The Software Practitioner&#8217;s Digest: November 2011">
+<meta property="og:description" content="This tardy issue of &lt;a title=&quot;The Software Practitioner’s Digest&quot; href=&quot;/tspd/&quot;&gt;The Software ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-542 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-542" class="clearfix post-542 post type-post status-publish format-standard hentry category-tspd">
+								<header class="entry-header">
+																		<h1 class="entry-title" >The Software Practitioner&#8217;s Digest: November 2011</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/tspd/" rel="category tag">The Software Practitioner's Digest</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="11:56 am" href="/blog/posts/tspd-2011-11/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">December 20, 2011</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/tspd-2011-11/&media=&description=The Software Practitioner&#8217;s Digest: November 2011" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p>This tardy issue of <a title="The Software Practitioner’s Digest" href="/tspd/">The Software Practitioner&#8217;s Digest</a> highlights articles from Better Software, IEEE Software, Software Engineering Notes and Jakob Nielsen, as well as a book on applied psychology in software development teams, all of which were published in November 2011.</p>
+<p><span id="more-542"></span></p>
+<p>In this issue:</p>
+<ul>
+<li><a href="#technical-debt">Technical debt</a></li>
+<li><a href="#late-projects">Tom DeMarco: All Late Projects Are the Same</a></li>
+<li><a href="#analog-development">Improving Software Engineering Through Applied Psychology (Digital Work in an Analog World)</a></li>
+<li><a href="#pbar">Pattern-Based Architecture Reviews</a></li>
+<li><a href="#usability-research">Jakob Nielsen: Accuracy vs. Insights in Quantitative Usability</a></li>
+<li><a href="#salary-survey">2011 Salary Survey</a></li>
+<li><a href="#graduate-curriculum">Industry Linked Graduate Software Engineering Curriculum</a></li>
+</ul>
+<h2 id="technical-debt">Technical debt</h2>
+<p>Two articles explored the subject of technical debt from different perspectives:</p>
+<p>In Better Software magazine, Matthew Heusser reported on ten ideas that were brought forward in an Agile Alliance-sponsored workshop on technical debt back in 2008, in which Ron Jeffries, Chris Sterling and Michael Feathers were some of the participants. A <a href="http://manage.techwell.com/articles/magfeature/10-thoughts-technical-debt" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://manage.techwell.com/articles/magfeature/10-thoughts-technical-debt', 'free version of the article');" rel="nofollow" title="10 Thoughts On Technical Debt by Matt Heusser">free version of the article</a>, entitled <em>10 Thoughts On Technical Debt</em>, is also available on <a href="http://techwell.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://techwell.com', 'Techwell.com');" rel="nofollow">Techwell.com</a>.</p>
+<p>Meanwhile, Siemens architect Frank Buschmann recommended a strategic, business-oriented approach to technical debt in <a href="http://doi.ieeecomputersociety.org/10.1109/MS.2011.150" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2011.150', 'To Pay or Not to Pay Technical Debt');" rel="nofollow"><em>To Pay or Not to Pay Technical Debt</em></a>, published in IEEE Software.</p>
+<h3>Related reading</h3>
+<ul>
+<li><a href="http://blogs.construx.com/blogs/stevemcc/archive/2007/11/01/technical-debt-2.aspx" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://blogs.construx.com/blogs/stevemcc/archive/2007/11/01/technical-debt-2.aspx', 'Technical Debt');" rel="nofollow"><em>Technical Debt</em></a>, an essay by Steve McConnell in which he classifies the different types of debts and suggests how to manage them.</li>
+<li>The <a href="http://www.youtube.com/watch?v=pqeJFYwnkjE" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.youtube.com/watch?v=pqeJFYwnkjE', 'Debt Metaphor');" rel="nofollow"><em>Debt Metaphor</em></a> (video), explained by Ward Cunningham (the person who coined this term). He also addresses common misuses of the term.</li>
+</ul>
+<h2 id="late-projects">Tom DeMarco: All Late Projects Are the Same</h2>
+<p><a href="http://en.wikipedia.org/wiki/Tom_DeMarco" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Tom_DeMarco', 'Tom DeMarco');" rel="nofollow">Tom DeMarco</a> argues that all late projects started late and the fault lies outside the software development team. This brief essay, published in IEEE Software, is entitled <a href="http://doi.ieeecomputersociety.org/10.1109/MS.2011.134" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2011.134', 'All Late Projects Are the Same');" rel="nofollow"><em>All Late Projects Are the Same</em></a>.</p>
+<h3>Related reading</h3>
+<ul>
+<li><a href="http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425', 'Facts and Fallacies of Software Engineering');" rel="nofollow"><em>Facts and Fallacies of Software Engineering</em></a>, a great book by <a href="http://en.wikipedia.org/wiki/Robert_L._Glass" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Robert_L._Glass', 'Robert Glass');" rel="nofollow">Robert Glass</a>. In the first chapter, Glass argues that one of the two most common causes of runaway projects is poor estimation (Fact 8), and estimation is usually done at the wrong time (Fact 9) and by the wrong people (Fact 10).</li>
+</ul>
+<h2 id="analog-development">Improving Software Engineering Through Applied Psychology (Digital Work in an Analog World)</h2>
+<p><a href="http://www.analogdevelopment.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.analogdevelopment.com/', 'Digital Work in an Analog World');" rel="nofollow"><em>Digital Work in an Analog World</em></a> by John R. Fox is a pragmatic book on <a href="http://en.wikipedia.org/wiki/Soft_skills" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Soft_skills', 'soft skills');" rel="nofollow">soft skills</a> aimed at software professionals.</p>
+<p>Covering topics that range from <a href="http://en.wikipedia.org/wiki/Confirmation_bias" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Confirmation_bias', 'confirmation bias');" rel="nofollow">confirmation bias</a> and <a href="http://psychology.about.com/od/cognitivepsychology/f/dissonance.htm" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://psychology.about.com/od/cognitivepsychology/f/dissonance.htm', 'cognitive dissonance');" rel="nofollow">cognitive dissonance</a> to stress and overestimation, including the effects of culture and gender, it starts out with a bit of (approachable) theory and goes on to explain many interesting facts that support subsequent recommendations on how to make your job (and your colleagues&#8217;) more effective and enjoyable.</p>
+<p>In spite of the lack of prior research specific to our industry, the author did a terrific job here, extrapolating research in similar settings and occasionally filling the gap with his own educated guesses as the last resort.</p>
+<p>It&#8217;s helped me identify things to improve and things to watch out for, and I&#8217;m sure it&#8217;d be very useful for other software practitioners too (especially managers). For a more comprehensive review of the book, read <a href="http://www.infoq.com/news/2011/11/sw-psychology" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.infoq.com/news/2011/11/sw-psychology', 'How Applied Psychology can help Software Engineers');" rel="nofollow"><em>How Applied Psychology can help Software Engineers</em></a> on <a href="http://www.infoq.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.infoq.com/', 'InfoQ');" rel="nofollow">InfoQ</a>.</p>
+<h2 id="pbar">Pattern-Based Architecture Reviews</h2>
+<p>Neil B. Harrison and Paris Avgeriou proposed <a href="http://doi.ieeecomputersociety.org/10.1109/MS.2010.156" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MS.2010.156', 'Pattern-Based Architecture Reviews');" rel="nofollow"><em>Pattern-Based Architecture Reviews</em></a> in IEEE Software. PBAR is a simple and lightweight process which could help identify architectural issues in software products and is intended to accommodate small teams and projects with short iterations in particular. The authors also presented the outcome of the research they&#8217;ve done.</p>
+<p>In a nutshell, it consists in having an external and expert architect reviewing specific aspects of the architecture with the software development team, in order to identify the architectural patters used and consider their suitability for the problem at hand.</p>
+<h3>Related reading</h3>
+<ul>
+<li><a href="http://doi.ieeecomputersociety.org/10.1109/ICDT.2007.65" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/ICDT.2007.65', 'Pattern-Driven Architectural Partitioning');" rel="nofollow"  title="Pattern-Driven Architectural Partitioning: Balancing Functional and Non-functional Requirements"><em>Pattern-Driven Architectural Partitioning</em></a>, by the same authors of PBAR. In a private conversation with Harrison and Avgeriou, we discussed the requirement for architect to come from outside the team as it may not be an option for many organizations. In such situations, following a similar process from the start of the design phase could be an attractive compromise and this is essentially what Pattern-Driver Architectural Partitioning is about. PDAP is another lightweight process and it is so intuitive that many architects pretty much follow it implicitly.</li>
+</ul>
+<h2 id="usability-research">Jakob Nielsen: Accuracy vs. Insights in Quantitative Usability</h2>
+<p><a href="http://en.wikipedia.org/wiki/Jakob_Nielsen_%28usability_consultant%29" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Jakob_Nielsen_%28usability_consultant%29', 'Jakob Nielsen');" rel="nofollow">Jakob Nielsen</a> reiterated the importance of doing user testing to get the bigger picture rather putting too much effort into small problems in <a href="http://www.useit.com/alertbox/study-accuracy-confidence.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.useit.com/alertbox/study-accuracy-confidence.html', 'Accuracy vs. Insights in Quantitative Usability');" rel="nofollow"><em>Accuracy vs. Insights in Quantitative Usability</em></a>. &#8220;Better to accept a wider margin of error in usability metrics than to spend the entire budget learning too few things with extreme precision&#8221;, is how he summarized the article.</p>
+<h2 id="salary-survey">2011 Salary Survey</h2>
+<p>The results of the 2011 Better Software/Techwell.com Salary Survey were published in Better Software, but not all questions were directly related to salaries or benefits.</p>
+<p>It was aimed at software practitioners in general and the regional distribution of participants was as follows: 68% from the USA, 8% from Canada, 8% from Europe, 7% from India and 9% from the rest of the world.</p>
+<p>Other questions were related to education and job function. Many stats were broken down by the ranking of the role (Staff level, Management level, Director level).</p>
+<p>Among other things, I found it interesting that 69% of those polled indicated that they&#8217;re satisfied or very satisfied with their job.</p>
+<h2 id="graduate-curriculum">Industry Linked Graduate Software Engineering Curriculum</h2>
+<p>In Software Engineering Notes, Alok Mishra and Deepti Mishra made an appeal to academic institutions offering software development degrees to make their curricula better suited for the industry in <a href="http://dx.doi.org/10.1145/2047414.2047429" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://dx.doi.org/10.1145/2047414.2047429', 'Industry Linked Graduate Software Engineering Curriculum');" rel="nofollow"><em>Industry Linked Graduate Software Engineering Curriculum</em></a>.</p>
+<p>There&#8217;s not much actionable material in this article, other than references to areas of study recommended for software developers.</p>
+<h3>Related reading</h3>
+<ul>
+<li><a href="http://www.computer.org/portal/web/certification/csda/references" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/portal/web/certification/csda/references', 'Recommended references for the CSDA');" rel="nofollow">Recommended references for the CSDA</a>.
+<li><a href="http://www.computer.org/portal/web/swebok/consolidated_reference_list" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/portal/web/swebok/consolidated_reference_list', 'SWEBOK Version 3 Consolidated Reference List');" rel="nofollow">SWEBOK Version 3 Consolidated Reference List</a>.</li>
+</ul>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+															</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/tspd-2011-10/" rel="prev"><span class="meta-nav">&#8592;</span> The Software Practitioner&#8217;s Digest: October 2011</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/tspd-2011-12/" rel="next">The Software Practitioner&#8217;s Digest: December 2011 <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+		
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

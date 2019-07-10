@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Setting up your first server</title>
+	<atom:link href="/blog/posts/setting-up-your-first-server/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/setting-up-your-first-server/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Steve</title>
+		<link>/blog/posts/setting-up-your-first-server/comment-page-1/#comment-15240</link>
+		<dc:creator><![CDATA[Steve]]></dc:creator>
+		<pubDate>Wed, 11 Jun 2008 10:55:12 +0000</pubDate>
+		<guid isPermaLink="false">/?p=42#comment-15240</guid>
+		<description><![CDATA[Quite why anyone would bother using that absolutetelnet program on Windows when the excellent open source PuTTy is available, I don&#039;t know. And anyway, it&#039;s bad form to advertise your commerical software like that in blog comments, especially on an open source related blog.]]></description>
+		<content:encoded><![CDATA[<p>Quite why anyone would bother using that absolutetelnet program on Windows when the excellent open source PuTTy is available, I don&#8217;t know. And anyway, it&#8217;s bad form to advertise your commerical software like that in blog comments, especially on an open source related blog.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/setting-up-your-first-server/comment-page-1/#comment-10207</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Fri, 11 Apr 2008 19:42:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=42#comment-10207</guid>
+		<description><![CDATA[I have a better recommendation for &lt;a href=&quot;http://www.getgnulinux.org/windows/&quot; rel=&quot;nofollow&quot;&gt;Windows&lt;/a&gt; users:  Don&#039;t use the freedom-trampling software recommended above (nor Windows) and switch to &lt;a href=&quot;http://www.getgnulinux.org/&quot; rel=&quot;nofollow&quot;&gt;Linux&lt;/a&gt;.]]></description>
+		<content:encoded><![CDATA[<p>I have a better recommendation for <a href="http://www.getgnulinux.org/windows/" rel="nofollow">Windows</a> users:  Don&#8217;t use the freedom-trampling software recommended above (nor Windows) and switch to <a href="http://www.getgnulinux.org/" rel="nofollow">Linux</a>.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ammon Lauritzen</title>
+		<link>/blog/posts/setting-up-your-first-server/comment-page-1/#comment-10041</link>
+		<dc:creator><![CDATA[Ammon Lauritzen]]></dc:creator>
+		<pubDate>Wed, 09 Apr 2008 17:14:33 +0000</pubDate>
+		<guid isPermaLink="false">/?p=42#comment-10041</guid>
+		<description><![CDATA[Thanks for the plug ;)
+
+I&#039;ve never used AbsoluteTelnet, but I&#039;ll check it out.
+
+For windows users, I can recommend either &lt;a href=&#039;http://www.putty.org/&#039; rel=&quot;nofollow&quot;&gt;PuTTY&lt;/a&gt; (lightweight, open source, zero install process) or &lt;a href=&#039;ftp://ftp.ssh.com/pub/ssh&#039; rel=&quot;nofollow&quot;&gt;SSH Secure Shell 3.2.9&lt;/a&gt; (older free version of their commercial client, good sftp support, way more featureful than putty).]]></description>
+		<content:encoded><![CDATA[<p>Thanks for the plug 😉</p>
+<p>I&#8217;ve never used AbsoluteTelnet, but I&#8217;ll check it out.</p>
+<p>For windows users, I can recommend either <a href='http://www.putty.org/' rel="nofollow">PuTTY</a> (lightweight, open source, zero install process) or <a href='ftp://ftp.ssh.com/pub/ssh' rel="nofollow">SSH Secure Shell 3.2.9</a> (older free version of their commercial client, good sftp support, way more featureful than putty).</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Brian Pence</title>
+		<link>/blog/posts/setting-up-your-first-server/comment-page-1/#comment-9860</link>
+		<dc:creator><![CDATA[Brian Pence]]></dc:creator>
+		<pubDate>Mon, 07 Apr 2008 19:43:21 +0000</pubDate>
+		<guid isPermaLink="false">/?p=42#comment-9860</guid>
+		<description><![CDATA[Might want to mention that if you want to access your shiny new server from Windows, you&#039;ll need to install an ssh client.  No version of windows comes with an SSH client.  Heck, Vista doesn&#039;t even come with a TELNET client!  I&#039;d recommend AbsoluteTelnet for both telnet and ssh.  Check my sig below for a link.
+
+Regards,
+
+Brian Pence
+Celestial Software
+&lt;a href=&quot;http://www.celestialsoftware.net&quot;/ rel=&quot;nofollow&quot;&gt;http://www.celestialsoftware.net&lt;/a&gt;
+AbsoluteTelnet (for &lt;a href=&quot;http://www.celestialsoftware.net&quot;/ rel=&quot;nofollow&quot;&gt;telnet&lt;/a&gt; and &lt;a href=&quot;http://www.celestialsoftware.net&quot;/ rel=&quot;nofollow&quot;&gt;ssh&lt;/a&gt;)]]></description>
+		<content:encoded><![CDATA[<p>Might want to mention that if you want to access your shiny new server from Windows, you&#8217;ll need to install an ssh client.  No version of windows comes with an SSH client.  Heck, Vista doesn&#8217;t even come with a TELNET client!  I&#8217;d recommend AbsoluteTelnet for both telnet and ssh.  Check my sig below for a link.</p>
+<p>Regards,</p>
+<p>Brian Pence<br />
+Celestial Software<br />
+<a href="http://www.celestialsoftware.net/" rel="nofollow">http://www.celestialsoftware.net/</a><br />
+AbsoluteTelnet (for <a href="http://www.celestialsoftware.net/" rel="nofollow">telnet</a> and <a href="http://www.celestialsoftware.net/" rel="nofollow">ssh</a>)</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

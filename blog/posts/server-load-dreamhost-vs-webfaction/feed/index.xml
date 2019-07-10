@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Server load: DreamHost vs WebFaction</title>
+	<atom:link href="/blog/posts/server-load-dreamhost-vs-webfaction/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/server-load-dreamhost-vs-webfaction/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Kian Gray</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/comment-page-1/#comment-74084</link>
+		<dc:creator><![CDATA[Kian Gray]]></dc:creator>
+		<pubDate>Fri, 16 Jul 2010 04:43:34 +0000</pubDate>
+		<guid isPermaLink="false">/?p=125#comment-74084</guid>
+		<description><![CDATA[Dedicated servers are the best when you want a stable webhost. .;:]]></description>
+		<content:encoded><![CDATA[<p>Dedicated servers are the best when you want a stable webhost. .;:</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Eva Campbell</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/comment-page-1/#comment-71667</link>
+		<dc:creator><![CDATA[Eva Campbell]]></dc:creator>
+		<pubDate>Wed, 19 May 2010 08:31:03 +0000</pubDate>
+		<guid isPermaLink="false">/?p=125#comment-71667</guid>
+		<description><![CDATA[Can anyone suggest a reliable Dedicated Server hosting that is not very expensive?,`&#039;]]></description>
+		<content:encoded><![CDATA[<p>Can anyone suggest a reliable Dedicated Server hosting that is not very expensive?,`&#8217;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: jay</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/comment-page-1/#comment-38675</link>
+		<dc:creator><![CDATA[jay]]></dc:creator>
+		<pubDate>Mon, 29 Dec 2008 02:48:47 +0000</pubDate>
+		<guid isPermaLink="false">/?p=125#comment-38675</guid>
+		<description><![CDATA[I switched from dreamhost to webfaction, mainly for the speed increase. I tested using a drupal install with devel to document load times and webfaction was 4 times or more faster (in miliseconds) than dreamhost. Of course milliseconds won&#039;t even be visible to the human eye, but it all adds up. The fact dreamhost datacenter is in CA and webfaction is in dallas, where I live, it might not be totally fair.
+
+The day before my dreamhost account ended this happened: http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/. So that was another incentive to leave DH. Dreamhost operates their own datacenter I thought, which I would think make repairs faster. 
+
+The webfaction panel is very simplified compared to dreamhost which I think is a plus, but has fewer built in features. Webfaction is pretty cheap and their month to month pricing/billing is really good for a host. 
+
+If it is true that servers are overloaded down the road after the &quot;trial period&quot;, then they will ultimately screw themselves. They will start getting bad press like above that doesn&#039;t go away. But being a shared host inherently means trouble. You need to be lucky enough to get on a shared server with others who are not abusing it. 
+
+There will always be alternatives to both dreamhost and webfaction. For now webfaction seems okay for me, but that could change. A website owners end goal should be to eventually move to a dedicated server or VPS.]]></description>
+		<content:encoded><![CDATA[<p>I switched from dreamhost to webfaction, mainly for the speed increase. I tested using a drupal install with devel to document load times and webfaction was 4 times or more faster (in miliseconds) than dreamhost. Of course milliseconds won&#8217;t even be visible to the human eye, but it all adds up. The fact dreamhost datacenter is in CA and webfaction is in dallas, where I live, it might not be totally fair.</p>
+<p>The day before my dreamhost account ended this happened: <a href="http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/" rel="nofollow">http://www.dreamhoststatus.com/2008/12/14/spacey-filer-problems/</a>. So that was another incentive to leave DH. Dreamhost operates their own datacenter I thought, which I would think make repairs faster. </p>
+<p>The webfaction panel is very simplified compared to dreamhost which I think is a plus, but has fewer built in features. Webfaction is pretty cheap and their month to month pricing/billing is really good for a host. </p>
+<p>If it is true that servers are overloaded down the road after the &#8220;trial period&#8221;, then they will ultimately screw themselves. They will start getting bad press like above that doesn&#8217;t go away. But being a shared host inherently means trouble. You need to be lucky enough to get on a shared server with others who are not abusing it. </p>
+<p>There will always be alternatives to both dreamhost and webfaction. For now webfaction seems okay for me, but that could change. A website owners end goal should be to eventually move to a dedicated server or VPS.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Kevin</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/comment-page-1/#comment-37650</link>
+		<dc:creator><![CDATA[Kevin]]></dc:creator>
+		<pubDate>Fri, 19 Dec 2008 23:42:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=125#comment-37650</guid>
+		<description><![CDATA[I switched from Dreamhost to Webfaction a year ago, and my initial review would have looked much like yours. My sites were MUCH faster at Webfaction.
+
+Then, my sites got slower and slower, and when I complained, they said I should move my web sites to a different server. My sites were fast again, for a few months, and then they got slower, and slower... and it looks like I will have to go through the hassle of moving to a different server again.
+
+Right now my Webfaction server has a load of 12 and it takes between five and thirty seconds to load a page where it used to take less than one second. So I have to disagree with the claim that &quot;They don&#039;t overload their servers.&quot; The statistics on the Google Webmaster tools show steadily deteriorating performance with an average page load going from less than one second to more than four seconds over the last three months.
+
+After 60 days there are no refunds so be careful about signing up with them for a long term contract. I&#039;m tired of arguing with them about speed issues but at this point I don&#039;t have any alternative except to abandon the money I&#039;ve already paid them.]]></description>
+		<content:encoded><![CDATA[<p>I switched from Dreamhost to Webfaction a year ago, and my initial review would have looked much like yours. My sites were MUCH faster at Webfaction.</p>
+<p>Then, my sites got slower and slower, and when I complained, they said I should move my web sites to a different server. My sites were fast again, for a few months, and then they got slower, and slower&#8230; and it looks like I will have to go through the hassle of moving to a different server again.</p>
+<p>Right now my Webfaction server has a load of 12 and it takes between five and thirty seconds to load a page where it used to take less than one second. So I have to disagree with the claim that &#8220;They don&#8217;t overload their servers.&#8221; The statistics on the Google Webmaster tools show steadily deteriorating performance with an average page load going from less than one second to more than four seconds over the last three months.</p>
+<p>After 60 days there are no refunds so be careful about signing up with them for a long term contract. I&#8217;m tired of arguing with them about speed issues but at this point I don&#8217;t have any alternative except to abandon the money I&#8217;ve already paid them.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Thomas N.</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/comment-page-1/#comment-27411</link>
+		<dc:creator><![CDATA[Thomas N.]]></dc:creator>
+		<pubDate>Thu, 09 Oct 2008 09:47:21 +0000</pubDate>
+		<guid isPermaLink="false">/?p=125#comment-27411</guid>
+		<description><![CDATA[I&#039;m on the same DH server as you (I found your blog when i googled for trans-am.dreamhost.com users :P) and I pretty much agree with you... DH&#039;s servers tend to be a bit crowded and busy. However, I think I&#039;m staying for a number of reasons (including my own laziness and DH&#039;s terms of service which are among the better ones among cheap hosts).. but I can&#039;t say I&#039;m hosting anything important either (but i keep an account on https://www.nearlyfreespeech.net/ for stuff I&#039;d like to keep online more reliably)
+
+It remains to be seen how much reliability improvement will come from this
+http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/
+change of server architecture. Changes include local storage for better I/O and (i presume) 64 bit Linux systems with more than 4 gigs of ram.
+
+At the moment DH uses separate file and mysql boxes (probably with some network latency as a consequence). 
+
+How is your machine @webfaction configured? are the /home dirs NFS mounts, or do they use local raid 6 for /home (the latter being what DH will migrate to)?]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m on the same DH server as you (I found your blog when i googled for trans-am.dreamhost.com users :P) and I pretty much agree with you&#8230; DH&#8217;s servers tend to be a bit crowded and busy. However, I think I&#8217;m staying for a number of reasons (including my own laziness and DH&#8217;s terms of service which are among the better ones among cheap hosts).. but I can&#8217;t say I&#8217;m hosting anything important either (but i keep an account on <a href="https://www.nearlyfreespeech.net/" rel="nofollow">https://www.nearlyfreespeech.net/</a> for stuff I&#8217;d like to keep online more reliably)</p>
+<p>It remains to be seen how much reliability improvement will come from this<br />
+<a href="http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/" rel="nofollow">http://blog.dreamhost.com/2008/10/01/lets-save-our-environment-harder/</a><br />
+change of server architecture. Changes include local storage for better I/O and (i presume) 64 bit Linux systems with more than 4 gigs of ram.</p>
+<p>At the moment DH uses separate file and mysql boxes (probably with some network latency as a consequence). </p>
+<p>How is your machine @webfaction configured? are the /home dirs NFS mounts, or do they use local raid 6 for /home (the latter being what DH will migrate to)?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

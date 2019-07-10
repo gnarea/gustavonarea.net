@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>RMLL &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/rmll/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Back from the Libre Software Meeting (RMLL) 2008</title>
+		<link>/blog/posts/back-from-the-libre-software-meeting-rmll-2008/</link>
+		<pubDate>Tue, 08 Jul 2008 13:58:59 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[RMLL]]></category>
+
+		<guid isPermaLink="false">/?p=61</guid>
+		<description><![CDATA[After 6 days of delicious pains au chocolat, spreading the word about GLM (by means of a conference and a booth) and having fun with cool people, I&#8217;m back home in Madrid from the RMLL.]]></description>
+		</item>
+	</channel>
+</rss>

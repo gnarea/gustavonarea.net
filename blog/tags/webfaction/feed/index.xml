@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WebFaction &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/webfaction/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Server load: DreamHost vs WebFaction</title>
+		<link>/blog/posts/server-load-dreamhost-vs-webfaction/</link>
+		<comments>/blog/posts/server-load-dreamhost-vs-webfaction/#comments</comments>
+		<pubDate>Sat, 13 Sep 2008 10:35:50 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Dreamhost]]></category>
+		<category><![CDATA[WebFaction]]></category>
+
+		<guid isPermaLink="false">/?p=125</guid>
+		<description><![CDATA[I got tired of the slowness of DreamHost servers and its consequences, such as sites being down or extremely slow from time to time. So I decided to migrate progressively over the next weeks to WebFaction because: The costs are the same. They don&#8217;t overload their servers. They have an excellent reputation in the TurboGears... <a class="more-link" href="/blog/posts/server-load-dreamhost-vs-webfaction/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/server-load-dreamhost-vs-webfaction/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

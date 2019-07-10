@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Gustavo &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/posts/author/admin/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>How docker-dev Makes Docker Rock in Development, Plus An Example With Python</title>
+		<link>/blog/posts/docker-dev-python/</link>
+		<pubDate>Thu, 31 Aug 2017 00:00:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=1001</guid>
+		<description><![CDATA[Docker is a great tool to deploy your application to staging and production environments, but the current ecosystem make it much less pleasant to use in development. Docker Compose does help a lot, but things could be more efficient -- Even for the most common tasks, you still have to pass additional options to <em>docker</em> and <em>docker-compose</em>, and resort to utilities like <em>awk</em> and <em>xargs</em>.]]></description>
+		</item>
+		<item>
+		<title>Records: A New Pythonic Data Type for Your Toolbox</title>
+		<link>/blog/posts/pyrecord-announcement/</link>
+		<comments>/blog/posts/pyrecord-announcement/#comments</comments>
+		<pubDate>Sun, 09 Nov 2014 19:59:34 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=825</guid>
+		<description><![CDATA[namedtuple, classes and dictionaries are no longer the only options to represent a key/value mapping where all they keys are known upfront: Records may be a better alternative and they&#8217;re now available in Python via PyRecord. This implementation is meant to be a highly improved version of namedtuple, but not yet a replacement. Features include:... <a class="more-link" href="/blog/posts/pyrecord-announcement/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/pyrecord-announcement/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: May-June 2012</title>
+		<link>/blog/posts/tspd-2012-06/</link>
+		<pubDate>Wed, 29 Aug 2012 22:56:37 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=762</guid>
+		<description><![CDATA[Late by two months, here&#8217;s the 6th issue of The Software Practitioner&#8217;s Digest, featuring only one relevant resource published between May and June 2012. Hopefully the next issue won&#8217;t be out too late, as I&#8217;m no longer as busy as I&#8217;d been for the past couple of months, although there&#8217;s still some catching-up to do.... <a class="more-link" href="/blog/posts/tspd-2012-06/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: March-April 2012</title>
+		<link>/blog/posts/tspd-2012-04/</link>
+		<pubDate>Thu, 17 May 2012 23:01:48 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=716</guid>
+		<description><![CDATA[This is the March-April 2012 issue of The Software Practitioner&#8217;s Digest, featuring an experimental format where the editor&#8217;s comments are presented in an introductory video and the highlighted publications are listed with their original abstracts. In this issue: Mutation-Driven Generation of Unit Tests and Oracles Easy Approach to Requirements Syntax (EARS) Comparison of approaches to... <a class="more-link" href="/blog/posts/tspd-2012-04/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>TSPD Goes Bimonthly</title>
+		<link>/blog/posts/tspd-goes-bimonthly/</link>
+		<pubDate>Thu, 08 Mar 2012 23:19:13 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=705</guid>
+		<description><![CDATA[Due to the low volume of relevant resources published during even months, I&#8217;ve decided to make The Software Practitioner&#8217;s Digest a bimonthly periodical starting with the March/April 2012 issue to be published in early May. Looking through the notes I took for the publications I read in February, I couldn&#8217;t really find anything relevant for... <a class="more-link" href="/blog/posts/tspd-goes-bimonthly/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: January 2012</title>
+		<link>/blog/posts/tspd-2012-01/</link>
+		<pubDate>Mon, 27 Feb 2012 23:50:38 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=653</guid>
+		<description><![CDATA[This late issue of The Software Practitioner&#8217;s Digest, the first in 2012, highlights resources published in January in Better Software, Dr. Dobb&#8217;s, IEEE Software and Software Engineering Radio. This digest has been the most difficult to compile so far, given how hesitant I was with regards to the inclusion of some research articles and essays... <a class="more-link" href="/blog/posts/tspd-2012-01/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: December 2011</title>
+		<link>/blog/posts/tspd-2011-12/</link>
+		<pubDate>Tue, 10 Jan 2012 23:33:32 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=623</guid>
+		<description><![CDATA[This is the third issue of the The Software Practitioner&#8217;s Digest, covering the little activity from December 2011 &#8212; A very quiet month not only because of the holiday season, but also because it&#8217;s an even month and the periodicals I follow are published in odd months. The next issue should be along the lines... <a class="more-link" href="/blog/posts/tspd-2011-12/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: November 2011</title>
+		<link>/blog/posts/tspd-2011-11/</link>
+		<pubDate>Tue, 20 Dec 2011 11:56:00 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=542</guid>
+		<description><![CDATA[This tardy issue of The Software Practitioner&#8217;s Digest highlights articles from Better Software, IEEE Software, Software Engineering Notes and Jakob Nielsen, as well as a book on applied psychology in software development teams, all of which were published in November 2011. In this issue: Technical debt Tom DeMarco: All Late Projects Are the Same Improving... <a class="more-link" href="/blog/posts/tspd-2011-11/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>The Software Practitioner&#8217;s Digest: October 2011</title>
+		<link>/blog/posts/tspd-2011-10/</link>
+		<comments>/blog/posts/tspd-2011-10/#comments</comments>
+		<pubDate>Tue, 15 Nov 2011 00:23:46 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[The Software Practitioner's Digest]]></category>
+
+		<guid isPermaLink="false">/?p=440</guid>
+		<description><![CDATA[Hello, World! You&#8217;re reading the first issue of The Software Practitioner&#8217;s Digest, covering resources published during October 2011. Computer The October issue of Computer features articles on Software Engineering and how it meets other fields. Can Practitioners Neglect Theory and Theoreticians Neglect Practice? Manfred Broy explains the importance of theory in software development and why... <a class="more-link" href="/blog/posts/tspd-2011-10/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/tspd-2011-10/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>&#8220;WSGI from Start to Finish&#8221; materials available</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/</link>
+		<comments>/blog/posts/wsgi-from-start-to-finish-materials-available/#comments</comments>
+		<pubDate>Tue, 20 Jul 2010 16:03:25 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Conferences]]></category>
+		<category><![CDATA[europython]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=387</guid>
+		<description><![CDATA[I&#8217;ve just uploaded the materials for my tutorial at EuroPython 2010, &#8220;WSGI from Start to Finish&#8221;. You can also get the slides and the WSGI cheat-sheet individually. I&#8217;ve updated the slides so that they make sense even without me speaking; so now they have references to the code examples. The tutorial was recorded and should... <a class="more-link" href="/blog/posts/wsgi-from-start-to-finish-materials-available/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/wsgi-from-start-to-finish-materials-available/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

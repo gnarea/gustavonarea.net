@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pootle &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/pootle/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Installing Pootle on Debian Etch, The Easiest Way</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/</link>
+		<comments>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/#comments</comments>
+		<pubDate>Wed, 21 May 2008 15:34:52 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Internationalization]]></category>
+		<category><![CDATA[Pootle]]></category>
+
+		<guid isPermaLink="false">/?p=41</guid>
+		<description><![CDATA[Pootle is a user-friendly web application for online translation of contents. It&#8217;s used by organizations like Creative Commons, OpenOffice.org and GNU/Linux Matters. I&#8217;m going to show you how to install it the easiest way, from my experience with the GLM Translation Service under Debian 4.0 (this guide might also work under Ubuntu, though). I&#8217;ll use... <a class="more-link" href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

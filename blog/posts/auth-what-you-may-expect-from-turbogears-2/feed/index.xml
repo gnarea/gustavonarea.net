@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Auth: What you may expect from TurboGears 2</title>
+	<atom:link href="/blog/posts/auth-what-you-may-expect-from-turbogears-2/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Christian Scholz</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/comment-page-1/#comment-29402</link>
+		<dc:creator><![CDATA[Christian Scholz]]></dc:creator>
+		<pubDate>Mon, 27 Oct 2008 21:51:15 +0000</pubDate>
+		<guid isPermaLink="false">/?p=148#comment-29402</guid>
+		<description><![CDATA[I think so, too regarding repoze.who, esp. as in the process the user actually has to login, so the two will mix.
+
+Looking forward to it :-) (and will keep thinking about how to do OAuth best in the meanwhile).]]></description>
+		<content:encoded><![CDATA[<p>I think so, too regarding repoze.who, esp. as in the process the user actually has to login, so the two will mix.</p>
+<p>Looking forward to it <img src="/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (and will keep thinking about how to do OAuth best in the meanwhile).</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/comment-page-1/#comment-29394</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Mon, 27 Oct 2008 20:13:58 +0000</pubDate>
+		<guid isPermaLink="false">/?p=148#comment-29394</guid>
+		<description><![CDATA[Hi, Christian!
+
+I think it doesn&#039;t fit into repoze.who because r.who only deals with authentication, but it&#039;d be a wonderful addition to the authorization framework I&#039;ve been working on, &lt;a href=&quot;http://lists.repoze.org/pipermail/repoze-dev/2008-October/000968.html&quot; rel=&quot;nofollow&quot;&gt;which I hope to make TurboGears-independent&lt;/a&gt;, either as part of the Repoze project or as an independent project.
+
+It can basically work where repoze.who can work, &lt;em&gt;although&lt;/em&gt; it has some TurboGears-specific bits. I would wait until it&#039;s fully independent of TurboGears.
+
+Cheers!]]></description>
+		<content:encoded><![CDATA[<p>Hi, Christian!</p>
+<p>I think it doesn&#8217;t fit into repoze.who because r.who only deals with authentication, but it&#8217;d be a wonderful addition to the authorization framework I&#8217;ve been working on, <a href="http://lists.repoze.org/pipermail/repoze-dev/2008-October/000968.html" rel="nofollow">which I hope to make TurboGears-independent</a>, either as part of the Repoze project or as an independent project.</p>
+<p>It can basically work where repoze.who can work, <em>although</em> it has some TurboGears-specific bits. I would wait until it&#8217;s fully independent of TurboGears.</p>
+<p>Cheers!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Christian Scholz</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/comment-page-1/#comment-29368</link>
+		<dc:creator><![CDATA[Christian Scholz]]></dc:creator>
+		<pubDate>Mon, 27 Oct 2008 15:34:38 +0000</pubDate>
+		<guid isPermaLink="false">/?p=148#comment-29368</guid>
+		<description><![CDATA[I really should finish that OpenID plugin up, right :)
+
+Hope to have some time this week, shouldn&#039;t be too much left (basically it&#039;s working) but some documentation would be good (well, and tests but testing openid is always a bit tricky due to it&#039;s redirecting nature but maybe somebody wants to help out).
+
+I was also playing around with OAuth recently but the big question is if it fits really into repoze.who. Nevertheless I guess it can make sense as sort of middleware which basically gives you back the token and you can decide upon the token what you allow and what not. But some thinking and discussion needs to go into this (as we did a little on #repoze).
+
+Any news can then be found on my blog.
+
+The stuff you write about also sounds quite cool. Will this also be usable in any WSGI context?]]></description>
+		<content:encoded><![CDATA[<p>I really should finish that OpenID plugin up, right <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Hope to have some time this week, shouldn&#8217;t be too much left (basically it&#8217;s working) but some documentation would be good (well, and tests but testing openid is always a bit tricky due to it&#8217;s redirecting nature but maybe somebody wants to help out).</p>
+<p>I was also playing around with OAuth recently but the big question is if it fits really into repoze.who. Nevertheless I guess it can make sense as sort of middleware which basically gives you back the token and you can decide upon the token what you allow and what not. But some thinking and discussion needs to go into this (as we did a little on #repoze).</p>
+<p>Any news can then be found on my blog.</p>
+<p>The stuff you write about also sounds quite cool. Will this also be usable in any WSGI context?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

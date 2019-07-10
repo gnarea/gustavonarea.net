@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>repoze.who &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/repozewho/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Web Site Security With repoze.who and repoze.what</title>
+		<link>/blog/posts/repoze-auth/</link>
+		<comments>/blog/posts/repoze-auth/#comments</comments>
+		<pubDate>Tue, 01 Jun 2010 14:41:13 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Publications]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Python Magazine]]></category>
+		<category><![CDATA[repoze.what]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=294</guid>
+		<description><![CDATA[This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the article are only applicable to repoze.who 1.0 and repoze.what 1.0, not repoze.who 2 and repoze.what 1.1 which are under development as of this writing. Have you ever created a Web application? If so, it&#8217;s... <a class="more-link" href="/blog/posts/repoze-auth/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/repoze-auth/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Auth: What you may expect from TurboGears 2</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/</link>
+		<comments>/blog/posts/auth-what-you-may-expect-from-turbogears-2/#comments</comments>
+		<pubDate>Mon, 27 Oct 2008 01:38:33 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[OAuth]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TG2]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=148</guid>
+		<description><![CDATA[Those still using TurboGears 1 will find a big improvement in the authentication and authorizarion area when they upgrade to version 2: TurboGears 2 ships with an easy-to-use, pluggable, extendable and well-documented authentication and authorization system, powered by repoze.who and tgext.authorization (whose documentation will be available along with TurboGears&#8217; very soon). Some of the features... <a class="more-link" href="/blog/posts/auth-what-you-may-expect-from-turbogears-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/auth-what-you-may-expect-from-turbogears-2/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>The repoze.who LDAP plugin will be an official plugin</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/</link>
+		<comments>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/#comments</comments>
+		<pubDate>Mon, 27 Oct 2008 00:15:01 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[LDAP]]></category>
+		<category><![CDATA[Repoze]]></category>
+		<category><![CDATA[repoze.who]]></category>
+
+		<guid isPermaLink="false">/?p=145</guid>
+		<description><![CDATA[Some weeks ago I was invited to make repoze.who.plugins.ldap an official repoze.who plugin, which means that: The license will change. It will use Repoze&#8217;s. The development tools will be migrated from Launchpad (bug tracker, repository, etc). The LDAP plugin&#8217;s documentation will be included into repoze.who&#8217;s. It will be maintained by Repoze commiters, and I&#8217;m one... <a class="more-link" href="/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Enable LDAP authentication in your WSGI applications!</title>
+		<link>/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/</link>
+		<pubDate>Mon, 08 Sep 2008 23:50:15 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[LDAP]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=119</guid>
+		<description><![CDATA[repoze.who.plugins.ldap is an straightforward yet powerful solution to enable LDAP authentication in your WSGI application. It enables you to have LDAP authentication working in your new or existing applications, in few minutes and with few lines of code! It&#8217;s a plugin for the repoze.who framework, featuring not only an LDAP authenticator, but also related utilities.... <a class="more-link" href="/blog/posts/enable-ldap-authentication-in-your-wsgi-applications/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+	</channel>
+</rss>

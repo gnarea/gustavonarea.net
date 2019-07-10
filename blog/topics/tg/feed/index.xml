@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Turbo Gears &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/topics/tg/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Web Site Security With repoze.who and repoze.what</title>
+		<link>/blog/posts/repoze-auth/</link>
+		<comments>/blog/posts/repoze-auth/#comments</comments>
+		<pubDate>Tue, 01 Jun 2010 14:41:13 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Publications]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Python Magazine]]></category>
+		<category><![CDATA[repoze.what]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=294</guid>
+		<description><![CDATA[This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the article are only applicable to repoze.who 1.0 and repoze.what 1.0, not repoze.who 2 and repoze.what 1.1 which are under development as of this writing. Have you ever created a Web application? If so, it&#8217;s... <a class="more-link" href="/blog/posts/repoze-auth/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/repoze-auth/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>&#8220;WSGI from Start to Finish&#8221; at EuroPython 2010</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/</link>
+		<comments>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/#comments</comments>
+		<pubDate>Tue, 25 May 2010 23:03:49 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Conferences]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=336</guid>
+		<description><![CDATA[If you&#8217;re a Web Application Developer using Python, you may be very interested in the tutorial I am presenting at EuroPython 2010: &#8220;WSGI from Start to Finish: How to use the power of WSGI to solve problems your framework cannot solve&#8221;. Your favorite Web framework is not able to meet all your needs, all the... <a class="more-link" href="/blog/posts/wsgi-from-start-to-finish-at-europython-2010/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Getting back on track</title>
+		<link>/blog/posts/getting-back-on-track/</link>
+		<pubDate>Tue, 17 Nov 2009 23:38:59 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Work]]></category>
+		<category><![CDATA[2degrees]]></category>
+		<category><![CDATA[Django]]></category>
+		<category><![CDATA[Madrid]]></category>
+		<category><![CDATA[Oxford]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spain]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[UK]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=285</guid>
+		<description><![CDATA[Yes, I&#8217;m alive. Since the second half of last summer I&#8217;ve been inactive in the Free Software arena. No commits, no emails from me in the last few months which may indicate that the projects are dead. So I wanted to write to let you know that I have no plans to stop maintaining any... <a class="more-link" href="/blog/posts/getting-back-on-track/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>Auth: What you may expect from TurboGears 2</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/</link>
+		<comments>/blog/posts/auth-what-you-may-expect-from-turbogears-2/#comments</comments>
+		<pubDate>Mon, 27 Oct 2008 01:38:33 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[OAuth]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TG2]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=148</guid>
+		<description><![CDATA[Those still using TurboGears 1 will find a big improvement in the authentication and authorizarion area when they upgrade to version 2: TurboGears 2 ships with an easy-to-use, pluggable, extendable and well-documented authentication and authorization system, powered by repoze.who and tgext.authorization (whose documentation will be available along with TurboGears&#8217; very soon). Some of the features... <a class="more-link" href="/blog/posts/auth-what-you-may-expect-from-turbogears-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/auth-what-you-may-expect-from-turbogears-2/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Joining the development of TurboGears</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/</link>
+		<comments>/blog/posts/joining-the-development-of-turbogears/#comments</comments>
+		<pubDate>Mon, 18 Aug 2008 17:23:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[TurboGears]]></category>
+
+		<guid isPermaLink="false">/?p=91</guid>
+		<description><![CDATA[I&#8217;ve had the great pleasure of being invited by the TurboGears team to become an official committer for the great TurboGears framework. This is because I&#8217;ve been contributing patches for TurboGears 2 and other packages used by Animador (a TurboGears 2 application), since I started its development, in order to fix bugs and/or add new... <a class="more-link" href="/blog/posts/joining-the-development-of-turbogears/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/joining-the-development-of-turbogears/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

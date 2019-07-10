@@ -1,0 +1,378 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>Windows | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Windows Tag Feed" href="/blog/tags/windows/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.16" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="archive tag tag-windows tag-82">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="post-archive blog-posts readable-content">
+			<header class="page-header">
+				<h1 class="page-title">Posts Tagged <span class="on">&#8594;</span> <span>Windows</span></h1>
+			</header>
+			<!-- end .page-header -->
+			
+			<article id="post-222" class="clearfix post-222 post type-post status-publish format-standard hentry category-free-software tag-computers tag-dell tag-ubuntu tag-windows">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/dell-ashamed-ubuntu-laptops/" rel="bookmark">Dell is ashamed of its Ubuntu-powered laptops</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/dell-ashamed-ubuntu-laptops/" title="5:54 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">April 16, 2009</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/dell-ashamed-ubuntu-laptops/#comments">45 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>My laptop was slow while running my chain and ball KDE 4, and also got some things broken recently (e.g., battery, screen hinges), so I decided to buy a new one last week before it leaves me stranded. And soon enough I realized that I had two options:</p>
+<ul>
+<li>Buy it in a place where every single computer ships with Windows, so that I could claim a refund. I didn&#8217;t care about the money: I just wanted to mess with that kind of vendors and file a lawsuit if I didn&#8217;t get it on good terms, to encourage people to do the same thing and thus contribute to do away with the <a href="http://www.getgnulinux.org/windows/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/windows/', 'Windows');" title="About Windows">Windows</a> Tax.</li>
+<li>Purchase it from a <a href="http://www.linuxpreloaded.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.linuxpreloaded.com/', 'Linux pre-installed');" title="GNU/Linux computers">Linux pre-installed</a> vendor, to support them. Even if they pre-installed a freedom-trampling system like Windows, it&#8217;d be good to show them that Freedomware worths it.</li>
+</ul>
+<p>I liked both options alike, so I based my decision on the computer specs and costs, not on the vendor/manufacturer.</p>
+<p>I decided to get a Dell XPS M1330, one of the two Ubuntu-powered computers that I remembered Dell sells in Spain. So I visited <a href="http://www.dell.es/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.es/ubuntu', 'dell.es/ubuntu');">dell.es/ubuntu</a> and was surprised to find just a couple of <a href="http://en.wikipedia.org/wiki/Netbook" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Netbook', 'netbooks');" title="What's a netbook?">netbooks</a>! Change of plans; now I&#8217;ll have to get it with Windows and claim a refund, I told myself.</p>
+<p>So the first step was to get a proof that I was imposed the operating system when I bought the laptop. Sales representatives were available for a chat, so I asked them how could I get a Dell XPS M1330 without Windows. The surprising answer was that <strong>it was available with Ubuntu</strong> and pointed me to <a href="http://configure2.euro.dell.com/dellstore/config.aspx?cs=esdhs1&amp;kc=a&amp;oc=N04X3315&amp;x=0&amp;y=0" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://configure2.euro.dell.com/dellstore/config.aspx?cs=esdhs1&amp;kc=a&amp;oc=N04X3315&amp;x=0&amp;y=0', 'configure2.euro.dell.com/dellstore/');" title="Dell XPS M1330 with Ubuntu pre-installed, in Spain">configure2.euro.dell.com/dellstore/</a>! Plans changed one more time; back to the original plan, get it with <a href="http://www.getgnulinux.org/switch_to_linux/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/switch_to_linux/', 'Linux');">Linux</a>.</p>
+<p>I obviously asked why it wasn&#8217;t listed on <a href="http://www.dell.es/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.es/ubuntu', 'dell.es/ubuntu');">dell.es/ubuntu</a>. The sales rep said that s/he didn&#8217;t know why and that s/he will forward my query to the relevant department. I bought the laptop with Ubuntu that day and that was it.</p>
+<p>Today, out of curiosity, I went to <a href="http://www.dell.es/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.es/ubuntu', 'dell.es/ubuntu');">dell.es/ubuntu</a> and found that it hasn&#8217;t changed! <strong>The link the sales rep provided me with the other day still works but the laptop is not listed</strong>. And the same happens in <a href="http://www.dell.fr/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.fr/ubuntu', 'dell.fr/ubuntu');">dell.fr/ubuntu</a>, <a href="http://www.dell.co.uk/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.co.uk/ubuntu', 'dell.co.uk/ubuntu');">dell.co.uk/ubuntu</a> and <a href="http://www.dell.de/ubuntu" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.dell.de/ubuntu', 'dell.de/ubuntu');">dell.de/ubuntu</a>, for example.</p>
+<p>This can hardly be a mistake. <strong>Why the heck does Dell hide some of the few Linux-powered computers they sell now?</strong> Maybe due to threats from Microsoft? After all, <a href="http://www.google.com/search?q=%2Bmicrosoft%2Bmonopolistic%2Bpractices" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.google.com/search?q=%2Bmicrosoft%2Bmonopolistic%2Bpractices', 'it&#8217;s well-know for its monopolistic practices');" title="Microsoft and its monopolistic practices">it&#8217;s well-know for its monopolistic practices</a>.</p>
+<p><strong>PS (April 18th @ 14:00 UTC):</strong> The link above to <a href="http://configure2.euro.dell.com/dellstore/config.aspx?cs=esdhs1&amp;kc=a&amp;oc=N04X3315&amp;x=0&amp;y=0" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://configure2.euro.dell.com/dellstore/config.aspx?cs=esdhs1&amp;kc=a&amp;oc=N04X3315&amp;x=0&amp;y=0', 'configure2.euro.dell.com/dellstore/');">configure2.euro.dell.com/dellstore/</a> doesn&#8217;t work at times today, so here&#8217;s an screenshot if it doesn&#8217;t work for you:</p>
+<p><a href="https://media.gustavonarea.net/ubuntu-xps-configurator.png"><img class="aligncenter size-thumbnail wp-image-234" title="Dell XPS with Ubuntu in Dell's configuration service" src="//media.gustavonarea.net/ubuntu-xps-configurator.png" alt="" width="150" height="92" /></a></p>
+<p><strong>PS (April 19th @ 18:30 UTC):</strong> This is an screenshot of the random error I warned about yesterday (which I took just in case), before reaching Digg.com&#8217;s front-page:</p>
+<p><a href="https://media.gustavonarea.net/dell-ubuntu-error-april18.png"><img class="aligncenter size-thumbnail wp-image-239" title="Error before hitting Digg.com's front-page" src="//media.gustavonarea.net/dell-ubuntu-error-april18.png" alt="" width="150" height="92" /></a></p>
+<p>Now, almost 20 hours after reaching Digg&#8217;s front-page, the link no longer works (not even at times, as yesterday) and a better formatted page is displayed instead:</p>
+<p><a href="https://media.gustavonarea.net/dell-ubuntu-error-april19.png"><img class="aligncenter size-thumbnail wp-image-240" title="Error after hitting Digg.com's front-page" src="//media.gustavonarea.net/dell-ubuntu-error-april19.png" alt="" width="150" height="92" /></a></p>
+<p>I don&#8217;t know if the different error pages actually mean something, but my point is that the link is now dead.</p>
+		
+		
+			</div>
+</article><article id="post-45" class="clearfix post-45 post type-post status-publish format-standard hentry category-free-software category-gnulinux-matters tag-animador tag-closed-standards tag-ffii tag-formats tag-freedomware tag-fsf tag-gglo tag-glm tag-gnu tag-gnulinux tag-mozilla tag-open-standards tag-protocols tag-unconstrained tag-windows">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/" rel="bookmark">I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/" title="8:09 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">March 5, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/#comments">6 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>We <a href="http://www.softwareliberty.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.softwareliberty.com/', 'freedomware');" title="Free Software">freedomware</a> advocates think that switching to a Freedom-respectful operating system (usually <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GNU/Linux');" title="Linux, an operating system that respects your Freedom">GNU/Linux</a>) is the most important step when switching to freedomware, and therefore we focus on promoting these systems (myself included). However, I&#8217;ve found out that <strong>it does <em>not</em> matter <em>that</em> much</strong>.</p>
+<p>The first and most important step when switching to Freedomware is using formats and protocols defined as <a href="http://opensource.org/osr/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://opensource.org/osr/', 'Open Standards');" title="Open Standards Requirement for Software">Open Standards</a>, even under a Freedom-trampling system like <a href="http://www.getgnulinux.org/windows/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/windows/', 'Windows');" title="Windows, a Freedom-trampling software">Windows</a>: <strong>Vendor lock-in is only possible by means of closed standards</strong>. They are the stone corner of the non-free software industry.</p>
+<p>Why those who know about Freedomware, and support the idea, don&#8217;t make the switch? Aside their inability to follow their thoughts (the games excuse is included here), because switching from <em>Windows+Office+MSNMessenger/Etc</em> to <em>GNU/Linux+OpenOffice.org+Pidgin+Etc</em> seems like a <strong>huge</strong> step, only made by <em>adventurous souls</em>.</p>
+<p>The most important things for them, their information and communications, are already locked-in, tied to a single vendor. <strong>Encouraging them to switch to a freedom-respectful operating system is an unwise recommendation, if you know they still rely on closed standards</strong>:</p>
+<ol>
+<li>If you say that they won&#8217;t be able to use the programs they were used to, but their free alternatives, you will fright them. Not to mention what they&#8217;ll think when they know that their MP3s, WMVs and .doc documents won&#8217;t play nice, and that their MSN Messenger sucks under GNU/Linux.</li>
+<li>If you help them to keep their files under closed formats and communicate through closed protocols, then, why on the earth do you want them to use a free operating system? <em>Using a free operating system <strong>simply</strong> means that most of your software is free</em>. It <em>seldom</em> means that the user is reluctant to use Freedom-trampling software, closed formats and/or closed protocols, again. Quick demonstration: Take a look at any community of the easy-to-use distros and you will find that these standards are widely used among the majority of these users (although this doesn&#8217;t mean that <a href="http://www.gentoo.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gentoo.org/', 'Gentoo');" title="Gentoo GNU/Linux">Gentoo</a> users, for example, are all disciples of the Church of Emacs).</li>
+</ol>
+<p>The only way to make safely the switch to a Freedom-respectful computing environment, with no turning back, is by getting rid of closed formats and protocols, before switching to a free operating system. Windows-GNU/Linux dual boots wouldn&#8217;t be necessary anymore.</p>
+<p>These closed standards have always been a top-priority for non-free software vendors, unlike for us. <strong>Closed standards represent the Achilles&#8217; heel of the non-free software industry</strong>. We must hit them there! Pay attention to this excerpt from <a href="http://ec.europa.eu/comm/competition/antitrust/cases/decisions/37792/en.pdf" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ec.europa.eu/comm/competition/antitrust/cases/decisions/37792/en.pdf', 'a memo sent by Aaron Contorer, Microsoft general manager for C++ development, to Bill Gates');" title="The European Commission, in its March 24, 2004 decision on Microsoft's business practices">a memo sent by Aaron Contorer, Microsoft general manager for C++ development, to Bill Gates</a>:</p>
+<blockquote><p> &#8220;The Windows API is so broad, so deep, and so functional that most <a href="http://en.wikipedia.org/wiki/Independent_software_vendor" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Independent_software_vendor', 'ISVs');" title="Independent software vendor">ISVs</a> would be crazy not to use it. And it is so deeply embedded in the source code of many Windows apps that there is a huge switching cost to using a different operating system instead&#8230;<br />
+&#8220;It is this switching cost that has given the customers the patience to stick with Windows through all our mistakes, our buggy drivers, our high <a href="http://en.wikipedia.org/wiki/Total_cost_of_ownership" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Total_cost_of_ownership', 'TCO');" title="Total cost of ownership">TCO</a>, our lack of a sexy vision at times, and many other difficulties [&#8230;] Customers constantly evaluate other desktop platforms, [but] it would be so much work to move over that they hope we just improve Windows rather than force them to move.<br />
+&#8220;In short, without this exclusive franchise called the Windows API, we would have been dead a long time ago.&#8221;</p></blockquote>
+<h2>OK, that&#8217;s the root problem, but what&#8217;s the solution!?</h2>
+<p><strong>We must put <em>more</em> effort into making people switch to open formats and open protocols</strong>, than the effort we put into encouraging them to switch to a freedom-respectful operating system like GNU/Linux. This is, our goal should be that people will get rid of closed formats and protocols <em>before</em> switching to a free operating system. <em>Don&#8217;t expect them to make the switch after installing the free system!</em> Or at least don&#8217;t get your hopes up if you ignore this (take the longer yet save path!).</p>
+<p>The above might seem obvious to you at this point, and you might wonder, <em>how are we supposed to do so effectively?</em></p>
+<h2>My proposal</h2>
+<p>We have to carry out three tasks to reach our goal:</p>
+<ol>
+<li>First and foremost, make people worry about the formats and protocols they rely on;</li>
+<li>Make it really easy for people to switch to unconstrained formats and protocols, under the current operating system, but also warn them that everything won&#8217;t be completely solved until they throw the non-free system away;</li>
+<li><strong>And <em>finally</em></strong>, make people switch to a freedom-respectful operating system, like GNU/Linux.</li>
+</ol>
+<p>(Notice that nowadays most of us start with task #3, then <em>some of us</em> go further and make #1, but nearly we all forget about task #2)</p>
+<p>These tasks should be performed separately and harmoniously, with one project for each of them. The good news is that we won&#8217;t have to start from scratch, as there are some existing efforts: <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="The Freedomware Marketing Organization">GNU/Linux Matters</a> is going to develop <a href="https://tracker.gnulinuxmatters.org/wiki/Uncontrained" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Uncontrained', 'Unconstrained.info');" title="Uncontrained.info">Unconstrained.info</a>, a project that would meet the requirements of task #1, and it also maintains <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GetGNULinux.org');" title="GNU/Linux, an operating system that respects your Freedom">GetGNULinux.org</a>, the project that already meets the requirements of task #3.</p>
+<p>The second task is by far the hardest one. <em>The</em> solution, in my opinion, is a software suite made up of the following well-integrated modules:</p>
+<ol>
+<li><strong>A package manager</strong>, like those for GNU/Linux: It will make it easy for people to get started with Freedomware applications that support unconstrained formats and protocols. These programs must be stored on special repositories, so that we could disable support for constrained standards by default. <em>This manager would only install Freedomware required to make the switch</em>, excluding <em>useful</em> free add-ons for the operating system: Our goal is not to make people feel comfortable with their freedom-trampling operating system. Only the best Freedomware packages will be available, with no alternatives: It would make no sense to include both OpenOffice.org and Koffice (for example), we don&#8217;t want people to <em>experiment</em> with the free alternatives, just that they make the switch.</li>
+<li><strong>A file format converter</strong>: An extremely easy to use Freedomware application to convert <em>any file</em> stored with a closed format into one stored with the best-suitable open format, preferably/optionally deleting the former file after the conversion. When the suite is being installed, it must configure the system to open those constrained-formats-based files with this converter.</li>
+<li><strong>A Instant Messaging Migrator</strong>: The hardest to make module. It will help people migrate to open protocols such as Jabber or SIP. It would create a gratis Jabber account with any provider. Then, if allowed, it would let people&#8217;s contacts know that they are making the switch to an unconstrained and better messaging network (encouraging them to make the switch too). Finally, it would configure the pre-selected free IM client accordingly, making it ready to use.</li>
+<li><strong>A tutor</strong>: A program, similar to a Help Center, that would advice people on unconstrained formats and protocols. It would provide guidance throughout the migration process. It would make sure that people keep in mind that they should switch to a free operating system once they get used to the new standards.</li>
+</ol>
+<p>This suite must meet these requirements:</p>
+<ul>
+<li>Be multi-platform: It must run on all the mainstream operating systems, including <strong>GNU/Linux</strong> (yes, haven&#8217;t you noticed the amount of GNU/Linux users tied to constrained formats and protocols?).</li>
+<li>Be multilingual.</li>
+<li>Be extremely easy to use.</li>
+</ul>
+<p>Once <a href="https://tracker.gnulinuxmatters.org/wiki/Uncontrained" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Uncontrained', 'Unconstrained.info');" title="Uncontrained.info">Unconstrained.info</a> and <em>the liberation suite</em> are ready, together with <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GetGNULinux.org');" title="GNU/Linux, an operating system that respects your Freedom">GetGNULinux.org</a>, the final touch for us to be effective will be <a href="https://tracker.gnulinuxmatters.org/wiki/Animador" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Animador', 'Animador');">Animador</a>.</p>
+<h2>In an ideal world&#8230;</h2>
+<p>&#8230; Organizations such as <a href="http://www.mozilla.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.mozilla.org/', 'Mozilla');">Mozilla</a>, the <a href="http://www.fsf.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/', 'FSF');">FSF</a> and the <a href="http://www.ffii.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.ffii.org/', 'FFII');">FFII</a> will support <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');">GNU/Linux Matters</a> with tasks #1 and #3, and <a href="http://www.gnu.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnu.org/', 'the GNU project');">the GNU project</a> will take over task #2, with the support of all of us.</p>
+<p>If everything fails, I&#8217;ll try my best to take over task #2 on behalf of GNU/Linux Matters.</p>
+<h2>On my part&#8230;</h2>
+<p>&#8230; I&#8217;ll try to make GNU/Linux Matters change its vision, according to this blog post.</p>
+<h2>On your part&#8230;</h2>
+<p>&#8230; This all sounds so beautiful, right? Well, <a href="http://www.gnulinuxmatters.org/participate/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/', 'we need you');" title="Help GNU/Linux Matters!">we need you</a>! And please don&#8217;t forget to comment on this blog post and spread the word about it if you find it useful.</p>
+<p><strong>PS:</strong> Got something to say? <a href="http://www.nuxified.org/topic/gnu_linux_does_not_matter_that_much" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.nuxified.org/topic/gnu_linux_does_not_matter_that_much', 'Talk about it on NXFD!');">Talk about it on NXFD!</a></p>
+		
+		
+			</div>
+</article>			
+						<nav class="navigation" role="navigation">
+				<div class="nav-previous">
+									</div>
+				
+				<div class="nav-next">
+									</div>
+			</nav>
+				</div>
+		<!-- end .search-results -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

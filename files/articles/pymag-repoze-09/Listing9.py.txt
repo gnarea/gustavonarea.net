@@ -1,0 +1,25 @@
+from repoze.what.predicates import Predicate
+from classifieds.model import DBSession, Classified
+
+class user_is_poster(Predicate):
+    message = 'Only %(poster)s can access classified ' \
+              '"%(classified)s"'
+    
+    def evaluate(self, environ, credentials):
+        # Let's get the current user's Id.
+        username = credentials.get('repoze.what.userid')
+        # Finding the classified in URLs like
+        # http://example.org/some-action/:classified:
+        vars = self.parse_variables(environ)
+        classified_id = vars.named_args.get('classified')
+        # We got it, now let's load its object and poster:
+        query = DBSession.query(Classified)
+        classified = query.get(classified_id)
+        poster = classified.poster
+        # Finally, let's compare them:
+        if poster.user_name != username:
+            # The current user didn't post the classified
+            # specified in the URL! The predicate isn't met
+            classified_title = classified.classified_title
+            self.unmet(poster=poster.user_name,
+                       classified=classified_title)

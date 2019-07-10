@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: The repoze.who LDAP plugin will be an official plugin</title>
+	<atom:link href="/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-89689</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 13 Apr 2011 19:53:28 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-89689</guid>
+		<description><![CDATA[@raulna: I don&#039;t know about any repoze.who PAM plugin, sorry. There may be one, though.]]></description>
+		<content:encoded><![CDATA[<p>@raulna: I don&#8217;t know about any repoze.who PAM plugin, sorry. There may be one, though.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: raulna</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-89659</link>
+		<dc:creator><![CDATA[raulna]]></dc:creator>
+		<pubDate>Wed, 13 Apr 2011 07:28:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-89659</guid>
+		<description><![CDATA[Hola Gustavo,
+
+I have developed an application with TG2. And now I need users to
+authenticate with PAM. How I can do? I have been testing &quot;repoze&quot; with
+SQLAlchemy and I like it but use it with PAM. Any ideas?
+
+Thanks]]></description>
+		<content:encoded><![CDATA[<p>Hola Gustavo,</p>
+<p>I have developed an application with TG2. And now I need users to<br />
+authenticate with PAM. How I can do? I have been testing &#8220;repoze&#8221; with<br />
+SQLAlchemy and I like it but use it with PAM. Any ideas?</p>
+<p>Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Jim Glenn</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-84604</link>
+		<dc:creator><![CDATA[Jim Glenn]]></dc:creator>
+		<pubDate>Fri, 21 Jan 2011 00:02:43 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-84604</guid>
+		<description><![CDATA[Hi Gustavo,
+
+I found your demo and plugin for LDAP with repoze.  I&#039;ve downloaded the demo and am running.  
+
+I can easily get to http://localhost:8080/, but when I go to http://localhost:8080/about, I get an WebError Traceback. 
+
+ ⇝ HTTPUnauthorized: 401 Unauthorized This server could not verify that you are authorized to access the document you requested. Either you supplied the wrong credentials (e.g., bad password), or your browser does not understand how to supply the credentials required.
+
+Any tips?]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo,</p>
+<p>I found your demo and plugin for LDAP with repoze.  I&#8217;ve downloaded the demo and am running.  </p>
+<p>I can easily get to <a href="http://localhost:8080/" rel="nofollow">http://localhost:8080/</a>, but when I go to <a href="http://localhost:8080/about" rel="nofollow">http://localhost:8080/about</a>, I get an WebError Traceback. </p>
+<p> ⇝ HTTPUnauthorized: 401 Unauthorized This server could not verify that you are authorized to access the document you requested. Either you supplied the wrong credentials (e.g., bad password), or your browser does not understand how to supply the credentials required.</p>
+<p>Any tips?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-67037</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Fri, 08 Jan 2010 23:10:34 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-67037</guid>
+		<description><![CDATA[Hi, Jeff.
+
+Please check this message:
+http://lists.repoze.org/pipermail/repoze-dev/2010-January/002546.html
+
+In the mean time, please feel free to use that plugin under the terms of the Repoze License:
+http://repoze.org/license.html
+
+Cheers.]]></description>
+		<content:encoded><![CDATA[<p>Hi, Jeff.</p>
+<p>Please check this message:<br />
+<a href="http://lists.repoze.org/pipermail/repoze-dev/2010-January/002546.html" rel="nofollow">http://lists.repoze.org/pipermail/repoze-dev/2010-January/002546.html</a></p>
+<p>In the mean time, please feel free to use that plugin under the terms of the Repoze License:<br />
+<a href="http://repoze.org/license.html" rel="nofollow">http://repoze.org/license.html</a></p>
+<p>Cheers.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Jeff</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-67025</link>
+		<dc:creator><![CDATA[Jeff]]></dc:creator>
+		<pubDate>Fri, 08 Jan 2010 16:48:33 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-67025</guid>
+		<description><![CDATA[The resources I&#039;ve identified seem to indicate that repoze.who is still GPL3 and that it is not yet an official plugin. Are those sources correct?
+
+I&#039;ve noticed this article is more than a year old. If you could provide links to documentation regarding repoze.who.plugins.ldap or confirm its inclusion and license change, that&#039;d be nice. : )]]></description>
+		<content:encoded><![CDATA[<p>The resources I&#8217;ve identified seem to indicate that repoze.who is still GPL3 and that it is not yet an official plugin. Are those sources correct?</p>
+<p>I&#8217;ve noticed this article is more than a year old. If you could provide links to documentation regarding repoze.who.plugins.ldap or confirm its inclusion and license change, that&#8217;d be nice. : )</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

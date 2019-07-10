@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Recommender System &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/recommender-system/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Koren&#8217;s SVD++ Python Implementation</title>
+		<link>/blog/posts/korens-svd-python-implementation/</link>
+		<comments>/blog/posts/korens-svd-python-implementation/#comments</comments>
+		<pubDate>Wed, 29 Jul 2009 12:01:30 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Software development]]></category>
+		<category><![CDATA[booleano]]></category>
+		<category><![CDATA[Netflix Prize]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Recommender System]]></category>
+
+		<guid isPermaLink="false">/?p=274</guid>
+		<description><![CDATA[I recently had to implement a recommender system for the Netflix Prize. Out of the best known models, I chose Yehuda Koren&#8217;s SVD++ model as published on the paper entitled &#8220;Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model&#8221; (the version that doesn&#8217;t take into account temporal effects; I&#8217;d have implemented the complete model, but... <a class="more-link" href="/blog/posts/korens-svd-python-implementation/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/korens-svd-python-implementation/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

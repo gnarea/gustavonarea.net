@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Internationalization &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/internationalization/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>A silly yet killer feature in Poliglota</title>
+		<link>/blog/posts/a-silly-yet-killer-feature-in-poliglota/</link>
+		<pubDate>Thu, 12 Jun 2008 23:02:46 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Internationalization]]></category>
+		<category><![CDATA[Poliglota]]></category>
+
+		<guid isPermaLink="false">/?p=52</guid>
+		<description><![CDATA[Just a quick post to highlight a new feature in Poliglota: While most CMSs around have a lot of trouble with non-Western languages and cross-linking the different language editions accordingly, Poliglota has a solid support for these features since day one! And it&#8217;s just one of the features. By the way, want to get involved... <a class="more-link" href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>Installing Pootle on Debian Etch, The Easiest Way</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/</link>
+		<comments>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/#comments</comments>
+		<pubDate>Wed, 21 May 2008 15:34:52 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Internationalization]]></category>
+		<category><![CDATA[Pootle]]></category>
+
+		<guid isPermaLink="false">/?p=41</guid>
+		<description><![CDATA[Pootle is a user-friendly web application for online translation of contents. It&#8217;s used by organizations like Creative Commons, OpenOffice.org and GNU/Linux Matters. I&#8217;m going to show you how to install it the easiest way, from my experience with the GLM Translation Service under Debian 4.0 (this guide might also work under Ubuntu, though). I&#8217;ll use... <a class="more-link" href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

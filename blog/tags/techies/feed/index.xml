@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>techies &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/techies/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>The Big Failure of the FSF</title>
+		<link>/blog/posts/the-big-failure-of-the-fsf/</link>
+		<comments>/blog/posts/the-big-failure-of-the-fsf/#comments</comments>
+		<pubDate>Mon, 27 Aug 2007 11:05:33 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[advocacy]]></category>
+		<category><![CDATA[average computer user]]></category>
+		<category><![CDATA[failures]]></category>
+		<category><![CDATA[fsf]]></category>
+		<category><![CDATA[glm]]></category>
+		<category><![CDATA[gnu]]></category>
+		<category><![CDATA[rms]]></category>
+		<category><![CDATA[techies]]></category>
+
+		<guid isPermaLink="false">/?p=13</guid>
+		<description><![CDATA[Explaining what freedom in computing is about, is also talk about the FSF and/or the GNU project; they&#8217;re nothing less than the flagship of the free software movement and they&#8217;ve made huge steps toward freedom in computing, but they have missed a key point: If the average computer user is not on our side, we&#8217;ll... <a class="more-link" href="/blog/posts/the-big-failure-of-the-fsf/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/the-big-failure-of-the-fsf/feed/</wfw:commentRss>
+		<slash:comments>37</slash:comments>
+		</item>
+	</channel>
+</rss>

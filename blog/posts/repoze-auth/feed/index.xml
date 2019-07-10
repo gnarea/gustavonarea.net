@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Web Site Security With repoze.who and repoze.what</title>
+	<atom:link href="/blog/posts/repoze-auth/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/repoze-auth/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-74182</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 20 Jul 2010 22:39:37 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-74182</guid>
+		<description><![CDATA[@Jonas: You could redirect the user to a URL where a repoze.who identifier would authenticate the user automatically.
+
+In other words, you could write an identifier which only works in a given URL path (e.g., &quot;/autologin/&quot;) and when that page is visited, the plugin checks that the user can certainly be logged in and then logs him in.
+
+Fortunately this will be a lot easier in repoze.who 2.]]></description>
+		<content:encoded><![CDATA[<p>@Jonas: You could redirect the user to a URL where a repoze.who identifier would authenticate the user automatically.</p>
+<p>In other words, you could write an identifier which only works in a given URL path (e.g., &#8220;/autologin/&#8221;) and when that page is visited, the plugin checks that the user can certainly be logged in and then logs him in.</p>
+<p>Fortunately this will be a lot easier in repoze.who 2.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Jonas Propperig</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-74125</link>
+		<dc:creator><![CDATA[Jonas Propperig]]></dc:creator>
+		<pubDate>Sat, 17 Jul 2010 23:47:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-74125</guid>
+		<description><![CDATA[Thanks Gustavo, this is great.
+
+What if we wanted to automatically sign the user in after they successfully register? Should we create a wsgi app to forward a the request to? 
+
+I&#039;m new to wsgi, pylons, repoze.who/what and am not really sure the best point to insert this type of functionality.
+
+Thanks,
+Jonas]]></description>
+		<content:encoded><![CDATA[<p>Thanks Gustavo, this is great.</p>
+<p>What if we wanted to automatically sign the user in after they successfully register? Should we create a wsgi app to forward a the request to? </p>
+<p>I&#8217;m new to wsgi, pylons, repoze.who/what and am not really sure the best point to insert this type of functionality.</p>
+<p>Thanks,<br />
+Jonas</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-72624</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Fri, 11 Jun 2010 20:13:59 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-72624</guid>
+		<description><![CDATA[@vbuell: I used &lt;a href=&quot;http://www.inkscape.org/&quot; rel=&quot;nofollow&quot;&gt;Inkscape&lt;/a&gt; and some &lt;a href=&quot;http://www.openclipart.org/detail/19707&quot; rel=&quot;nofollow&quot;&gt;flowchart symbols&lt;/a&gt; from the &lt;a href=&quot;http://www.openclipart.org/&quot; rel=&quot;nofollow&quot;&gt;Open Clip Art Library&lt;/a&gt;.
+
+And thanks for reporting the broken link, I just fixed it! :)]]></description>
+		<content:encoded><![CDATA[<p>@vbuell: I used <a href="http://www.inkscape.org/" rel="nofollow">Inkscape</a> and some <a href="http://www.openclipart.org/detail/19707" rel="nofollow">flowchart symbols</a> from the <a href="http://www.openclipart.org/" rel="nofollow">Open Clip Art Library</a>.</p>
+<p>And thanks for reporting the broken link, I just fixed it! <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: William Chambers</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-72596</link>
+		<dc:creator><![CDATA[William Chambers]]></dc:creator>
+		<pubDate>Thu, 10 Jun 2010 18:47:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-72596</guid>
+		<description><![CDATA[Really good post. It&#039;s great to find some good information on actually &#039;using&#039; repoze since there&#039;s really not much out there besides the docs.]]></description>
+		<content:encoded><![CDATA[<p>Really good post. It&#8217;s great to find some good information on actually &#8216;using&#8217; repoze since there&#8217;s really not much out there besides the docs.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: vbuell</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-72581</link>
+		<dc:creator><![CDATA[vbuell]]></dc:creator>
+		<pubDate>Thu, 10 Jun 2010 09:07:43 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-72581</guid>
+		<description><![CDATA[Thanks! The article is just superb! Very clear and popular.
+
+What tool did you use to produce such a cute diagrams?
+
+BTW: Pressing on &quot;Older posts&quot; (/page/2/) of your blog gives &quot;404 - Not Found&quot;]]></description>
+		<content:encoded><![CDATA[<p>Thanks! The article is just superb! Very clear and popular.</p>
+<p>What tool did you use to produce such a cute diagrams?</p>
+<p>BTW: Pressing on &#8220;Older posts&#8221; (<a href="/page/2/" rel="nofollow">/page/2/</a>) of your blog gives &#8220;404 &#8211; Not Found&#8221;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo on Information Technology » Web Site Security With repoze &#8230; &#171; Tips On Security</title>
+		<link>/blog/posts/repoze-auth/comment-page-1/#comment-72183</link>
+		<dc:creator><![CDATA[Gustavo on Information Technology » Web Site Security With repoze &#8230; &#171; Tips On Security]]></dc:creator>
+		<pubDate>Tue, 01 Jun 2010 19:28:03 +0000</pubDate>
+		<guid isPermaLink="false">/?p=294#comment-72183</guid>
+		<description><![CDATA[[...] original here: Gustavo on Information Technology » Web Site Security With repoze &#8230;   Comments [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] original here: Gustavo on Information Technology » Web Site Security With repoze &#8230;   Comments [&#8230;]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: So long Debian servers, welcome Ubuntu</title>
+	<atom:link href="/blog/posts/so-long-debian-servers-welcome-ubuntu/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo on Information Technology</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-27534</link>
+		<dc:creator><![CDATA[Gustavo on Information Technology]]></dc:creator>
+		<pubDate>Fri, 10 Oct 2008 18:44:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-27534</guid>
+		<description><![CDATA[&lt;strong&gt;So it was not a bad idea to switch to Ubuntu...&lt;/strong&gt;
+
+I remember that when I announced that GLM&#8217;s servers were being switched to Ubuntu, I got comments on that post and some emails asking me to reconsider this for reasons I didn&#8217;t agree with.
+Some months later, I read that Wikimedia is switchi...]]></description>
+		<content:encoded><![CDATA[<p><strong>So it was not a bad idea to switch to Ubuntu&#8230;</strong></p>
+<p>I remember that when I announced that GLM&#8217;s servers were being switched to Ubuntu, I got comments on that post and some emails asking me to reconsider this for reasons I didn&#8217;t agree with.<br />
+Some months later, I read that Wikimedia is switchi&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-14532</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2008 15:14:54 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-14532</guid>
+		<description><![CDATA[@Olaf:
+
+1.- Pootle and Trac, to name a few.
+2.- Are you serious?
+
+Cheers.]]></description>
+		<content:encoded><![CDATA[<p>@Olaf:</p>
+<p>1.- Pootle and Trac, to name a few.<br />
+2.- Are you serious?</p>
+<p>Cheers.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Olaf van der Spek</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-14524</link>
+		<dc:creator><![CDATA[Olaf van der Spek]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2008 13:56:57 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-14524</guid>
+		<description><![CDATA[&#062; we often need the latest stable version
+
+Why? What packages do you need to be of the latest stable version?
+Note that there&#039;s also backports.
+
+&#062; # Uncomplicated Firewall. An extremely easy-to-setup, basic firewall. It’s just a front-end to iptables-restore, so you can still add/adjust any rule according to your needs.
+
+Do you need one on a server? I&#039;m not running one.]]></description>
+		<content:encoded><![CDATA[<p>&gt; we often need the latest stable version</p>
+<p>Why? What packages do you need to be of the latest stable version?<br />
+Note that there&#8217;s also backports.</p>
+<p>&gt; # Uncomplicated Firewall. An extremely easy-to-setup, basic firewall. It’s just a front-end to iptables-restore, so you can still add/adjust any rule according to your needs.</p>
+<p>Do you need one on a server? I&#8217;m not running one.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: its me</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-14355</link>
+		<dc:creator><![CDATA[its me]]></dc:creator>
+		<pubDate>Tue, 03 Jun 2008 23:50:41 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-14355</guid>
+		<description><![CDATA[Plus not all packages you want to install on Ubuntu have security support (think universe and multiverse)!]]></description>
+		<content:encoded><![CDATA[<p>Plus not all packages you want to install on Ubuntu have security support (think universe and multiverse)!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Jack</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-14201</link>
+		<dc:creator><![CDATA[Jack]]></dc:creator>
+		<pubDate>Mon, 02 Jun 2008 13:55:46 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-14201</guid>
+		<description><![CDATA[I agree with Debianist: Ubuntu on servers is hell.  They have tried to pack too many &quot;nice&quot; features that end up getting in the way.]]></description>
+		<content:encoded><![CDATA[<p>I agree with Debianist: Ubuntu on servers is hell.  They have tried to pack too many &#8220;nice&#8221; features that end up getting in the way.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ksek</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-13982</link>
+		<dc:creator><![CDATA[ksek]]></dc:creator>
+		<pubDate>Sat, 31 May 2008 20:22:59 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-13982</guid>
+		<description><![CDATA[I don&#039;t think that ubuntu server is better than debian, if you use etch, packages are very old but if you use testing packages are new and even some of them are newer than ubuntu, what ubuntu basicly does is to take debian packages and repackage it for ubuntu. so when you use ubuntu server, indeed you use debian testing. though I like ubuntu, I never think to use it on servers.]]></description>
+		<content:encoded><![CDATA[<p>I don&#8217;t think that ubuntu server is better than debian, if you use etch, packages are very old but if you use testing packages are new and even some of them are newer than ubuntu, what ubuntu basicly does is to take debian packages and repackage it for ubuntu. so when you use ubuntu server, indeed you use debian testing. though I like ubuntu, I never think to use it on servers.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Debianist</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/comment-page-1/#comment-13857</link>
+		<dc:creator><![CDATA[Debianist]]></dc:creator>
+		<pubDate>Fri, 30 May 2008 17:50:40 +0000</pubDate>
+		<guid isPermaLink="false">/?p=50#comment-13857</guid>
+		<description><![CDATA[Think about it again because change Debian servers to Ubuntu servers is a bad move, really. I know it by experience.]]></description>
+		<content:encoded><![CDATA[<p>Think about it again because change Debian servers to Ubuntu servers is a bad move, really. I know it by experience.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

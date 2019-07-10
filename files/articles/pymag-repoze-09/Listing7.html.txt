@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC 
+ "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="master.html" />
+
+<head>
+  <meta http-equiv="content-type"
+        content="text/html; charset=UTF-8" />
+  <title>Publish a classified</title>
+</head>
+
+<body>
+    ${sidebar_top()}
+  <div>
+    <h2>Publish a classified</h2>
+    
+    <p>
+        Please use the form below to publish a
+        classified.
+    </p>
+    
+    <form action="${tg.url('/add_classified')}" 
+          method="post">
+        <label>Classified title:
+            <input name="title" type="text" />
+        </label>
+        <br />
+        <label>Classified text:
+            <textarea name="contents" rows="10" 
+                      cols="30" />
+        </label>
+        <br />
+        <input type="submit" value="Publish classified!" />
+    </form>
+  </div>
+  <div class="clearingdiv" />
+</body>
+</html>

@@ -1,0 +1,17 @@
+@expose()
+@require(has_permission('add-classifieds'))
+def add_classified(self, title, contents):
+    new_classified = model.Classified()
+    new_classified.classified_title = title
+    new_classified.classified_contents = contents
+    # Getting the poster's user object from
+    # repoze.who's identity dict:
+    identity = request.environ['repoze.who.identity']
+    new_classified.poster = identity['user']
+    # We're ready to insert the row:
+    DBSession.add(new_classified)
+    # Redirecting to the previous form with a 
+    # notification message:
+    flash('Classified "%s" successfully published!'
+          % title)
+    redirect(url('/'))

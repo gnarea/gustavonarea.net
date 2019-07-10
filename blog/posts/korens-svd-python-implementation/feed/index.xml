@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Koren&#8217;s SVD++ Python Implementation</title>
+	<atom:link href="/blog/posts/korens-svd-python-implementation/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/korens-svd-python-implementation/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: cristi</title>
+		<link>/blog/posts/korens-svd-python-implementation/comment-page-1/#comment-72740</link>
+		<dc:creator><![CDATA[cristi]]></dc:creator>
+		<pubDate>Mon, 14 Jun 2010 14:33:54 +0000</pubDate>
+		<guid isPermaLink="false">/?p=274#comment-72740</guid>
+		<description><![CDATA[Hi there,
+
+I&#039;m trying to understand the svd++ algorithm for my masters thesis and I&#039;m looking at your implementation. 
+I see that in wooflixcli you are importing the Recommender module, which I can&#039;t seem to find in the source you provided. 
+
+Am I missing something ?
+
+Thanks in advance.]]></description>
+		<content:encoded><![CDATA[<p>Hi there,</p>
+<p>I&#8217;m trying to understand the svd++ algorithm for my masters thesis and I&#8217;m looking at your implementation.<br />
+I see that in wooflixcli you are importing the Recommender module, which I can&#8217;t seem to find in the source you provided. </p>
+<p>Am I missing something ?</p>
+<p>Thanks in advance.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: matteo</title>
+		<link>/blog/posts/korens-svd-python-implementation/comment-page-1/#comment-62673</link>
+		<dc:creator><![CDATA[matteo]]></dc:creator>
+		<pubDate>Fri, 09 Oct 2009 12:27:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=274#comment-62673</guid>
+		<description><![CDATA[hi, I&#039;m trying to figure out your code implementing svd++ in matlab enviroment..
+I&#039;m not sure, but I think I found something maybe wrong, 
+in the predict_rating() method at a certain point you wrote:
+...
+# Finally, the prediction:
+        preferences = user.factors_vector.multiply_by_list(implicit_prefences, self.session)
+...
+
+shouldn&#039;t there be a sum operation between vectors instead of a multiply?]]></description>
+		<content:encoded><![CDATA[<p>hi, I&#8217;m trying to figure out your code implementing svd++ in matlab enviroment..<br />
+I&#8217;m not sure, but I think I found something maybe wrong,<br />
+in the predict_rating() method at a certain point you wrote:<br />
+&#8230;<br />
+# Finally, the prediction:<br />
+        preferences = user.factors_vector.multiply_by_list(implicit_prefences, self.session)<br />
+&#8230;</p>
+<p>shouldn&#8217;t there be a sum operation between vectors instead of a multiply?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

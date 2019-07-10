@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: &#8220;WSGI from Start to Finish&#8221; at EuroPython 2010</title>
+	<atom:link href="/blog/posts/wsgi-from-start-to-finish-at-europython-2010/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: John Griessen</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/comment-page-1/#comment-73840</link>
+		<dc:creator><![CDATA[John Griessen]]></dc:creator>
+		<pubDate>Wed, 07 Jul 2010 16:37:02 +0000</pubDate>
+		<guid isPermaLink="false">/?p=336#comment-73840</guid>
+		<description><![CDATA[I&#039;m not yet published in python, but I like it and have made
+some free published open hardware for biologists
+and have more in planning.  Would twodegrees membership benefit
+an  open hardware developer?
+
+I&#039;d like to know more about WSGI.  If you have anything you can share 
+I promise not to bug you about it.   I&#039;ll be trying out twod.wsgi soon.
+
+John
+Austin Texas]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m not yet published in python, but I like it and have made<br />
+some free published open hardware for biologists<br />
+and have more in planning.  Would twodegrees membership benefit<br />
+an  open hardware developer?</p>
+<p>I&#8217;d like to know more about WSGI.  If you have anything you can share<br />
+I promise not to bug you about it.   I&#8217;ll be trying out twod.wsgi soon.</p>
+<p>John<br />
+Austin Texas</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/comment-page-1/#comment-71875</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 26 May 2010 08:23:49 +0000</pubDate>
+		<guid isPermaLink="false">/?p=336#comment-71875</guid>
+		<description><![CDATA[That&#039;d be nice! Although I&#039;m not sure if someone else from the development team will go too.
+
+I&#039;ll keep in touch via email! :)
+
+ - Gustavo.]]></description>
+		<content:encoded><![CDATA[<p>That&#8217;d be nice! Although I&#8217;m not sure if someone else from the development team will go too.</p>
+<p>I&#8217;ll keep in touch via email! <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p> &#8211; Gustavo.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ben</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/comment-page-1/#comment-71874</link>
+		<dc:creator><![CDATA[Ben]]></dc:creator>
+		<pubDate>Wed, 26 May 2010 08:04:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=336#comment-71874</guid>
+		<description><![CDATA[Hi Gustavo,
+
+I&#039;m doing a talk at EuroPython too! It&#039;s going to be on the websocket/repoze/eventlet stuff I&#039;ve been hacking on.
+
+We should catch up while we&#039;re there! Is anyone else from 2 degrees coming?
+
+Ben]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo,</p>
+<p>I&#8217;m doing a talk at EuroPython too! It&#8217;s going to be on the websocket/repoze/eventlet stuff I&#8217;ve been hacking on.</p>
+<p>We should catch up while we&#8217;re there! Is anyone else from 2 degrees coming?</p>
+<p>Ben</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

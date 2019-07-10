@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Joining the development of TurboGears</title>
+	<atom:link href="/blog/posts/joining-the-development-of-turbogears/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/joining-the-development-of-turbogears/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/comment-page-1/#comment-23680</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Thu, 21 Aug 2008 14:03:11 +0000</pubDate>
+		<guid isPermaLink="false">/?p=91#comment-23680</guid>
+		<description><![CDATA[@Andrew: Thank you! It&#039;s now fixed.]]></description>
+		<content:encoded><![CDATA[<p>@Andrew: Thank you! It&#8217;s now fixed.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Andrew Basson</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/comment-page-1/#comment-23619</link>
+		<dc:creator><![CDATA[Andrew Basson]]></dc:creator>
+		<pubDate>Thu, 21 Aug 2008 02:49:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=91#comment-23619</guid>
+		<description><![CDATA[Hi Gustavo,
+
+Downloaded Animador from svn. The Getting Started instructions point 4 needs to change for the Animador egg to be created in the virtualenv.
+
+Change : ./setup.py develop to:
+python setup.py develop
+
+HTH, Andrew.]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo,</p>
+<p>Downloaded Animador from svn. The Getting Started instructions point 4 needs to change for the Animador egg to be created in the virtualenv.</p>
+<p>Change : ./setup.py develop to:<br />
+python setup.py develop</p>
+<p>HTH, Andrew.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/comment-page-1/#comment-23426</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 19 Aug 2008 14:02:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=91#comment-23426</guid>
+		<description><![CDATA[Thanks, Roger and Florent!
+
+@Florent: Sure, I&#039;ll do it once the plugin is finished.]]></description>
+		<content:encoded><![CDATA[<p>Thanks, Roger and Florent!</p>
+<p>@Florent: Sure, I&#8217;ll do it once the plugin is finished.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Florent Aide</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/comment-page-1/#comment-23419</link>
+		<dc:creator><![CDATA[Florent Aide]]></dc:creator>
+		<pubDate>Tue, 19 Aug 2008 12:47:18 +0000</pubDate>
+		<guid isPermaLink="false">/?p=91#comment-23419</guid>
+		<description><![CDATA[Welcome onboard!
+
+and don&#039;t forget to post about your OpenId usage in tg2 :-)]]></description>
+		<content:encoded><![CDATA[<p>Welcome onboard!</p>
+<p>and don&#8217;t forget to post about your OpenId usage in tg2 <img src="/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Roger Demetrescu</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/comment-page-1/#comment-23354</link>
+		<dc:creator><![CDATA[Roger Demetrescu]]></dc:creator>
+		<pubDate>Mon, 18 Aug 2008 23:50:46 +0000</pubDate>
+		<guid isPermaLink="false">/?p=91#comment-23354</guid>
+		<description><![CDATA[Welcome aboard, Gustavo...  :)]]></description>
+		<content:encoded><![CDATA[<p>Welcome aboard, Gustavo&#8230;  <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

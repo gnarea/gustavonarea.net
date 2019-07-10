@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Installing Pootle on Debian Etch, The Easiest Way</title>
+	<atom:link href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Nicolas</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-60543</link>
+		<dc:creator><![CDATA[Nicolas]]></dc:creator>
+		<pubDate>Mon, 07 Sep 2009 18:31:41 +0000</pubDate>
+		<guid isPermaLink="false">/?p=41#comment-60543</guid>
+		<description><![CDATA[Very nice tutorial ... I was able to setup http://translate.centresis.org/ based on your very helpful hints. Thanks very very much!
+
+Now I just wish the Debian packages would be updated to the latest version ...]]></description>
+		<content:encoded><![CDATA[<p>Very nice tutorial &#8230; I was able to setup <a href="http://translate.centresis.org/" rel="nofollow">http://translate.centresis.org/</a> based on your very helpful hints. Thanks very very much!</p>
+<p>Now I just wish the Debian packages would be updated to the latest version &#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12925</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Thu, 22 May 2008 18:41:20 +0000</pubDate>
+		<guid isPermaLink="false">/?p=41#comment-12925</guid>
+		<description><![CDATA[@Amos:
+
+Thank you very much! I&#039;ve corrected the typos.]]></description>
+		<content:encoded><![CDATA[<p>@Amos:</p>
+<p>Thank you very much! I&#8217;ve corrected the typos.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Amos Batto</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12915</link>
+		<dc:creator><![CDATA[Amos Batto]]></dc:creator>
+		<pubDate>Thu, 22 May 2008 15:27:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=41#comment-12915</guid>
+		<description><![CDATA[A great how-to. I struggled to set up a Pootle Server in Etch a couple weeks ago. I wish this how-to had been available at the time.  It would have saved me hours of frustration.
+
+I have two suggestions: 
+Use &quot;sudo -i&quot; to login in as the user with administrative privileges rather than having to type &quot;sudo&quot; before every command.
+
+You left out the &quot;ln&quot; command to create soft links. 
+
+Change:
+sudo /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf
+
+To:
+sudo ln /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf]]></description>
+		<content:encoded><![CDATA[<p>A great how-to. I struggled to set up a Pootle Server in Etch a couple weeks ago. I wish this how-to had been available at the time.  It would have saved me hours of frustration.</p>
+<p>I have two suggestions:<br />
+Use &#8220;sudo -i&#8221; to login in as the user with administrative privileges rather than having to type &#8220;sudo&#8221; before every command.</p>
+<p>You left out the &#8220;ln&#8221; command to create soft links. </p>
+<p>Change:<br />
+sudo /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf</p>
+<p>To:<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12797</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 21 May 2008 18:41:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=41#comment-12797</guid>
+		<description><![CDATA[@roebek:
+
+Indeed, but you&#039;d install Pootle v0.10.1-1 in Debian 4.0. Ubuntu Hardy does have an up-to-date version.]]></description>
+		<content:encoded><![CDATA[<p>@roebek:</p>
+<p>Indeed, but you&#8217;d install Pootle v0.10.1-1 in Debian 4.0. Ubuntu Hardy does have an up-to-date version.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: roebek</title>
+		<link>/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12796</link>
+		<dc:creator><![CDATA[roebek]]></dc:creator>
+		<pubDate>Wed, 21 May 2008 18:35:52 +0000</pubDate>
+		<guid isPermaLink="false">/?p=41#comment-12796</guid>
+		<description><![CDATA[The easiest way is
+
+apt-get install pootle
+
+:)]]></description>
+		<content:encoded><![CDATA[<p>The easiest way is</p>
+<p>apt-get install pootle</p>
+<p><img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

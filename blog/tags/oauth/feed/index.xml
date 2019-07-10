@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OAuth &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/oauth/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Auth: What you may expect from TurboGears 2</title>
+		<link>/blog/posts/auth-what-you-may-expect-from-turbogears-2/</link>
+		<comments>/blog/posts/auth-what-you-may-expect-from-turbogears-2/#comments</comments>
+		<pubDate>Mon, 27 Oct 2008 01:38:33 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[OAuth]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TG2]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=148</guid>
+		<description><![CDATA[Those still using TurboGears 1 will find a big improvement in the authentication and authorizarion area when they upgrade to version 2: TurboGears 2 ships with an easy-to-use, pluggable, extendable and well-documented authentication and authorization system, powered by repoze.who and tgext.authorization (whose documentation will be available along with TurboGears&#8217; very soon). Some of the features... <a class="more-link" href="/blog/posts/auth-what-you-may-expect-from-turbogears-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/auth-what-you-may-expect-from-turbogears-2/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,293 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>The Software Practitioner&#8217;s Digest | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/tspd/" />
+<link rel='shortlink' href='/?p=420' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Ftspd%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Ftspd%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="The Software Practitioner&#8217;s Digest">
+<meta property="og:description" content="&lt;em&gt;The Software Practitioner&#039;s Digest&lt;/em&gt; is an informal bimonthly publication aimed at people who participate in ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="page page-id-420 page-template-default">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content row-fluid page">
+										<article id="post-420" class="clearfix post-420 page type-page status-publish hentry">
+								<header class="entry-header">
+									<h1 class="entry-title">The Software Practitioner&#8217;s Digest</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-content clearfix">
+									<p><em>The Software Practitioner&#8217;s Digest</em> is an informal bimonthly publication aimed at people who participate in the development of software-intensive systems. It highlights the latest down-to-earth publications from renowned sources in the industry and the academia.</p>
+<p><strong>Software developers and managers may be particularly interested in this digest</strong>, as it covers the ten Knowledge Areas from the <a href="http://en.wikipedia.org/wiki/Software_Engineering_Body_of_Knowledge" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Software_Engineering_Body_of_Knowledge', 'SWEBOK');" title="Software Engineering Body of Knowledge">SWEBOK</a>: Requirements, design, construction, testing, maintenance, configuration management, engineering management, processes, tools &amp; methods and quality.</p>
+<p>Technology- or vendor-specific information is outside the scope of this publication, so articles specific to Java or Linux, for example, are not considered for inclusion.</p>
+<ul style="list-style: none; text-align: center; font-weight: bold; font-size: 1.1em; margin: 1em 2em; padding-left: 0;">
+<li style="display: inline;"><a href="/blog/topics/tspd/" title="Latest issues of The Software Practitioner's Digest">Latest issues</a>
+</li>
+<li style="display: inline; margin: auto 2em;"><a href="http://feeds.gustavonarea.net/tspd" title="Subscribe to The Software Practitioner's Digest" style="background: url('/wp-content/themes/emerald-10/images/icon_feed.gif') no-repeat; padding-left: 20px;">Feed</a></li>
+<li style="display: inline;"><a href="http://feedburner.google.com/fb/a/mailverify?uri=tspd" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://feedburner.google.com/fb/a/mailverify?uri=tspd', 'Subscribe by email');" title="Subscribe to The Software Practitioner's Digest by email">Subscribe by email</a></li>
+</ul>
+<div class="addthis_32x32_style addthis_default_style">
+<a class="addthis_button_facebook_follow" addthis:userid="swdigest" style="margin-left: 40%;"></a><a class="addthis_button_twitter_follow" addthis:userid="swdigest"></a><a class="addthis_button_google_follow" addthis:userid="u/0/b/110802812796418758669/110802812796418758669"></a>
+</div>
+<p><script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ec227aa374de38f"></script></p>
+<div style="clear: both;"></div>
+<h2>Motivation</h2>
+<p><strong>The software industry and the academia are disconnected</strong>. On the one hand, practitioners often focus on the latest tools of the trade while paying too little attention to the theory underpinning the development of software. Academics, on the other hand, often focus on purely theoretical subjects while engaging too little with the industry to help it understand what works and what doesn&#8217;t. In this scenario, it should come as no surprise that <a href="http://doi.ieeecomputersociety.org/10.1109/MC.2011.268" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://doi.ieeecomputersociety.org/10.1109/MC.2011.268', 'software development hasn&#8217;t yet become an engineering discipline');" title="&quot;Software Engineering - Missing in Action: A Personal Perspective&quot; by David Parnas">software development hasn&#8217;t yet become an engineering discipline</a>.</p>
+<p>As a practitioner who believes that evidence should guide practice, I constantly (but not exclusively) read technology-independent books and periodicals. This takes time and I find that a fair amount of the literature is (1) impractical or simply aimed at theoreticians, or (2) not supported by actual research (or at least none is referenced). This is unfortunate, as there may be some actionable insight buried in the former and claims made in the latter could potentially be supported by factual information.</p>
+<p>I couldn&#8217;t find similar initiatives before starting this digest and therefore I decided to share publications that I believe are worth reading by fellow practitioners &#8212; I had started something similar at work, so I figured I might as well share it with the broader software development community.</p>
+<p>Inspired by <a href="http://en.wikipedia.org/wiki/Robert_L._Glass" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Robert_L._Glass', 'Robert Glass');">Robert Glass</a>&#8216; <a href="http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425', 'Facts and Fallacies of Software Engineering');">Facts and Fallacies of Software Engineering</a> and <a href="http://en.wikipedia.org/wiki/Steve_McConnell" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Steve_McConnell', 'Steve McConnell');">Steve McConnell</a>&#8216;s <a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/', 'Code Complete');">Code Complete</a>, two books that emphasize the importance of research in the software industry and whose references served as the basis for the periodicals I now follow, this is intended as my modest follow-up to their work.</p>
+<h2>Sources followed</h2>
+<p>The vast majority of the quality publications I read come from the following paid periodicals:</p>
+<ul>
+<li><a href="http://www.bettersoftware.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.bettersoftware.com', 'Better Software');">Better Software</a></li>
+<li><a href="http://www.computer.org/computer" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/computer', 'Computer');">Computer</a>.</li>
+<li><a href="http://www.computer.org/portal/web/software/home" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/portal/web/software/home', 'IEEE Software');">IEEE Software</a>.</li>
+<li><a href="http://www.computer.org/portal/web/tse" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/portal/web/tse', 'IEEE Transactions on Software');">IEEE Transactions on Software</a>.</li>
+<li><a href="http://www.computer.org/portal/web/itpro" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org/portal/web/itpro', 'IT Professional');">IT Professional</a>.</li>
+<li><a href="http://www.sigsoft.org/SEN/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.sigsoft.org/SEN/', 'Software Engineering Notes');">Software Engineering Notes</a>.</li>
+</ul>
+<p>You will find that many of the publications highlighted come from the <a href="http://www.computer.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.computer.org', 'IEEE-CS');">IEEE-CS</a>. That&#8217;s because their publications are simply the best in terms of relevance, timeliness, practicality and objectivity.</p>
+<p>I&#8217;m also subscribed to the following news sites, which often publish technology-neutral opinion pieces (loosely) based on sound principles, but seldom reference research that supports their claims:</p>
+<ul>
+<li><a href="http://drdobbs.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://drdobbs.com', 'Dr. Dobb&#8217;s');">Dr. Dobb&#8217;s</a>.</li>
+<li><a href="http://www.infoq.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.infoq.com', 'InfoQ');">InfoQ</a>.</li>
+</ul>
+<p>I also follow some remarkable practitioners/researchers who have blogs or newsletters:</p>
+<ul>
+<li><a href="http://se9book.wordpress.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://se9book.wordpress.com/', 'Ian Sommerville');">Ian Sommerville</a>.</li>
+<li><a href="http://www.useit.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.useit.com/', 'Jakob Nielsen');">Jakob Nielsen</a>.</li>
+<li><a href="http://martinfowler.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://martinfowler.com/', 'Martin Fowler');">Martin Fowler</a>.</li>
+<li><a href="http://blogs.construx.com/blogs/stevemcc/default.aspx" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://blogs.construx.com/blogs/stevemcc/default.aspx', 'Steve McConnell');">Steve McConnell</a>.</li>
+</ul>
+<p>Feel free to <a href="/contact/">recommend me other sources</a>!</p>
+									
+																	</div>
+								<!-- end .entry-content -->
+							</article>
+							<!-- end .hentry -->
+									
+			
+<div id="comments" class="comments-area">
+		
+	</div>
+<!-- end #comments -->		</div>
+		<!-- end .readable-content -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

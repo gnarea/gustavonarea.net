@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GNU/Linux Matters &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/topics/gnulinux-matters/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>The Linux homepage now in Arabic, Russian, Vietnamese and Ukrainian</title>
+		<link>/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/</link>
+		<pubDate>Thu, 04 Sep 2008 22:41:06 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Arabic]]></category>
+		<category><![CDATA[GGL.o]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[Russian]]></category>
+		<category><![CDATA[translations]]></category>
+		<category><![CDATA[Ukrainian]]></category>
+		<category><![CDATA[Vietnamese]]></category>
+
+		<guid isPermaLink="false">/?p=113</guid>
+		<description><![CDATA[The awesome international Linux homepage is now available in Arabic, Russian, Vietnamese and Ukrainian! Check the official announcement. Are you missing your language? Translate it and help us promote freedomware!]]></description>
+		</item>
+		<item>
+		<title>Joining the development of TurboGears</title>
+		<link>/blog/posts/joining-the-development-of-turbogears/</link>
+		<comments>/blog/posts/joining-the-development-of-turbogears/#comments</comments>
+		<pubDate>Mon, 18 Aug 2008 17:23:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Free Software contributions]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[OpenId]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[TurboGears]]></category>
+
+		<guid isPermaLink="false">/?p=91</guid>
+		<description><![CDATA[I&#8217;ve had the great pleasure of being invited by the TurboGears team to become an official committer for the great TurboGears framework. This is because I&#8217;ve been contributing patches for TurboGears 2 and other packages used by Animador (a TurboGears 2 application), since I started its development, in order to fix bugs and/or add new... <a class="more-link" href="/blog/posts/joining-the-development-of-turbogears/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/joining-the-development-of-turbogears/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Python Developers: Help Us Promote Freedomware!</title>
+		<link>/blog/posts/python-developers-help-us-promote-freedomware/</link>
+		<pubDate>Sun, 27 Jul 2008 18:45:19 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">/?p=62</guid>
+		<description><![CDATA[GNU/Linux Matters is looking for Python developers to develop the upcoming multicultural SpreadFirefox.com-like platform to promote freedomware and Linux.]]></description>
+		</item>
+		<item>
+		<title>Back from the Libre Software Meeting (RMLL) 2008</title>
+		<link>/blog/posts/back-from-the-libre-software-meeting-rmll-2008/</link>
+		<pubDate>Tue, 08 Jul 2008 13:58:59 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[RMLL]]></category>
+
+		<guid isPermaLink="false">/?p=61</guid>
+		<description><![CDATA[After 6 days of delicious pains au chocolat, spreading the word about GLM (by means of a conference and a booth) and having fun with cool people, I&#8217;m back home in Madrid from the RMLL.]]></description>
+		</item>
+		<item>
+		<title>We need German translators to promote Linux! And others are welcome too</title>
+		<link>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/</link>
+		<comments>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/#comments</comments>
+		<pubDate>Wed, 25 Jun 2008 16:49:31 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Poliglota]]></category>
+
+		<guid isPermaLink="false">/?p=57</guid>
+		<description><![CDATA[We need people to bring the first GNU/Linux website that doesn&#8217;t suck to all possible languages. Until last year, translations were hard to setup and manage, so we created an special multi-website CMS focused on internationalization, which makes it really easy for translators to preview their work and release websites with a few clicks, and... <a class="more-link" href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>A silly yet killer feature in Poliglota</title>
+		<link>/blog/posts/a-silly-yet-killer-feature-in-poliglota/</link>
+		<pubDate>Thu, 12 Jun 2008 23:02:46 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Internationalization]]></category>
+		<category><![CDATA[Poliglota]]></category>
+
+		<guid isPermaLink="false">/?p=52</guid>
+		<description><![CDATA[Just a quick post to highlight a new feature in Poliglota: While most CMSs around have a lot of trouble with non-Western languages and cross-linking the different language editions accordingly, Poliglota has a solid support for these features since day one! And it&#8217;s just one of the features. By the way, want to get involved... <a class="more-link" href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>So long Debian servers, welcome Ubuntu</title>
+		<link>/blog/posts/so-long-debian-servers-welcome-ubuntu/</link>
+		<comments>/blog/posts/so-long-debian-servers-welcome-ubuntu/#comments</comments>
+		<pubDate>Wed, 28 May 2008 14:25:38 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[migration]]></category>
+		<category><![CDATA[servers]]></category>
+		<category><![CDATA[ubuntu]]></category>
+
+		<guid isPermaLink="false">/?p=50</guid>
+		<description><![CDATA[I&#8217;ve been assessing the possibility of switching GNU/Linux Matters&#8216; servers (which are all powered by Debian) to Ubuntu, and I have finally decided to go for it. They were running Debian for three reasons: Stability, something Debian is well-known for. A large user base, which brings two big advantages: A huge amount of packaged applications... <a class="more-link" href="/blog/posts/so-long-debian-servers-welcome-ubuntu/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/so-long-debian-servers-welcome-ubuntu/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>The only screencasting software that doesn&#8217;t crash in Ubuntu Hardy</title>
+		<link>/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/</link>
+		<pubDate>Mon, 19 May 2008 17:07:59 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[glm]]></category>
+		<category><![CDATA[gutsy]]></category>
+		<category><![CDATA[hardy]]></category>
+		<category><![CDATA[istanbul]]></category>
+		<category><![CDATA[recordmydesktop]]></category>
+		<category><![CDATA[screencast]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[xvidcap]]></category>
+
+		<guid isPermaLink="false">/?p=48</guid>
+		<description><![CDATA[I&#8217;ve spent a lot of time trying to record some screencasts for GLM, but every screencasting software I tried crashed under Ubuntu Hardy (and Gutsy too): XVidCap: The workaround is supposed to be disabling sound, but didn&#8217;t work. RecordMyDesktop (plus its two front-ends): Crashes with no error message. From time to time I was able... <a class="more-link" href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+		<item>
+		<title>I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much</title>
+		<link>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/</link>
+		<comments>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/#comments</comments>
+		<pubDate>Wed, 05 Mar 2008 20:09:20 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[Closed Standards]]></category>
+		<category><![CDATA[ffii]]></category>
+		<category><![CDATA[formats]]></category>
+		<category><![CDATA[fsf]]></category>
+		<category><![CDATA[GGL.o]]></category>
+		<category><![CDATA[glm]]></category>
+		<category><![CDATA[gnu]]></category>
+		<category><![CDATA[gnu/linux]]></category>
+		<category><![CDATA[mozilla]]></category>
+		<category><![CDATA[Open Standards]]></category>
+		<category><![CDATA[protocols]]></category>
+		<category><![CDATA[Unconstrained]]></category>
+		<category><![CDATA[Windows]]></category>
+
+		<guid isPermaLink="false">/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/</guid>
+		<description><![CDATA[We freedomware advocates think that switching to a Freedom-respectful operating system (usually GNU/Linux) is the most important step when switching to freedomware, and therefore we focus on promoting these systems (myself included). However, I&#8217;ve found out that it does not matter that much. The first and most important step when switching to Freedomware is using... <a class="more-link" href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Testing, testing&#8230; 1, 2, 3&#8230; Testing</title>
+		<link>/blog/posts/testing-testing-1-2-3-testing/</link>
+		<comments>/blog/posts/testing-testing-1-2-3-testing/#comments</comments>
+		<pubDate>Fri, 06 Jul 2007 21:43:04 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+
+		<guid isPermaLink="false">/?p=6</guid>
+		<description><![CDATA[Well, it looks like I finally got a blog! I will use it to talk about what&#8217;s going on behind-the-scenes with my contributions to the free software movement, mainly by means of GNU/Linux Matters. I want to let people know that we&#8217;re alive! That behind those cool but static websites there are people moving forward,... <a class="more-link" href="/blog/posts/testing-testing-1-2-3-testing/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/testing-testing-1-2-3-testing/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

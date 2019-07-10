@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments for Gustavo on Software Development</title>
+	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Comment on Records: A New Pythonic Data Type for Your Toolbox by Gustavo</title>
+		<link>/blog/posts/pyrecord-announcement/comment-page-1/#comment-113385</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 10 Dec 2014 13:07:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=825#comment-113385</guid>
+		<description><![CDATA[Thanks, Volodymyr!
+
+Yes, indeed immutability is one thing PyRecord is missing. I have had needed it at least twice since I created the library. I&#039;m hoping to work on it after the Christmas break.
+
+I too dislike having to repeat the name of the record type. I spent a long time researching and prototyping alternatives, but came to the conclusion that namedtuple&#039;s approach (repeating the type name) was the best compromise.
+
+One of the options I considered was very similar to what you&#039;re proposing, but I found two problems with it: It wouldn&#039;t be correct to imply that PyRecord has a class named &quot;Point&quot; and it would not be good for static code analysis (inc. code completion in IDEs).
+
+I also considered exposing a second way to create record types, but then I remembered one point in the Zen of Python: &quot;There should be one-- and preferably only one --obvious way to do it&quot;.]]></description>
+		<content:encoded><![CDATA[<p>Thanks, Volodymyr!</p>
+<p>Yes, indeed immutability is one thing PyRecord is missing. I have had needed it at least twice since I created the library. I&#8217;m hoping to work on it after the Christmas break.</p>
+<p>I too dislike having to repeat the name of the record type. I spent a long time researching and prototyping alternatives, but came to the conclusion that namedtuple&#8217;s approach (repeating the type name) was the best compromise.</p>
+<p>One of the options I considered was very similar to what you&#8217;re proposing, but I found two problems with it: It wouldn&#8217;t be correct to imply that PyRecord has a class named &#8220;Point&#8221; and it would not be good for static code analysis (inc. code completion in IDEs).</p>
+<p>I also considered exposing a second way to create record types, but then I remembered one point in the Zen of Python: &#8220;There should be one&#8211; and preferably only one &#8211;obvious way to do it&#8221;.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Records: A New Pythonic Data Type for Your Toolbox by Volodymyr Vitvitskyi</title>
+		<link>/blog/posts/pyrecord-announcement/comment-page-1/#comment-113384</link>
+		<dc:creator><![CDATA[Volodymyr Vitvitskyi]]></dc:creator>
+		<pubDate>Mon, 08 Dec 2014 20:27:34 +0000</pubDate>
+		<guid isPermaLink="false">/?p=825#comment-113384</guid>
+		<description><![CDATA[Hi Gustavo, very neat library you developed.
+
+I like `collections.namedtuple` a lot for their immutability and `_replace` method =) Very often redefine `__new__` in them to make some fields optional, with default value.
+
+Regarding passing name of the record type explicitly, have you considered to make a sugar for that ?
+
+For instance, `pyrecord.new.Point(&quot;x&quot;, &quot;y&quot;)`  or  `pyrecord.type.Point`.
+Also you can check `sh` library they make a wrapper for the module so you can do something like this
+
+&lt;code&gt;
+from pyrecord import PointDef
+&#160;
+Point = PointDef(&#039;x&#039;, &#039;y&#039;)
+# or 
+Point = pyrecord.Point(&#039;x&#039;, &#039;y&#039;) 
+&lt;/code&gt;
+
+I tried this approach. 
+
+&lt;code&gt;
+class RecordNameProxy:
+    def __getattr__(self, name):
+        return lambda *args, **kwargs: Record.create_type(name, *args, **kwargs)
+&#160;
+type = RecordNameProxy()
+&lt;/code&gt;]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo, very neat library you developed.</p>
+<p>I like `collections.namedtuple` a lot for their immutability and `_replace` method =) Very often redefine `__new__` in them to make some fields optional, with default value.</p>
+<p>Regarding passing name of the record type explicitly, have you considered to make a sugar for that ?</p>
+<p>For instance, `pyrecord.new.Point(&#8220;x&#8221;, &#8220;y&#8221;)`  or  `pyrecord.type.Point`.<br />
+Also you can check `sh` library they make a wrapper for the module so you can do something like this</p>
+<p><code><br />
+from pyrecord import PointDef<br />
+&nbsp;<br />
+Point = PointDef('x', 'y')<br />
+# or<br />
+Point = pyrecord.Point('x', 'y')<br />
+</code></p>
+<p>I tried this approach. </p>
+<p><code><br />
+class RecordNameProxy:<br />
+    def __getattr__(self, name):<br />
+        return lambda *args, **kwargs: Record.create_type(name, *args, **kwargs)<br />
+&nbsp;<br />
+type = RecordNameProxy()<br />
+</code></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The Software Practitioner&#8217;s Digest: October 2011 by davidk</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112917</link>
+		<dc:creator><![CDATA[davidk]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2011 19:32:18 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112917</guid>
+		<description><![CDATA[@Gustavo Thanks to the reference to the EUROMICRO paper.  Although I only skimmed the paper it seems to me looser-coupling is the main difference.   I take away that SOSE is a subset of CBSE with some design flexibility removed by sticking to the same choice for certain thing (like location independence). If SOSE is a &#039;good&#039; paradigm then the removed flexibility was in areas where people frequently made poor choices or always he same choice.  Hopefully we&#039;ve learned something from CBSE and taken the best parts/practices forwards to make SOSE. [Although personally I think it&#039;s just a new name for making the obviously correct choices when building software.]]]></description>
+		<content:encoded><![CDATA[<p>@Gustavo Thanks to the reference to the EUROMICRO paper.  Although I only skimmed the paper it seems to me looser-coupling is the main difference.   I take away that SOSE is a subset of CBSE with some design flexibility removed by sticking to the same choice for certain thing (like location independence). If SOSE is a &#8216;good&#8217; paradigm then the removed flexibility was in areas where people frequently made poor choices or always he same choice.  Hopefully we&#8217;ve learned something from CBSE and taken the best parts/practices forwards to make SOSE. [Although personally I think it&#8217;s just a new name for making the obviously correct choices when building software.]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The Software Practitioner&#8217;s Digest: October 2011 by Gustavo</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112781</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 21:49:52 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112781</guid>
+		<description><![CDATA[@davidk, you&#039;re correct in that the differentiation I offered is is limited, hence I started by saying that my explanation was inaccurate. I was afraid to diverge too much by offering a more accurate explanation and I thought that binding time was the most significant difference.
+
+In the EUROMICRO paper I mentioned above, the authors point out that late binding is also possible in CBSE and cite &lt;a href=&quot;http://en.wikipedia.org/wiki/Component_Object_Model&quot; rel=&quot;nofollow&quot;&gt;COM&lt;/a&gt; as an example. They cover other differences which, in my opinion, are not as significant as binding time.
+
+Looked from another perspective, services in SOSE are black boxes for their clients, while CBSE allows components to be used as white, gray or black boxes. I&#039;d imagine this distinction can be useful in areas like critical systems development, where redundancy and diversity strategies like &lt;a rel=&quot;nofollow&quot; href=&quot;http://en.wikipedia.org/wiki/N-version_programming&quot; rel=&quot;nofollow&quot;&gt;NVP&lt;/a&gt; are used and SOSE could potentially be deemed the only acceptable paradigm.]]></description>
+		<content:encoded><![CDATA[<p>@davidk, you&#8217;re correct in that the differentiation I offered is is limited, hence I started by saying that my explanation was inaccurate. I was afraid to diverge too much by offering a more accurate explanation and I thought that binding time was the most significant difference.</p>
+<p>In the EUROMICRO paper I mentioned above, the authors point out that late binding is also possible in CBSE and cite <a href="http://en.wikipedia.org/wiki/Component_Object_Model" rel="nofollow">COM</a> as an example. They cover other differences which, in my opinion, are not as significant as binding time.</p>
+<p>Looked from another perspective, services in SOSE are black boxes for their clients, while CBSE allows components to be used as white, gray or black boxes. I&#8217;d imagine this distinction can be useful in areas like critical systems development, where redundancy and diversity strategies like <a rel="nofollow" href="http://en.wikipedia.org/wiki/N-version_programming" rel="nofollow">NVP</a> are used and SOSE could potentially be deemed the only acceptable paradigm.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The Software Practitioner&#8217;s Digest: October 2011 by davidk</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112763</link>
+		<dc:creator><![CDATA[davidk]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 15:48:10 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112763</guid>
+		<description><![CDATA[Your SOSE vs CBSE differentiation is only describing late vs early binding.  Component based systems often use late-binding (ex. plug-ins).  So either there is something else important about SOSE or folks are just recycling the same old ideas to write new papers.]]></description>
+		<content:encoded><![CDATA[<p>Your SOSE vs CBSE differentiation is only describing late vs early binding.  Component based systems often use late-binding (ex. plug-ins).  So either there is something else important about SOSE or folks are just recycling the same old ideas to write new papers.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The repoze.who LDAP plugin will be an official plugin by Gustavo</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-89689</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Wed, 13 Apr 2011 19:53:28 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-89689</guid>
+		<description><![CDATA[@raulna: I don&#039;t know about any repoze.who PAM plugin, sorry. There may be one, though.]]></description>
+		<content:encoded><![CDATA[<p>@raulna: I don&#8217;t know about any repoze.who PAM plugin, sorry. There may be one, though.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The repoze.who LDAP plugin will be an official plugin by raulna</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-89659</link>
+		<dc:creator><![CDATA[raulna]]></dc:creator>
+		<pubDate>Wed, 13 Apr 2011 07:28:23 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-89659</guid>
+		<description><![CDATA[Hola Gustavo,
+
+I have developed an application with TG2. And now I need users to
+authenticate with PAM. How I can do? I have been testing &quot;repoze&quot; with
+SQLAlchemy and I like it but use it with PAM. Any ideas?
+
+Thanks]]></description>
+		<content:encoded><![CDATA[<p>Hola Gustavo,</p>
+<p>I have developed an application with TG2. And now I need users to<br />
+authenticate with PAM. How I can do? I have been testing &#8220;repoze&#8221; with<br />
+SQLAlchemy and I like it but use it with PAM. Any ideas?</p>
+<p>Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on &#8220;WSGI from Start to Finish&#8221; materials available by Gustavo</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-87632</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Sat, 12 Mar 2011 18:19:36 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-87632</guid>
+		<description><![CDATA[Hello, Dharmavirsinh.
+
+It&#039;s hosted at &lt;a href=&quot;http://www.linode.com/?r=5d1565e30bb93355e48d162c1a1ce49fa6bc638c&quot; rel=&quot;nofollow&quot;&gt;Linode&lt;/a&gt;, which, by the way, I would highly recommend to anyone.
+
+HTH.
+
+ - Gustavo.]]></description>
+		<content:encoded><![CDATA[<p>Hello, Dharmavirsinh.</p>
+<p>It&#8217;s hosted at <a href="http://www.linode.com/?r=5d1565e30bb93355e48d162c1a1ce49fa6bc638c" rel="nofollow">Linode</a>, which, by the way, I would highly recommend to anyone.</p>
+<p>HTH.</p>
+<p> &#8211; Gustavo.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on &#8220;WSGI from Start to Finish&#8221; materials available by Dharmavirsinh Jhala</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/comment-page-1/#comment-87533</link>
+		<dc:creator><![CDATA[Dharmavirsinh Jhala]]></dc:creator>
+		<pubDate>Thu, 10 Mar 2011 21:25:38 +0000</pubDate>
+		<guid isPermaLink="false">/?p=387#comment-87533</guid>
+		<description><![CDATA[Hi,
+
+Asking you a question about hosting, as read your past post about webfaction.com
+Your website is pretty fast do you still host it with webfaction.com?
+
+if not where?
+
+Kudos.]]></description>
+		<content:encoded><![CDATA[<p>Hi,</p>
+<p>Asking you a question about hosting, as read your past post about webfaction.com<br />
+Your website is pretty fast do you still host it with webfaction.com?</p>
+<p>if not where?</p>
+<p>Kudos.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on The repoze.who LDAP plugin will be an official plugin by Jim Glenn</title>
+		<link>/blog/posts/the-repozewho-ldap-plugin-will-be-an-official-plugin/comment-page-1/#comment-84604</link>
+		<dc:creator><![CDATA[Jim Glenn]]></dc:creator>
+		<pubDate>Fri, 21 Jan 2011 00:02:43 +0000</pubDate>
+		<guid isPermaLink="false">/?p=145#comment-84604</guid>
+		<description><![CDATA[Hi Gustavo,
+
+I found your demo and plugin for LDAP with repoze.  I&#039;ve downloaded the demo and am running.  
+
+I can easily get to http://localhost:8080/, but when I go to http://localhost:8080/about, I get an WebError Traceback. 
+
+ ⇝ HTTPUnauthorized: 401 Unauthorized This server could not verify that you are authorized to access the document you requested. Either you supplied the wrong credentials (e.g., bad password), or your browser does not understand how to supply the credentials required.
+
+Any tips?]]></description>
+		<content:encoded><![CDATA[<p>Hi Gustavo,</p>
+<p>I found your demo and plugin for LDAP with repoze.  I&#8217;ve downloaded the demo and am running.  </p>
+<p>I can easily get to <a href="http://localhost:8080/" rel="nofollow">http://localhost:8080/</a>, but when I go to <a href="http://localhost:8080/about" rel="nofollow">http://localhost:8080/about</a>, I get an WebError Traceback. </p>
+<p> ⇝ HTTPUnauthorized: 401 Unauthorized This server could not verify that you are authorized to access the document you requested. Either you supplied the wrong credentials (e.g., bad password), or your browser does not understand how to supply the credentials required.</p>
+<p>Any tips?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

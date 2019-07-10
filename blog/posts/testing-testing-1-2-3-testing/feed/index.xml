@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Testing, testing&#8230; 1, 2, 3&#8230; Testing</title>
+	<atom:link href="/blog/posts/testing-testing-1-2-3-testing/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/testing-testing-1-2-3-testing/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/testing-testing-1-2-3-testing/comment-page-1/#comment-3</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 10 Jul 2007 15:54:35 +0000</pubDate>
+		<guid isPermaLink="false">/?p=6#comment-3</guid>
+		<description><![CDATA[Hi, Alberto!
+
+I hope so too! But please don&#039;t talk to me about those exams! They were nightmares to me and I&#039;m just trying to wake up.
+
+I&#039;m glad to know you&#039;re there right now! By the way, I&#039;ll go home too just after the exams.
+
+Till september!]]></description>
+		<content:encoded><![CDATA[<p>Hi, Alberto!</p>
+<p>I hope so too! But please don&#8217;t talk to me about those exams! They were nightmares to me and I&#8217;m just trying to wake up.</p>
+<p>I&#8217;m glad to know you&#8217;re there right now! By the way, I&#8217;ll go home too just after the exams.</p>
+<p>Till september!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Alberto Diaz (FI)</title>
+		<link>/blog/posts/testing-testing-1-2-3-testing/comment-page-1/#comment-2</link>
+		<dc:creator><![CDATA[Alberto Diaz (FI)]]></dc:creator>
+		<pubDate>Tue, 10 Jul 2007 00:32:10 +0000</pubDate>
+		<guid isPermaLink="false">/?p=6#comment-2</guid>
+		<description><![CDATA[Hey dude!
+
+I got your email about your blogs (both the personal one and the technical one) today. It&#039;s great. Hope you blog quite often on the technical side, it&#039;s great seeing people push so hard for free software.
+
+I&#039;m back at home, hope it didn&#039;t go so bad in june after all :)
+
+See u in september!
+Alberto]]></description>
+		<content:encoded><![CDATA[<p>Hey dude!</p>
+<p>I got your email about your blogs (both the personal one and the technical one) today. It&#8217;s great. Hope you blog quite often on the technical side, it&#8217;s great seeing people push so hard for free software.</p>
+<p>I&#8217;m back at home, hope it didn&#8217;t go so bad in june after all <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>See u in september!<br />
+Alberto</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

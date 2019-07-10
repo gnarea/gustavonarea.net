@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Magazine &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/python-magazine/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>Web Site Security With repoze.who and repoze.what</title>
+		<link>/blog/posts/repoze-auth/</link>
+		<comments>/blog/posts/repoze-auth/#comments</comments>
+		<pubDate>Tue, 01 Jun 2010 14:41:13 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[HOWTOs]]></category>
+		<category><![CDATA[Publications]]></category>
+		<category><![CDATA[Software development]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Python Magazine]]></category>
+		<category><![CDATA[repoze.what]]></category>
+		<category><![CDATA[repoze.who]]></category>
+		<category><![CDATA[TurboGears]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=294</guid>
+		<description><![CDATA[This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the article are only applicable to repoze.who 1.0 and repoze.what 1.0, not repoze.who 2 and repoze.what 1.1 which are under development as of this writing. Have you ever created a Web application? If so, it&#8217;s... <a class="more-link" href="/blog/posts/repoze-auth/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/repoze-auth/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

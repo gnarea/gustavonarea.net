@@ -1,0 +1,665 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>Installing Pootle on Debian Etch, The Easiest Way | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Installing Pootle on Debian Etch, The Easiest Way Comments Feed" href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The only screencasting software that doesn&#8217;t crash in Ubuntu Hardy' href='/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/' />
+<link rel='next' title='So long Debian servers, welcome Ubuntu' href='/blog/posts/so-long-debian-servers-welcome-ubuntu/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comments" />
+<link rel='shortlink' href='/?p=41' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Finstalling-pootle-on-debian-etch-the-easiest-way%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Finstalling-pootle-on-debian-etch-the-easiest-way%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="Installing Pootle on Debian Etch, The Easiest Way">
+<meta property="og:description" content="&lt;a title=&quot;A user-friendly web portal that makes the translation process so much simpler&quot; ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-41 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-41" class="clearfix post-41 post type-post status-publish format-standard hentry category-howtos tag-debian tag-internationalization tag-pootle">
+								<header class="entry-header">
+																		<h1 class="entry-title" >Installing Pootle on Debian Etch, The Easiest Way</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="3:34 pm" href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 21, 2008</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/&media=&description=Installing Pootle on Debian Etch, The Easiest Way" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p><a href="http://translate.sourceforge.net/wiki/pootle/index" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/index', 'Pootle');" title="A user-friendly web portal that makes the translation process so much simpler">Pootle</a> is a user-friendly web application for online translation of contents. It&#8217;s used by organizations like <a href="http://translate.creativecommons.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.creativecommons.org/', 'Creative Commons');">Creative Commons</a>, <a href="http://www.sunvirtuallab.com:32300/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.sunvirtuallab.com:32300/', 'OpenOffice.org');">OpenOffice.org</a> and <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a>.</p>
+<p>I&#8217;m going to show you how to install it the easiest way, from my experience with the <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/', 'GLM Translation Service');" title="GNU/Linux Matters!">GLM Translation Service</a> under Debian 4.0 (this guide might also work under Ubuntu, though). I&#8217;ll use the <a href="http://www.debianhelp.co.uk/sudo.htm" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.debianhelp.co.uk/sudo.htm', 'sudo');" title="Sudo Configuration in Debian">sudo</a> utility, so I assume that you&#8217;ve already installed and configured sudo accordingly for your user.</p>
+<h2>Installing dependencies</h2>
+<p>Some of the Pootle&#8217;s dependencies are available in Debian repositories, so we may install them by running:<br />
+<code>sudo aptitude install python-dev python-pysqlite2 python-celementtree subversion bzip2 g++ curl</code></p>
+<p>We&#8217;re now going to install the other software packages required by Pootle. First, select the directory where you want to download and compile your software, for example:<br />
+<code>cd /usr/src</code></p>
+<p>To get the source code of the packages and extract them, run the following commands:<br />
+<code>curl http://www.kid-templating.org/dist/0.9.6/kid-0.9.6.tar.gz | tar xzv<br />
+curl http://dfn.dl.sourceforge.net/sourceforge/translate/translate-toolkit-1.1.1.tar.bz2 | tar xjv<br />
+curl http://garr.dl.sourceforge.net/sourceforge/translate/Pootle-1.1.0.tar.bz2 | tar xjv<br />
+curl http://jtoolkit.sourceforge.net/snapshots/jToolkit-0.7.8/jToolkit-0.7.8.tar.gz | tar xzv<br />
+</code></p>
+<p>Installing the applications:<br />
+<code>sudo python translate-toolkit-1.1.1/setup.py install<br />
+sudo python kid-0.9.6/setup.py install<br />
+sudo Pootle-1.1.0/pootlesetup.py install<br />
+sudo jToolkit-0.7.8/jToolkitSetup.py install<br />
+</code></p>
+<h3>Do not install PyLucene</h3>
+<p>Pootle is supposed to work better with PyLucene, but if you (like me) hate headaches, you won&#8217;t install PyLucene on Debian Etch. If you try to install it, you&#8217;d get this error:<br />
+<code>install: cannot stat `/usr/lib/security/libgcj.security': No such file or directory<br />
+make: *** [install] Error 1</code></p>
+<p>There&#8217;s nothing you could install that would create that file; don&#8217;t you even try to create it as an empty file: You&#8217;d be able to install PyLucene, but Pootle won&#8217;t work and you&#8217;d get this error when you&#8217;ll try to run it:<br />
+<code>GC Warning: Repeated allocation of very large block (appr. size 65536):<br />
+May lead to memory leak and poor performance.</code></p>
+<p>If it&#8217;s too late, and you&#8217;ve already installed PyLucene with <em>libgcj.security</em> as an empty file (as suggested in some mailing-lists), you may fix it by running the following commands:<br />
+<code>sudo mv /usr/lib/python2.4/site-packages/_PyLucene.so /usr/lib/python2.4/site-packages/_PyLucene.so.old<br />
+sudo mv /usr/lib/python2.4/site-packages/PyLucene.py /usr/lib/python2.4/site-packages/PyLucene.py.old<br />
+sudo mv /usr/lib/python2.4/site-packages/PyLucene.pyc /usr/lib/python2.4/site-packages/PyLucene.pyc.old</code></p>
+<h3>Don&#8217;t you have a mail server?</h3>
+<p>If your mail server is not in the same host as Pootle, you&#8217;ll need to install one. Just run the command below to install <a href="http://en.wikipedia.org/wiki/Postfix_%28software%29" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Postfix_%28software%29', 'Postfix');">Postfix</a> and then select &#8220;Internet website&#8221; when asked about what you&#8217;ll use postfix for:<br />
+<code>sudo apt-get install postfix</code></p>
+<h2>Configuring Pootle</h2>
+<p>To make it easy for you to configure and play with Pootle, I suggest you create softlinks to Pootle&#8217;s configuration files in a folder like <em>/etc/pootle</em>:<br />
+<code>sudo mkdir /etc/pootle<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/users.prefs -s /etc/pootle/users.conf<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/html -s /etc/pootle/html<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/templates -s /etc/pootle/templates</code></p>
+<p>This way, any file you might ever need to edit will be in /etc/pootle.</p>
+<p>Now let&#8217;s edit the main configuration file in Pootle: <code>sudo nano /etc/pootle/pootle.conf</code></p>
+<p>It&#8217;s well-documented, so I won&#8217;t talk a lot about it. I just suggest you only set the following parameters accordingly:</p>
+<ul>
+<li><em>description</em>: Describe your website powered by Pootle, with a text aimed at (potential) translators.</li>
+<li><em>fromaddress</em>.</li>
+<li><em>supportaddress</em>: The email address for translators to make questions. This might be a mailing list.</li>
+<li><em>defaultrights</em>: I suggest you set it to <code>defaultrights = "view, suggest, archive, pocompile, translate, commit"</code></li>
+<li><em>podirectory</em>: It&#8217;s the path to your translation files. For this HOWTO I&#8217;ll use <em>/var/translations</em>.</li>
+</ul>
+<h2>Your <em>pootle</em> user</h2>
+<p>I suggest you create a user for running <em>pootle</em>:<br />
+<code>sudo adduser --disabled-password --disabled-login pootle</code></p>
+<h2>Setting up service scripts for Pootle</h2>
+<p>Create the file <em>/etc/init.d/pootle</em> as root with the following contents:<br />
+<code>#!/bin/bash<br />
+# /etc/init.d/pootle: start and stop the Pootle Server<br />
+# Pootle runs as user -pootle- via sudo<br />
+# This script is based on the one published here http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+PREFIX=/usr/local/pootle<br />
+test -x /usr/bin/PootleServer || exit 0<br />
+. /lib/lsb/init-functions<br />
+case "$1" in<br />
+start)<br />
+log_begin_msg "Starting Pootle Server..."<br />
+/usr/bin/sudo -u pootle $PREFIX/start_pootle &amp;<br />
+log_end_msg 0<br />
+;;<br />
+stop)<br />
+log_begin_msg "Stopping Pootle Server..."<br />
+$PREFIX/stop_pootle &gt;/dev/null 2&gt;&amp;1<br />
+log_end_msg 0<br />
+;;<br />
+restart)<br />
+log_begin_msg "Stopping Pootle Server..."<br />
+$PREFIX/stop_pootle &gt;/dev/null 2&gt;&amp;1<br />
+log_end_msg 0<br />
+log_begin_msg "Starting Pootle Server..."<br />
+sudo -u pootle $PREFIX/start_pootle &amp;<br />
+log_end_msg 0<br />
+;;<br />
+status)<br />
+$PREFIX/status_pootle<br />
+;;<br />
+*)<br />
+log_success_msg "Usage: /etc/init.d/pootle {start|stop|restart|status}"<br />
+exit 1<br />
+esac<br />
+exit 0</code></p>
+<p>Now let&#8217;s create, as root, the auxiliary scripts required by the script above:</p>
+<h3>/usr/local/pootle/start_pootle</h3>
+<p><code>#!/bin/bash<br />
+# $PREFIX/start_pootle<br />
+# Start script in port 8080, separates errors from normal logs<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+export HOME="/home/pootle"<br />
+/usr/bin/PootleServer -p 8080 $@ &gt;&gt; /var/log/pootle/`date "+%F"` 2&gt;&gt; /var/log/pootle/`date "+%F"`.err</code></p>
+<h3>/usr/local/pootle/stop_pootle</h3>
+<p><code><br />
+#!/bin/bash<br />
+# Stop script $PREFIX/stop_pootle<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+echo "Killing Pootle"<br />
+pidpootle=`ps -ef |grep PootleServer |grep python | awk '{print $2}'`<br />
+pidpootle2=`ps -ef |grep start_pootle |grep bin | awk '{print $2}'`<br />
+kill $pidpootle2 &gt;/dev/null 2&gt;&amp;1<br />
+kill $pidpootle &gt;/dev/null 2&gt;&amp;1</code></p>
+<h3>/usr/local/pootle/status_pootle</h3>
+<p><code>#!/bin/bash<br />
+# Pootle Status $PREFIX/status_pootle<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+pidpootle=`ps -ef |grep PootleServer |grep python | awk '{print $2}'`<br />
+if [ "$pidpootle" != "" ]<br />
+then<br />
+echo "Pootle Server running in pid ($pidpootle)"<br />
+else<br />
+echo "Pootle Server is not running"<br />
+fi</code></p>
+<h3>Make them work!</h3>
+<p>Now we have to make these scripts <em>useful</em>:<br />
+<code>sudo chmod +x /etc/init.d/pootle<br />
+sudo chmod +x /usr/local/pootle/s*<br />
+sudo update-rc.d pootle</code></p>
+<h2>Configuring Pootle to use your repository</h2>
+<p>Pootle supports several <a href="http://en.wikipedia.org/wiki/Revision_control" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Revision_control', 'VCSs');">VCSs</a>, but I&#8217;ll only teach you how to setup a Subversion working copy that Pootle may update and commit. If you don&#8217;t use a version control system, I recommend you do so. If you&#8217;re sure you don&#8217;t need it, you may skip this section. If you&#8217;re using another VCS, you&#8217;ll need to go to the Pootle&#8217;s website to <a href="http://translate.sourceforge.net/wiki/pootle/version_control" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/version_control', 'learn how to configure it with Pootle');" title="Version control in Pootle">learn how to configure it with Pootle</a>.</p>
+<h3>Setup your working copy</h3>
+<p>Let&#8217;s create the working copy at, say, <em>/var/translations</em>. To do that in GNU/Linux Matters, we would run:<br />
+<code>sudo svn co https://svn.gnulinuxmatters.org:81/i18n /var/translations</code><br />
+You should replace the URL by yours.<br />
+And don&#8217;t forget to set the <em>pootle</em> user as the owner:<br />
+<code>sudo chown pootle -R /var/translations</code></p>
+<h3>Create basic cronjobs</h3>
+<p>We should run from time to time two scripts:</p>
+<ul>
+<li>One to commit the changes made by translators; ideally, these changes would be committed by translators themselves, but from my experience you should not count on that (most of them forget about it or just don&#8217;t know they can do that).</li>
+<li>Another to update your PO templates from the repository.</li>
+</ul>
+<p>So we&#8217;re going to ask our <em>pootle</em> user to do this by creating cronjobs. First, <em>become pootle</em>:<br />
+<code>sudo su - pootle</code><br />
+Then run <code>crontab -e</code> and add the following two lines:<br />
+<code>*/15 * * * * /usr/bin/svn update /var/translations &gt;&gt; /dev/null 2&gt;&gt; /home/pootle/update.err<br />
+0 0,8,16 * * * /usr/bin/svn commit -m "Uncommitted translations in the last 8 hours" /var/translations &gt;&gt; /dev/null 2&gt;&gt; /home/pootle/commit.err</code></p>
+<h2>Pootle is running on port 8080</h2>
+<p>For security reasons, if you followed this HOWTO you&#8217;ll be running as the <em>pootle</em> user, not as root. And due to a UNIX misfeature, only root may open ports below 1024. So, unless you love appending the port number to your URLs, and if port 80 is available on your system, you&#8217;d <a href="http://translate.sourceforge.net/wiki/pootle/apache" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/apache', 'proxy Pootle through a webserver');" title="Proxying Pootle through Apache">proxy Pootle through a webserver</a>.</p>
+<p>The proxy trick is recommended, but if you cannot do that or just don&#8217;t want, you can use iptables to redirect traffic from port 8080 to 80. My suggestion would be to use the next iptables ruleset:<br />
+<code># Generated by iptables-save v1.3.6 on Thu Jan 24 16:40:59 2008<br />
+*nat<br />
+:PREROUTING ACCEPT [0:0]<br />
+:POSTROUTING ACCEPT [0:0]<br />
+:OUTPUT ACCEPT [0:0]<br />
+-A PREROUTING -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080<br />
+COMMIT<br />
+# Completed on Thu Jan 24 16:40:59 2008<br />
+# Generated by iptables-save v1.3.6 on Thu Jan 24 16:40:59 2008<br />
+*filter<br />
+:INPUT ACCEPT [0:0]<br />
+:FORWARD ACCEPT [0:0]<br />
+:OUTPUT ACCEPT [495:60715]<br />
+-A INPUT -i lo -j ACCEPT<br />
+-A INPUT -m state --state INVALID -j DROP<br />
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT<br />
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT<br />
+-A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT<br />
+-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT<br />
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7<br />
+-A INPUT -p tcp -j REJECT --reject-with tcp-reset<br />
+-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable<br />
+-A INPUT -j REJECT --reject-with icmp-proto-unreachable<br />
+-A FORWARD -j REJECT --reject-with icmp-port-unreachable<br />
+COMMIT<br />
+# Completed on Thu Jan 24 16:40:59 2008</code></p>
+<p>For more information about this basic iptables-based firewall, you may read my <a href="/blog/posts/setting-up-your-first-server/">Setting up your first server</a> HOWTO.</p>
+<h2>Criticism? Suggestions? Complaints?</h2>
+<p>Leave a comment!</p>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+																			<footer class="entry-meta post-tags">
+												<a href="/blog/tags/debian/" rel="tag">Debian</a>, <a href="/blog/tags/internationalization/" rel="tag">Internationalization</a>, <a href="/blog/tags/pootle/" rel="tag">Pootle</a>											</footer>
+											<!-- end .entry-meta -->
+																	</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/" rel="prev"><span class="meta-nav">&#8592;</span> The only screencasting software that doesn&#8217;t crash in Ubuntu Hardy</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/so-long-debian-servers-welcome-ubuntu/" rel="next">So long Debian servers, welcome Ubuntu <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+					<h2 class="comments-title">
+					5 Comments <span class="on">&#8594;</span> <span>Installing Pootle on Debian Etch, The Easiest Way</span>				</h2>
+				<!-- end .comments-title -->
+				
+				<ol class="commentlist">
+										
+					<li class="comment even thread-even depth-1" id="li-comment-12796">
+						<article id="comment-12796" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/88f92b06047af5c4d69ffc1cf2a7c4fd?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/88f92b06047af5c4d69ffc1cf2a7c4fd?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">roebek </cite><a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12796"><time datetime="2008-05-21T18:35:52+00:00">May 21, 2008 at 6:35 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>The easiest way is</p>
+<p>apt-get install pootle</p>
+<p><img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-12797">
+						<article id="comment-12797" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> <span></span></cite><a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12797"><time datetime="2008-05-21T18:41:30+00:00">May 21, 2008 at 6:41 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@roebek:</p>
+<p>Indeed, but you&#8217;d install Pootle v0.10.1-1 in Debian 4.0. Ubuntu Hardy does have an up-to-date version.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-12915">
+						<article id="comment-12915" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fd7ed447f0c0136274fc5605d881d3cd?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fd7ed447f0c0136274fc5605d881d3cd?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Amos Batto </cite><a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12915"><time datetime="2008-05-22T15:27:30+00:00">May 22, 2008 at 3:27 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>A great how-to. I struggled to set up a Pootle Server in Etch a couple weeks ago. I wish this how-to had been available at the time.  It would have saved me hours of frustration.</p>
+<p>I have two suggestions:<br />
+Use &#8220;sudo -i&#8221; to login in as the user with administrative privileges rather than having to type &#8220;sudo&#8221; before every command.</p>
+<p>You left out the &#8220;ln&#8221; command to create soft links. </p>
+<p>Change:<br />
+sudo /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf</p>
+<p>To:<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-12925">
+						<article id="comment-12925" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> <span></span></cite><a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-12925"><time datetime="2008-05-22T18:41:20+00:00">May 22, 2008 at 6:41 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@Amos:</p>
+<p>Thank you very much! I&#8217;ve corrected the typos.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-60543">
+						<article id="comment-60543" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/471a40678fb5a07f8a9a251df56f620f?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/471a40678fb5a07f8a9a251df56f620f?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://CentreSIS.org/' rel='external nofollow' class='url'>Nicolas</a> </cite><a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/comment-page-1/#comment-60543"><time datetime="2009-09-07T18:31:41+00:00">September 7, 2009 at 6:31 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Very nice tutorial &#8230; I was able to setup <a href="http://translate.centresis.org/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://translate.centresis.org', 'http://translate.centresis.org');" rel="nofollow">http://translate.centresis.org</a> based on your very helpful hints. Thanks very very much!</p>
+<p>Now I just wish the Debian packages would be updated to the latest version &#8230;</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+				</ol>
+				<!-- end .commentlist -->
+				
+								
+											<p class="nocomments">Comments are closed.</p>
+										
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

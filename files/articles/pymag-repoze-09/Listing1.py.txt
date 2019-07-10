@@ -1,0 +1,31 @@
+"""Model definitions for the classifieds."""
+
+from sqlalchemy import ForeignKey, Column
+from sqlalchemy.types import Unicode, UnicodeText, Integer
+from sqlalchemy.orm import relation
+
+from classifieds.model import DeclarativeBase
+
+
+class Classified(DeclarativeBase):
+    """Simple classified"""
+    
+    __tablename__ = 'classified'
+    
+    #{ Columns
+    
+    classified_id = Column(Integer(), autoincrement=True, 
+                           primary_key=True)
+    
+    poster_id = Column(Integer(), 
+                       ForeignKey('tg_user.user_id'))
+    
+    classified_title = Column(Unicode(255))
+    
+    classified_contents = Column(UnicodeText())
+    
+    #{ Relations
+    
+    poster = relation('User', backref='classifieds')
+    
+    #}

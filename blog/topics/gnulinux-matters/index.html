@@ -1,0 +1,700 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>GNU/Linux Matters | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; GNU/Linux Matters Category Feed" href="/blog/topics/gnulinux-matters/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.16" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="archive category category-gnulinux-matters category-6">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="post-archive blog-masonry">
+			<header class="page-header">
+				<h1 class="page-title">Post Category <span class="on">&#8594;</span> <span>GNU/Linux Matters</span></h1>
+			</header>
+			<!-- end .page-header -->
+			
+			<article id="post-113" class="clearfix post-113 post type-post status-publish format-standard hentry category-gnulinux-matters tag-arabic tag-gglo tag-linux tag-russian tag-translations tag-ukrainian tag-vietnamese">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/" rel="bookmark">The Linux homepage now in Arabic, Russian, Vietnamese and Ukrainian</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/" title="10:41 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">September 4, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>The awesome international <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'Linux');">Linux</a> homepage is now available in <a href="http://www.honalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.honalinux.org/', 'Arabic');">Arabic</a>, <a href="http://pereidinalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://pereidinalinux.org/', 'Russian');">Russian</a>, <a href="http://dunglinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://dunglinux.org/', 'Vietnamese');">Vietnamese</a> and <a href="http://otrymaylinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://otrymaylinux.org/', 'Ukrainian');">Ukrainian</a>!</p>
+<ul>
+<li><a href="http://www.gnulinuxmatters.org/blog/we-have-just-released-four-new-translations/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/we-have-just-released-four-new-translations/', 'Check the official announcement');" title="We have just released four new translations">Check the official announcement</a>.</li>
+<li>Are you missing your language? <a href="http://www.gnulinuxmatters.org/participate/translation/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/translation/', 'Translate it');">Translate it</a> and help us promote <a href="http://www.softwareliberty.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.softwareliberty.com/', 'freedomware');" title="Free Software">freedomware</a>!</li>
+</ul>
+		
+		
+			</div>
+</article><article id="post-91" class="clearfix post-91 post type-post status-publish format-standard hentry category-floss-contributions category-gnulinux-matters category-tg tag-animador tag-openid tag-python tag-turbogears">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/joining-the-development-of-turbogears/" rel="bookmark">Joining the development of TurboGears</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/floss-contributions/" rel="category tag">Free Software contributions</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>, <a href="/blog/topics/tg/" rel="category tag">Turbo Gears</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/joining-the-development-of-turbogears/" title="5:23 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">August 18, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/joining-the-development-of-turbogears/#comments">5 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve had the great pleasure of being invited by the <a href="http://en.wikipedia.org/wiki/TurboGears" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/TurboGears', 'TurboGears');">TurboGears</a> team to become an official <a href="http://en.wikipedia.org/wiki/Committer" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Committer', 'committer');" title="What's a committer?">committer</a> for <a href="http://turbogears.org/about/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://turbogears.org/about/', 'the great TurboGears framework');">the great TurboGears framework</a>.</p>
+<p>This is because I&#8217;ve been contributing patches for TurboGears 2 and other packages used by <a href="http://tracker.gnulinuxmatters.org/wiki/Animador" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://tracker.gnulinuxmatters.org/wiki/Animador', 'Animador');">Animador</a> (a <a href="http://turbogears.org/2.0/docs/index.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://turbogears.org/2.0/docs/index.html', 'TurboGears 2');">TurboGears 2</a> application), since I started its development, in order to fix bugs and/or add new features that I want in Animador. So now I can apply my changes by myself! 😉</p>
+<p>And stay tunned, because very soon it&#8217;s going to be very easy to add <a href="http://openid.net/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://openid.net/', 'OpenId');">OpenId</a> support to any WSGI application by means of <a href="http://tracker.gnulinuxmatters.org/ticket/264" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://tracker.gnulinuxmatters.org/ticket/264', 'a plugin for the framework-independent repoze.who package');">a plugin for the framework-independent <em>repoze.who</em> package</a>!</p>
+		
+		
+			</div>
+</article><article id="post-62" class="clearfix post-62 post type-post status-publish format-standard hentry category-free-software category-gnulinux-matters tag-animador tag-python">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/python-developers-help-us-promote-freedomware/" rel="bookmark">Python Developers: Help Us Promote Freedomware!</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/python-developers-help-us-promote-freedomware/" title="6:45 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">July 27, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p><a href="http://www.gnulinuxmatters.org/blog/we-are-looking-for-python-developers/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/we-are-looking-for-python-developers/', 'GNU/Linux Matters is looking for Python developers');">GNU/Linux Matters is looking for Python developers</a> to develop the upcoming multicultural SpreadFirefox.com-like platform to promote freedomware and <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'Linux');" title="GNU/Linux">Linux</a>.</p>
+		
+		
+			</div>
+</article><article id="post-61" class="clearfix post-61 post type-post status-publish format-standard hentry category-gnulinux-matters tag-events tag-rmll">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/back-from-the-libre-software-meeting-rmll-2008/" rel="bookmark">Back from the Libre Software Meeting (RMLL) 2008</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/back-from-the-libre-software-meeting-rmll-2008/" title="1:58 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">July 8, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p style="text-align: center;"><a href="http://media.gustavonarea.name/v/en/france/rmll-08/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/', '');" title="My RMLL 08 Album"><img class="alignnone size-medium wp-image-60 aligncenter" title="Geeky nightly meeting at the RMLL 08" src="//media.gustavonarea.net/rmll-08-300x225.jpg" alt="" width="300" height="225" srcset="//media.gustavonarea.net/rmll-08-300x225.jpg 300w, //media.gustavonarea.net/rmll-08.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>After 6 days of delicious <a href="http://en.wikipedia.org/wiki/Pain_au_chocolat" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Pain_au_chocolat', 'pains au chocolat');">pains au chocolat</a>, spreading the word about <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org', 'GLM');" title="GNU/Linux Matters!">GLM</a> (by means of <a href="http://people.gnulinuxmatters.org/gustavo/documents/rmll_08.odp" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://people.gnulinuxmatters.org/gustavo/documents/rmll_08.odp', 'a conference');" title="The Next 10 Million Users Won't Wear a Beard">a conference</a> and <a href="http://media.gustavonarea.name/v/en/france/rmll-08/100_0784.jpg.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/100_0784.jpg.html', 'a booth');" title="GLM booth at the RMLL 2008">a booth</a>) and having fun with <a href="http://media.gustavonarea.name/v/en/france/rmll-08/100_0913.jpg.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/100_0913.jpg.html', 'cool people');">cool people</a>, I&#8217;m back home in Madrid from the <a href="http://2008.rmll.info/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://2008.rmll.info/', 'RMLL');">RMLL</a>.</p>
+		
+		
+			</div>
+</article><article id="post-57" class="clearfix post-57 post type-post status-publish format-standard hentry category-gnulinux-matters tag-poliglota">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/" rel="bookmark">We need German translators to promote Linux! And others are welcome too</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/" title="4:49 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">June 25, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/#comments">1 Comment</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p><strong>We need people to bring the first <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GNU/Linux');">GNU/Linux</a> website that doesn&#8217;t suck to all possible languages.</strong></p>
+<p>Until last year, translations were hard to setup and manage, so we created an <a href="https://tracker.gnulinuxmatters.org/wiki/Poliglota" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Poliglota', 'special multi-website CMS');">special multi-website CMS</a> focused on internationalization, which makes it really easy for translators to preview their work and release websites with a few clicks, and also reports any mistake translators and editors have made (if any), among other things. We also setup a <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org', 'web-based translation interface');" title="GLM Translation Service">web-based translation interface</a>, for those who don&#8217;t want to use the traditional, not-so-easy-to-use <a href="http://en.wikipedia.org/wiki/Computer-assisted_translation" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Computer-assisted_translation', 'CAT');" title="Computer-assisted translation">CAT</a> applications.</p>
+<p>The <a href="http://www.obtengalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.obtengalinux.org/', 'Castilian');">Castilian</a> and <a href="http://www.passeralinux.fr/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.passeralinux.fr/', 'French');">French</a> translations were the first to be ported to the new system, and now <a href="http://www.gnulinux.cat/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinux.cat/', 'the Catalan translation');">the Catalan translation</a> is near completion. But <a href="http://www.linuxfueralle.de/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.linuxfueralle.de/', 'the German translation');">the German translation</a> is just <a href="http://translate.gnulinuxmatters.org/de/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/de/', '~60% translated');">~60% translated</a>, which means the new edition cannot be released <em>the new way</em>; this has caused some problems since we&#8217;re using the new system, because we have to maintain it <em>the old way </em>and the time we spend maintaining one outdated site could be used to improve the system that powers the other websites, so we decided to move on and stop maintaining it the old way &#8211; that means that it won&#8217;t be linked to from the upgraded websites such as <a href="http://www.obtengalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.obtengalinux.org/', 'ObtengaLinux.org');">ObtengaLinux.org</a>, until the German translation is complete.</p>
+<p>So, if you&#8217;re a German speaker, <strong>please help us out</strong>. But if you speak a language other than German and English, you can help too. Just head on to the <a href="http://www.gnulinuxmatters.org/participate/translation/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/translation/', 'GLM website to find out how to be a translator');">GLM website to find out how to be a translator</a>.</p>
+<p><strong>PS:</strong> <a href="http://www.gnulinuxmatters.org/blog/calling-for-german-and-catalan-translators/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/calling-for-german-and-catalan-translators/', 'We already talked about this on the blog');">We already talked about this on the blog</a>, but only Catalan translators came up. I&#8217;m making another try on my blog because I belong to some groups at <a href="http://mugshot.org/person?who=Mnpdt5tjd0wW0W" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://mugshot.org/person?who=Mnpdt5tjd0wW0W', 'Mugshot');">Mugshot</a> and thus more people can know about this.</p>
+		
+		
+			</div>
+</article><article id="post-52" class="clearfix post-52 post type-post status-publish format-standard hentry category-gnulinux-matters tag-internationalization tag-poliglota">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/" rel="bookmark">A silly yet killer feature in Poliglota</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/" title="11:02 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">June 12, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>Just a quick post to highlight a <a href="https://tracker.gnulinuxmatters.org/ticket/120" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/ticket/120', 'new feature');">new feature</a> in <a href="https://tracker.gnulinuxmatters.org/wiki/Poliglota" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Poliglota', 'Poliglota');">Poliglota</a>:</p>
+<p><a href="https://media.gustavonarea.net/poliglota-after-120.png"><img class="aligncenter size-full wp-image-54" title="A zoom at a killer feature in Poliglota" src="//media.gustavonarea.net/poliglota-after-120-zoom.png" alt="" /></a></p>
+<p>While most CMSs around have a lot of trouble with non-Western languages and cross-linking the different language editions accordingly, Poliglota has a solid support for these features since day one! And it&#8217;s just one of the features.</p>
+<p>By the way, want to get involved and <em>speak</em> PHP? Then please <a href="http://www.gnulinuxmatters.org/contact" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/contact', 'contact us');">contact us</a>!</p>
+		
+		
+			</div>
+</article><article id="post-50" class="clearfix post-50 post type-post status-publish format-standard hentry category-gnulinux-matters tag-debian tag-migration tag-servers tag-ubuntu">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/so-long-debian-servers-welcome-ubuntu/" rel="bookmark">So long Debian servers, welcome Ubuntu</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/so-long-debian-servers-welcome-ubuntu/" title="2:25 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 28, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/so-long-debian-servers-welcome-ubuntu/#comments">7 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve been assessing the possibility of switching <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a>&#8216; servers (which are all powered by Debian) to Ubuntu, and I have finally decided to go for it.</p>
+<p>They were running Debian for three reasons:</p>
+<ol>
+<li>Stability, something Debian is well-known for.</li>
+<li>A large user base, which brings two big advantages: A huge amount of packaged applications and a good community support.</li>
+<li>I&#8217;m only familiar with Debian-based distros <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ol>
+<p>And they weren&#8217;t running Ubuntu because, to be honest, I didn&#8217;t find Ubuntu reliable enough to power a server, mainly because of the cutting-edge applications it includes by default; it was just great for my personal computer. I guess this is mostly due to I&#8217;ve been using Kubuntu since Breeze, and it was a highly unreliable system in the early versions &#8211; IMHO things begun to take shape in Feisty and now Hardy just rocks.</p>
+<p>I&#8217;ve started to switch our servers to Ubuntu because I think it&#8217;s the best choice, <em>at least for us</em>, because we still have the three advantages of using Debian (it&#8217;s based on it after all), plus:</p>
+<ol>
+<li>Packaged applications are up-to-date, so I don&#8217;t have to compile and maintain software which have a old version in Debian repositories (we often need the latest stable version). Yes, I can use Debian Testing, but this is not the only drawback.</li>
+<li><a href="https://help.ubuntu.com/8.04/serverguide/C/firewall.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://help.ubuntu.com/8.04/serverguide/C/firewall.html', 'Uncomplicated Firewall');">Uncomplicated Firewall</a>. An extremely easy-to-setup, basic firewall. It&#8217;s just a front-end to <em>iptables-restore</em>, so you can still add/adjust any rule according to your needs.</li>
+<li><strong>Many</strong> other tiny (and not so tiny) <a href="http://www.ubuntu.com/products/whatisubuntu/serveredition" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.ubuntu.com/products/whatisubuntu/serveredition', 'benefits');">benefits</a> that together make a big difference.</li>
+</ol>
+<p>The migration should take some months because it&#8217;s not a top-priority at present. There are <a href="https://tracker.gnulinuxmatters.org/report/3" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/report/3', 'many more things');">many more things</a> that should be done first.</p>
+<p>Put simply, it&#8217;s not that Ubuntu is much better than Debian on the server, it just happens to make your job easier if you&#8217;re the administrator.</p>
+		
+		
+			</div>
+</article><article id="post-48" class="clearfix post-48 post type-post status-publish format-standard hentry category-gnulinux-matters category-howtos tag-debian tag-glm tag-gutsy tag-hardy tag-istanbul tag-recordmydesktop tag-screencast tag-ubuntu tag-xvidcap">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/" rel="bookmark">The only screencasting software that doesn&#8217;t crash in Ubuntu Hardy</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>, <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/" title="5:07 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 19, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve spent a lot of time trying to <a href="https://tracker.gnulinuxmatters.org/ticket/139" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/ticket/139', 'record some screencasts for GLM');">record some screencasts for GLM</a>, but every screencasting software I tried crashed under Ubuntu Hardy (and Gutsy too):</p>
+<ul>
+<li>XVidCap: The workaround is supposed to be disabling sound, but didn&#8217;t work.</li>
+<li>RecordMyDesktop (plus its two front-ends): Crashes with no error message. From time to time I was able to record videos.</li>
+<li>Istanbul: Crashes if you select a window to be recorded.</li>
+</ul>
+<p>So, the only solution is to install a newer version of Istanbul for Debian:<br />
+<code>http://ftp.fr.debian.org/debian/pool/main/i/istanbul/istanbul_0.2.2-4_i386.deb</code><br />
+or, if you have a 64-bit box, <code>http://ftp.fr.debian.org/debian/pool/main/i/istanbul/istanbul_0.2.2-4_amd64.deb</code></p>
+<p>After making the appropriate bug reports, I can finally start recording the screencasts with Istanbul!</p>
+<p>PS: Forget about the above. That Debian package doesn&#8217;t work either. I&#8217;m installing KDE4 to check whether I can record the screencast with it; I think I saw such an option when I tried it out.</p>
+<p>PPS: The KDE4 built-in screencasting component uses a weird format (cps?) which cannot be opened with VLC, Mplayer nor Kaffeine (<a href="http://ubuntuforums.org/showpost.php?p=4717105&amp;postcount=2" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ubuntuforums.org/showpost.php?p=4717105&amp;postcount=2', 'but there&#8217;s a dirty workaround');">but there&#8217;s a dirty workaround</a>). Anyways, it records the whole screen and I just want to record a single window.</p>
+<p>PPPS: <a href="http://ubuntuforums.org/showthread.php?p=5016504" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ubuntuforums.org/showthread.php?p=5016504', 'I&#8217;m not alone');">I&#8217;m not alone</a>.</p>
+		
+		
+			</div>
+</article><article id="post-45" class="clearfix post-45 post type-post status-publish format-standard hentry category-free-software category-gnulinux-matters tag-animador tag-closed-standards tag-ffii tag-formats tag-freedomware tag-fsf tag-gglo tag-glm tag-gnu tag-gnulinux tag-mozilla tag-open-standards tag-protocols tag-unconstrained tag-windows">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/" rel="bookmark">I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/" title="8:09 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">March 5, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/#comments">6 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>We <a href="http://www.softwareliberty.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.softwareliberty.com/', 'freedomware');" title="Free Software">freedomware</a> advocates think that switching to a Freedom-respectful operating system (usually <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GNU/Linux');" title="Linux, an operating system that respects your Freedom">GNU/Linux</a>) is the most important step when switching to freedomware, and therefore we focus on promoting these systems (myself included). However, I&#8217;ve found out that <strong>it does <em>not</em> matter <em>that</em> much</strong>.</p>
+<p>The first and most important step when switching to Freedomware is using formats and protocols defined as <a href="http://opensource.org/osr/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://opensource.org/osr/', 'Open Standards');" title="Open Standards Requirement for Software">Open Standards</a>, even under a Freedom-trampling system like <a href="http://www.getgnulinux.org/windows/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/windows/', 'Windows');" title="Windows, a Freedom-trampling software">Windows</a>: <strong>Vendor lock-in is only possible by means of closed standards</strong>. They are the stone corner of the non-free software industry.</p>
+<p>Why those who know about Freedomware, and support the idea, don&#8217;t make the switch? Aside their inability to follow their thoughts (the games excuse is included here), because switching from <em>Windows+Office+MSNMessenger/Etc</em> to <em>GNU/Linux+OpenOffice.org+Pidgin+Etc</em> seems like a <strong>huge</strong> step, only made by <em>adventurous souls</em>.</p>
+<p>The most important things for them, their information and communications, are already locked-in, tied to a single vendor. <strong>Encouraging them to switch to a freedom-respectful operating system is an unwise recommendation, if you know they still rely on closed standards</strong>:</p>
+<ol>
+<li>If you say that they won&#8217;t be able to use the programs they were used to, but their free alternatives, you will fright them. Not to mention what they&#8217;ll think when they know that their MP3s, WMVs and .doc documents won&#8217;t play nice, and that their MSN Messenger sucks under GNU/Linux.</li>
+<li>If you help them to keep their files under closed formats and communicate through closed protocols, then, why on the earth do you want them to use a free operating system? <em>Using a free operating system <strong>simply</strong> means that most of your software is free</em>. It <em>seldom</em> means that the user is reluctant to use Freedom-trampling software, closed formats and/or closed protocols, again. Quick demonstration: Take a look at any community of the easy-to-use distros and you will find that these standards are widely used among the majority of these users (although this doesn&#8217;t mean that <a href="http://www.gentoo.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gentoo.org/', 'Gentoo');" title="Gentoo GNU/Linux">Gentoo</a> users, for example, are all disciples of the Church of Emacs).</li>
+</ol>
+<p>The only way to make safely the switch to a Freedom-respectful computing environment, with no turning back, is by getting rid of closed formats and protocols, before switching to a free operating system. Windows-GNU/Linux dual boots wouldn&#8217;t be necessary anymore.</p>
+<p>These closed standards have always been a top-priority for non-free software vendors, unlike for us. <strong>Closed standards represent the Achilles&#8217; heel of the non-free software industry</strong>. We must hit them there! Pay attention to this excerpt from <a href="http://ec.europa.eu/comm/competition/antitrust/cases/decisions/37792/en.pdf" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ec.europa.eu/comm/competition/antitrust/cases/decisions/37792/en.pdf', 'a memo sent by Aaron Contorer, Microsoft general manager for C++ development, to Bill Gates');" title="The European Commission, in its March 24, 2004 decision on Microsoft's business practices">a memo sent by Aaron Contorer, Microsoft general manager for C++ development, to Bill Gates</a>:</p>
+<blockquote><p> &#8220;The Windows API is so broad, so deep, and so functional that most <a href="http://en.wikipedia.org/wiki/Independent_software_vendor" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Independent_software_vendor', 'ISVs');" title="Independent software vendor">ISVs</a> would be crazy not to use it. And it is so deeply embedded in the source code of many Windows apps that there is a huge switching cost to using a different operating system instead&#8230;<br />
+&#8220;It is this switching cost that has given the customers the patience to stick with Windows through all our mistakes, our buggy drivers, our high <a href="http://en.wikipedia.org/wiki/Total_cost_of_ownership" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Total_cost_of_ownership', 'TCO');" title="Total cost of ownership">TCO</a>, our lack of a sexy vision at times, and many other difficulties [&#8230;] Customers constantly evaluate other desktop platforms, [but] it would be so much work to move over that they hope we just improve Windows rather than force them to move.<br />
+&#8220;In short, without this exclusive franchise called the Windows API, we would have been dead a long time ago.&#8221;</p></blockquote>
+<h2>OK, that&#8217;s the root problem, but what&#8217;s the solution!?</h2>
+<p><strong>We must put <em>more</em> effort into making people switch to open formats and open protocols</strong>, than the effort we put into encouraging them to switch to a freedom-respectful operating system like GNU/Linux. This is, our goal should be that people will get rid of closed formats and protocols <em>before</em> switching to a free operating system. <em>Don&#8217;t expect them to make the switch after installing the free system!</em> Or at least don&#8217;t get your hopes up if you ignore this (take the longer yet save path!).</p>
+<p>The above might seem obvious to you at this point, and you might wonder, <em>how are we supposed to do so effectively?</em></p>
+<h2>My proposal</h2>
+<p>We have to carry out three tasks to reach our goal:</p>
+<ol>
+<li>First and foremost, make people worry about the formats and protocols they rely on;</li>
+<li>Make it really easy for people to switch to unconstrained formats and protocols, under the current operating system, but also warn them that everything won&#8217;t be completely solved until they throw the non-free system away;</li>
+<li><strong>And <em>finally</em></strong>, make people switch to a freedom-respectful operating system, like GNU/Linux.</li>
+</ol>
+<p>(Notice that nowadays most of us start with task #3, then <em>some of us</em> go further and make #1, but nearly we all forget about task #2)</p>
+<p>These tasks should be performed separately and harmoniously, with one project for each of them. The good news is that we won&#8217;t have to start from scratch, as there are some existing efforts: <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="The Freedomware Marketing Organization">GNU/Linux Matters</a> is going to develop <a href="https://tracker.gnulinuxmatters.org/wiki/Uncontrained" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Uncontrained', 'Unconstrained.info');" title="Uncontrained.info">Unconstrained.info</a>, a project that would meet the requirements of task #1, and it also maintains <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GetGNULinux.org');" title="GNU/Linux, an operating system that respects your Freedom">GetGNULinux.org</a>, the project that already meets the requirements of task #3.</p>
+<p>The second task is by far the hardest one. <em>The</em> solution, in my opinion, is a software suite made up of the following well-integrated modules:</p>
+<ol>
+<li><strong>A package manager</strong>, like those for GNU/Linux: It will make it easy for people to get started with Freedomware applications that support unconstrained formats and protocols. These programs must be stored on special repositories, so that we could disable support for constrained standards by default. <em>This manager would only install Freedomware required to make the switch</em>, excluding <em>useful</em> free add-ons for the operating system: Our goal is not to make people feel comfortable with their freedom-trampling operating system. Only the best Freedomware packages will be available, with no alternatives: It would make no sense to include both OpenOffice.org and Koffice (for example), we don&#8217;t want people to <em>experiment</em> with the free alternatives, just that they make the switch.</li>
+<li><strong>A file format converter</strong>: An extremely easy to use Freedomware application to convert <em>any file</em> stored with a closed format into one stored with the best-suitable open format, preferably/optionally deleting the former file after the conversion. When the suite is being installed, it must configure the system to open those constrained-formats-based files with this converter.</li>
+<li><strong>A Instant Messaging Migrator</strong>: The hardest to make module. It will help people migrate to open protocols such as Jabber or SIP. It would create a gratis Jabber account with any provider. Then, if allowed, it would let people&#8217;s contacts know that they are making the switch to an unconstrained and better messaging network (encouraging them to make the switch too). Finally, it would configure the pre-selected free IM client accordingly, making it ready to use.</li>
+<li><strong>A tutor</strong>: A program, similar to a Help Center, that would advice people on unconstrained formats and protocols. It would provide guidance throughout the migration process. It would make sure that people keep in mind that they should switch to a free operating system once they get used to the new standards.</li>
+</ol>
+<p>This suite must meet these requirements:</p>
+<ul>
+<li>Be multi-platform: It must run on all the mainstream operating systems, including <strong>GNU/Linux</strong> (yes, haven&#8217;t you noticed the amount of GNU/Linux users tied to constrained formats and protocols?).</li>
+<li>Be multilingual.</li>
+<li>Be extremely easy to use.</li>
+</ul>
+<p>Once <a href="https://tracker.gnulinuxmatters.org/wiki/Uncontrained" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Uncontrained', 'Unconstrained.info');" title="Uncontrained.info">Unconstrained.info</a> and <em>the liberation suite</em> are ready, together with <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GetGNULinux.org');" title="GNU/Linux, an operating system that respects your Freedom">GetGNULinux.org</a>, the final touch for us to be effective will be <a href="https://tracker.gnulinuxmatters.org/wiki/Animador" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Animador', 'Animador');">Animador</a>.</p>
+<h2>In an ideal world&#8230;</h2>
+<p>&#8230; Organizations such as <a href="http://www.mozilla.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.mozilla.org/', 'Mozilla');">Mozilla</a>, the <a href="http://www.fsf.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/', 'FSF');">FSF</a> and the <a href="http://www.ffii.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.ffii.org/', 'FFII');">FFII</a> will support <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');">GNU/Linux Matters</a> with tasks #1 and #3, and <a href="http://www.gnu.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnu.org/', 'the GNU project');">the GNU project</a> will take over task #2, with the support of all of us.</p>
+<p>If everything fails, I&#8217;ll try my best to take over task #2 on behalf of GNU/Linux Matters.</p>
+<h2>On my part&#8230;</h2>
+<p>&#8230; I&#8217;ll try to make GNU/Linux Matters change its vision, according to this blog post.</p>
+<h2>On your part&#8230;</h2>
+<p>&#8230; This all sounds so beautiful, right? Well, <a href="http://www.gnulinuxmatters.org/participate/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/', 'we need you');" title="Help GNU/Linux Matters!">we need you</a>! And please don&#8217;t forget to comment on this blog post and spread the word about it if you find it useful.</p>
+<p><strong>PS:</strong> Got something to say? <a href="http://www.nuxified.org/topic/gnu_linux_does_not_matter_that_much" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.nuxified.org/topic/gnu_linux_does_not_matter_that_much', 'Talk about it on NXFD!');">Talk about it on NXFD!</a></p>
+		
+		
+			</div>
+</article><article id="post-6" class="clearfix post-6 post type-post status-publish format-standard hentry category-free-software category-gnulinux-matters">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/testing-testing-1-2-3-testing/" rel="bookmark">Testing, testing&#8230; 1, 2, 3&#8230; Testing</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/testing-testing-1-2-3-testing/" title="9:43 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">July 6, 2007</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/testing-testing-1-2-3-testing/#comments">2 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>Well, it looks like I finally got a blog!</p>
+<p>I will use it to talk about what&#8217;s going on <em>behind-the-scenes</em> with my contributions to the free software movement, mainly by means of <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a>. I want to let people know that we&#8217;re alive! That behind those cool but static websites there are people moving forward, getting ready to effectively defend Freedom in computing. Yes, <a href="http://www.gnulinuxmatters.org/blog/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/', 'we already have a blog');">we already have a blog</a>, but I believe that a <em>personal touch</em> would be great as well. I look forward to seeing more people at GLM blogging about what&#8217;s happening <em>under the hood</em>.</p>
+<p>But that&#8217;s not it. I&#8217;m studying computing, so you might think that I&#8217;ll blog about computing-related stuff; if so, you&#8217;re right. <strong>I love software</strong> and I wish I could only care about it, without worrying about whether it&#8217;s free or not&#8230; Every single piece of software must be <a href="http://www.fsf.org/licensing/essays/free-sw.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/licensing/essays/free-sw.html', 'free as in Freedom');">free as in Freedom</a>. Unfortunately, in the real world, most computing systems are powered by privative software.</p>
+<p>I hope you enjoy it!</p>
+<p>PS: You might wonder what&#8217;s &#8220;privative software&#8221;. I&#8217;ll explain it later, but in the mean time you can read <a href="http://www.nuxified.org/topic/propietary_privative#comment-4447" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.nuxified.org/topic/propietary_privative#comment-4447', 'dylunio&#8217;s brief explanation');">dylunio&#8217;s brief explanation</a>.</p>
+		
+		
+			</div>
+</article>		</div>
+		<!-- end .blog-masonry -->
+		
+					<nav class="navigation" role="navigation">
+				<div class="nav-previous">
+									</div>
+				
+				<div class="nav-next">
+									</div>
+			</nav>
+			</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

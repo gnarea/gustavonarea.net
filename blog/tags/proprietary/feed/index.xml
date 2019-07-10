@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>proprietary &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/proprietary/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>&#8220;Non-free&#8221; and &#8220;proprietary&#8221; are OK, but it is Freedom-depriving software</title>
+		<link>/blog/posts/non-free-and-proprietary-are-ok-but-it-is-freedom-depriving-software/</link>
+		<pubDate>Mon, 23 Jul 2007 19:26:00 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[freedom-depriving]]></category>
+		<category><![CDATA[freedom-respectful]]></category>
+		<category><![CDATA[non-free]]></category>
+		<category><![CDATA[open-source]]></category>
+		<category><![CDATA[privative]]></category>
+		<category><![CDATA[proprietary]]></category>
+		<category><![CDATA[terminology]]></category>
+
+		<guid isPermaLink="false">/?p=9</guid>
+		<description><![CDATA[While English is the de facto language for technical documentation, it&#8217;s a headache when it comes to using the two key words of the free software philosophy: Free and non-free. I mean, to explain what free software is all about, we should also explain what we mean by &#8220;free&#8221;. This is so true, that English-speaking... <a class="more-link" href="/blog/posts/non-free-and-proprietary-are-ok-but-it-is-freedom-depriving-software/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+	</channel>
+</rss>

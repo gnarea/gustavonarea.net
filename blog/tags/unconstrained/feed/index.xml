@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Unconstrained &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/unconstrained/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much</title>
+		<link>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/</link>
+		<comments>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/#comments</comments>
+		<pubDate>Wed, 05 Mar 2008 20:09:20 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Freedomware]]></category>
+		<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[animador]]></category>
+		<category><![CDATA[Closed Standards]]></category>
+		<category><![CDATA[ffii]]></category>
+		<category><![CDATA[formats]]></category>
+		<category><![CDATA[fsf]]></category>
+		<category><![CDATA[GGL.o]]></category>
+		<category><![CDATA[glm]]></category>
+		<category><![CDATA[gnu]]></category>
+		<category><![CDATA[gnu/linux]]></category>
+		<category><![CDATA[mozilla]]></category>
+		<category><![CDATA[Open Standards]]></category>
+		<category><![CDATA[protocols]]></category>
+		<category><![CDATA[Unconstrained]]></category>
+		<category><![CDATA[Windows]]></category>
+
+		<guid isPermaLink="false">/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/</guid>
+		<description><![CDATA[We freedomware advocates think that switching to a Freedom-respectful operating system (usually GNU/Linux) is the most important step when switching to freedomware, and therefore we focus on promoting these systems (myself included). However, I&#8217;ve found out that it does not matter that much. The first and most important step when switching to Freedomware is using... <a class="more-link" href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

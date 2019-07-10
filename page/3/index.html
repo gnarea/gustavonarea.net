@@ -1,0 +1,828 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>Gustavo on Software Development | Notes from a disciplined software developer | Page 3</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.16" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="home blog paged paged-3">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="blog-posts readable-content">
+			<article id="post-113" class="clearfix post-113 post type-post status-publish format-standard hentry category-gnulinux-matters tag-arabic tag-gglo tag-linux tag-russian tag-translations tag-ukrainian tag-vietnamese">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/" rel="bookmark">The Linux homepage now in Arabic, Russian, Vietnamese and Ukrainian</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/" title="10:41 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">September 4, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>The awesome international <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'Linux');">Linux</a> homepage is now available in <a href="http://www.honalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.honalinux.org/', 'Arabic');">Arabic</a>, <a href="http://pereidinalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://pereidinalinux.org/', 'Russian');">Russian</a>, <a href="http://dunglinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://dunglinux.org/', 'Vietnamese');">Vietnamese</a> and <a href="http://otrymaylinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://otrymaylinux.org/', 'Ukrainian');">Ukrainian</a>!</p>
+<ul>
+<li><a href="http://www.gnulinuxmatters.org/blog/we-have-just-released-four-new-translations/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/we-have-just-released-four-new-translations/', 'Check the official announcement');" title="We have just released four new translations">Check the official announcement</a>.</li>
+<li>Are you missing your language? <a href="http://www.gnulinuxmatters.org/participate/translation/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/translation/', 'Translate it');">Translate it</a> and help us promote <a href="http://www.softwareliberty.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.softwareliberty.com/', 'freedomware');" title="Free Software">freedomware</a>!</li>
+</ul>
+		
+		
+			</div>
+</article><article id="post-91" class="clearfix post-91 post type-post status-publish format-standard hentry category-floss-contributions category-gnulinux-matters category-tg tag-animador tag-openid tag-python tag-turbogears">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/joining-the-development-of-turbogears/" rel="bookmark">Joining the development of TurboGears</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/floss-contributions/" rel="category tag">Free Software contributions</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>, <a href="/blog/topics/tg/" rel="category tag">Turbo Gears</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/joining-the-development-of-turbogears/" title="5:23 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">August 18, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/joining-the-development-of-turbogears/#comments">5 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve had the great pleasure of being invited by the <a href="http://en.wikipedia.org/wiki/TurboGears" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/TurboGears', 'TurboGears');">TurboGears</a> team to become an official <a href="http://en.wikipedia.org/wiki/Committer" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Committer', 'committer');" title="What's a committer?">committer</a> for <a href="http://turbogears.org/about/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://turbogears.org/about/', 'the great TurboGears framework');">the great TurboGears framework</a>.</p>
+<p>This is because I&#8217;ve been contributing patches for TurboGears 2 and other packages used by <a href="http://tracker.gnulinuxmatters.org/wiki/Animador" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://tracker.gnulinuxmatters.org/wiki/Animador', 'Animador');">Animador</a> (a <a href="http://turbogears.org/2.0/docs/index.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://turbogears.org/2.0/docs/index.html', 'TurboGears 2');">TurboGears 2</a> application), since I started its development, in order to fix bugs and/or add new features that I want in Animador. So now I can apply my changes by myself! 😉</p>
+<p>And stay tunned, because very soon it&#8217;s going to be very easy to add <a href="http://openid.net/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://openid.net/', 'OpenId');">OpenId</a> support to any WSGI application by means of <a href="http://tracker.gnulinuxmatters.org/ticket/264" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://tracker.gnulinuxmatters.org/ticket/264', 'a plugin for the framework-independent repoze.who package');">a plugin for the framework-independent <em>repoze.who</em> package</a>!</p>
+		
+		
+			</div>
+</article><article id="post-62" class="clearfix post-62 post type-post status-publish format-standard hentry category-free-software category-gnulinux-matters tag-animador tag-python">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/python-developers-help-us-promote-freedomware/" rel="bookmark">Python Developers: Help Us Promote Freedomware!</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>, <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/python-developers-help-us-promote-freedomware/" title="6:45 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">July 27, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p><a href="http://www.gnulinuxmatters.org/blog/we-are-looking-for-python-developers/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/we-are-looking-for-python-developers/', 'GNU/Linux Matters is looking for Python developers');">GNU/Linux Matters is looking for Python developers</a> to develop the upcoming multicultural SpreadFirefox.com-like platform to promote freedomware and <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'Linux');" title="GNU/Linux">Linux</a>.</p>
+		
+		
+			</div>
+</article><article id="post-61" class="clearfix post-61 post type-post status-publish format-standard hentry category-gnulinux-matters tag-events tag-rmll">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/back-from-the-libre-software-meeting-rmll-2008/" rel="bookmark">Back from the Libre Software Meeting (RMLL) 2008</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/back-from-the-libre-software-meeting-rmll-2008/" title="1:58 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">July 8, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p style="text-align: center;"><a href="http://media.gustavonarea.name/v/en/france/rmll-08/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/', '');" title="My RMLL 08 Album"><img class="alignnone size-medium wp-image-60 aligncenter" title="Geeky nightly meeting at the RMLL 08" src="//media.gustavonarea.net/rmll-08-300x225.jpg" alt="" width="300" height="225" srcset="//media.gustavonarea.net/rmll-08-300x225.jpg 300w, //media.gustavonarea.net/rmll-08.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>After 6 days of delicious <a href="http://en.wikipedia.org/wiki/Pain_au_chocolat" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Pain_au_chocolat', 'pains au chocolat');">pains au chocolat</a>, spreading the word about <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org', 'GLM');" title="GNU/Linux Matters!">GLM</a> (by means of <a href="http://people.gnulinuxmatters.org/gustavo/documents/rmll_08.odp" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://people.gnulinuxmatters.org/gustavo/documents/rmll_08.odp', 'a conference');" title="The Next 10 Million Users Won't Wear a Beard">a conference</a> and <a href="http://media.gustavonarea.name/v/en/france/rmll-08/100_0784.jpg.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/100_0784.jpg.html', 'a booth');" title="GLM booth at the RMLL 2008">a booth</a>) and having fun with <a href="http://media.gustavonarea.name/v/en/france/rmll-08/100_0913.jpg.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://media.gustavonarea.name/v/en/france/rmll-08/100_0913.jpg.html', 'cool people');">cool people</a>, I&#8217;m back home in Madrid from the <a href="http://2008.rmll.info/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://2008.rmll.info/', 'RMLL');">RMLL</a>.</p>
+		
+		
+			</div>
+</article><article id="post-57" class="clearfix post-57 post type-post status-publish format-standard hentry category-gnulinux-matters tag-poliglota">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/" rel="bookmark">We need German translators to promote Linux! And others are welcome too</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/" title="4:49 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">June 25, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/#comments">1 Comment</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p><strong>We need people to bring the first <a href="http://www.getgnulinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.getgnulinux.org/', 'GNU/Linux');">GNU/Linux</a> website that doesn&#8217;t suck to all possible languages.</strong></p>
+<p>Until last year, translations were hard to setup and manage, so we created an <a href="https://tracker.gnulinuxmatters.org/wiki/Poliglota" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Poliglota', 'special multi-website CMS');">special multi-website CMS</a> focused on internationalization, which makes it really easy for translators to preview their work and release websites with a few clicks, and also reports any mistake translators and editors have made (if any), among other things. We also setup a <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org', 'web-based translation interface');" title="GLM Translation Service">web-based translation interface</a>, for those who don&#8217;t want to use the traditional, not-so-easy-to-use <a href="http://en.wikipedia.org/wiki/Computer-assisted_translation" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Computer-assisted_translation', 'CAT');" title="Computer-assisted translation">CAT</a> applications.</p>
+<p>The <a href="http://www.obtengalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.obtengalinux.org/', 'Castilian');">Castilian</a> and <a href="http://www.passeralinux.fr/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.passeralinux.fr/', 'French');">French</a> translations were the first to be ported to the new system, and now <a href="http://www.gnulinux.cat/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinux.cat/', 'the Catalan translation');">the Catalan translation</a> is near completion. But <a href="http://www.linuxfueralle.de/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.linuxfueralle.de/', 'the German translation');">the German translation</a> is just <a href="http://translate.gnulinuxmatters.org/de/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/de/', '~60% translated');">~60% translated</a>, which means the new edition cannot be released <em>the new way</em>; this has caused some problems since we&#8217;re using the new system, because we have to maintain it <em>the old way </em>and the time we spend maintaining one outdated site could be used to improve the system that powers the other websites, so we decided to move on and stop maintaining it the old way &#8211; that means that it won&#8217;t be linked to from the upgraded websites such as <a href="http://www.obtengalinux.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.obtengalinux.org/', 'ObtengaLinux.org');">ObtengaLinux.org</a>, until the German translation is complete.</p>
+<p>So, if you&#8217;re a German speaker, <strong>please help us out</strong>. But if you speak a language other than German and English, you can help too. Just head on to the <a href="http://www.gnulinuxmatters.org/participate/translation/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/participate/translation/', 'GLM website to find out how to be a translator');">GLM website to find out how to be a translator</a>.</p>
+<p><strong>PS:</strong> <a href="http://www.gnulinuxmatters.org/blog/calling-for-german-and-catalan-translators/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/blog/calling-for-german-and-catalan-translators/', 'We already talked about this on the blog');">We already talked about this on the blog</a>, but only Catalan translators came up. I&#8217;m making another try on my blog because I belong to some groups at <a href="http://mugshot.org/person?who=Mnpdt5tjd0wW0W" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://mugshot.org/person?who=Mnpdt5tjd0wW0W', 'Mugshot');">Mugshot</a> and thus more people can know about this.</p>
+		
+		
+			</div>
+</article><article id="post-52" class="clearfix post-52 post type-post status-publish format-standard hentry category-gnulinux-matters tag-internationalization tag-poliglota">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/" rel="bookmark">A silly yet killer feature in Poliglota</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/" title="11:02 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">June 12, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>Just a quick post to highlight a <a href="https://tracker.gnulinuxmatters.org/ticket/120" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/ticket/120', 'new feature');">new feature</a> in <a href="https://tracker.gnulinuxmatters.org/wiki/Poliglota" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/wiki/Poliglota', 'Poliglota');">Poliglota</a>:</p>
+<p><a href="https://media.gustavonarea.net/poliglota-after-120.png"><img class="aligncenter size-full wp-image-54" title="A zoom at a killer feature in Poliglota" src="//media.gustavonarea.net/poliglota-after-120-zoom.png" alt="" /></a></p>
+<p>While most CMSs around have a lot of trouble with non-Western languages and cross-linking the different language editions accordingly, Poliglota has a solid support for these features since day one! And it&#8217;s just one of the features.</p>
+<p>By the way, want to get involved and <em>speak</em> PHP? Then please <a href="http://www.gnulinuxmatters.org/contact" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/contact', 'contact us');">contact us</a>!</p>
+		
+		
+			</div>
+</article><article id="post-51" class="clearfix post-51 post type-post status-publish format-standard hentry category-howtos tag-subversion">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/backing-up-and-restoring-your-subversion-repository/" rel="bookmark">Backing up and restoring your Subversion repository</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/backing-up-and-restoring-your-subversion-repository/" title="9:03 am" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 30, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/backing-up-and-restoring-your-subversion-repository/#comments">2 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>Most tutorials around show how to backup your Subversion repository:</p>
+<p><code>svnadmin dump /path/to/your/repository &gt; ./repository.dump</code></p>
+<p>And how to restore it:</p>
+<p><code>mkdir /new/path/to/your/repository<br />
+svnadmin create /new/path/to/your/repository<br />
+svnadmin load /new/path/to/your/repository &lt; ./repository.dump</code></p>
+<p>But don&#8217;t tell you what to do to solve the problem that will arise when you try to restore it:</p>
+<p><code>svnadmin: Dump stream contains a malformed header (with no ':') at '* Dumped revision 0.'</code></p>
+<p>The solution is too simple; just run:</p>
+<p><code>grep --binary-files=text -v '^* Dumped revision' ./repository.dump > ./repository.clear-dump</code></p>
+<p>Now you should be able to restore your subversion repository with no problems:</p>
+<p><code>svnadmin load /new/path/to/your/repository &lt; ./repository.clear-dump</code></p>
+<p>PS: I don&#8217;t use <em><a href="http://svnbook.red-bean.com/en/1.0/re33.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://svnbook.red-bean.com/en/1.0/re33.html', 'hotcopy');">hotcopy</a></em> because I prefer to have a single file for these backups.</p>
+		
+		
+			</div>
+</article><article id="post-50" class="clearfix post-50 post type-post status-publish format-standard hentry category-gnulinux-matters tag-debian tag-migration tag-servers tag-ubuntu">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/so-long-debian-servers-welcome-ubuntu/" rel="bookmark">So long Debian servers, welcome Ubuntu</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/so-long-debian-servers-welcome-ubuntu/" title="2:25 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 28, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/so-long-debian-servers-welcome-ubuntu/#comments">7 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve been assessing the possibility of switching <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a>&#8216; servers (which are all powered by Debian) to Ubuntu, and I have finally decided to go for it.</p>
+<p>They were running Debian for three reasons:</p>
+<ol>
+<li>Stability, something Debian is well-known for.</li>
+<li>A large user base, which brings two big advantages: A huge amount of packaged applications and a good community support.</li>
+<li>I&#8217;m only familiar with Debian-based distros <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ol>
+<p>And they weren&#8217;t running Ubuntu because, to be honest, I didn&#8217;t find Ubuntu reliable enough to power a server, mainly because of the cutting-edge applications it includes by default; it was just great for my personal computer. I guess this is mostly due to I&#8217;ve been using Kubuntu since Breeze, and it was a highly unreliable system in the early versions &#8211; IMHO things begun to take shape in Feisty and now Hardy just rocks.</p>
+<p>I&#8217;ve started to switch our servers to Ubuntu because I think it&#8217;s the best choice, <em>at least for us</em>, because we still have the three advantages of using Debian (it&#8217;s based on it after all), plus:</p>
+<ol>
+<li>Packaged applications are up-to-date, so I don&#8217;t have to compile and maintain software which have a old version in Debian repositories (we often need the latest stable version). Yes, I can use Debian Testing, but this is not the only drawback.</li>
+<li><a href="https://help.ubuntu.com/8.04/serverguide/C/firewall.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://help.ubuntu.com/8.04/serverguide/C/firewall.html', 'Uncomplicated Firewall');">Uncomplicated Firewall</a>. An extremely easy-to-setup, basic firewall. It&#8217;s just a front-end to <em>iptables-restore</em>, so you can still add/adjust any rule according to your needs.</li>
+<li><strong>Many</strong> other tiny (and not so tiny) <a href="http://www.ubuntu.com/products/whatisubuntu/serveredition" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.ubuntu.com/products/whatisubuntu/serveredition', 'benefits');">benefits</a> that together make a big difference.</li>
+</ol>
+<p>The migration should take some months because it&#8217;s not a top-priority at present. There are <a href="https://tracker.gnulinuxmatters.org/report/3" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/report/3', 'many more things');">many more things</a> that should be done first.</p>
+<p>Put simply, it&#8217;s not that Ubuntu is much better than Debian on the server, it just happens to make your job easier if you&#8217;re the administrator.</p>
+		
+		
+			</div>
+</article><article id="post-41" class="clearfix post-41 post type-post status-publish format-standard hentry category-howtos tag-debian tag-internationalization tag-pootle">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/" rel="bookmark">Installing Pootle on Debian Etch, The Easiest Way</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/" title="3:34 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 21, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+							<span class="comments-link">
+						<a href="/blog/posts/installing-pootle-on-debian-etch-the-easiest-way/#comments">5 Comments</a>					</span>
+						
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p><a href="http://translate.sourceforge.net/wiki/pootle/index" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/index', 'Pootle');" title="A user-friendly web portal that makes the translation process so much simpler">Pootle</a> is a user-friendly web application for online translation of contents. It&#8217;s used by organizations like <a href="http://translate.creativecommons.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.creativecommons.org/', 'Creative Commons');">Creative Commons</a>, <a href="http://www.sunvirtuallab.com:32300/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.sunvirtuallab.com:32300/', 'OpenOffice.org');">OpenOffice.org</a> and <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a>.</p>
+<p>I&#8217;m going to show you how to install it the easiest way, from my experience with the <a href="http://translate.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.gnulinuxmatters.org/', 'GLM Translation Service');" title="GNU/Linux Matters!">GLM Translation Service</a> under Debian 4.0 (this guide might also work under Ubuntu, though). I&#8217;ll use the <a href="http://www.debianhelp.co.uk/sudo.htm" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.debianhelp.co.uk/sudo.htm', 'sudo');" title="Sudo Configuration in Debian">sudo</a> utility, so I assume that you&#8217;ve already installed and configured sudo accordingly for your user.</p>
+<h2>Installing dependencies</h2>
+<p>Some of the Pootle&#8217;s dependencies are available in Debian repositories, so we may install them by running:<br />
+<code>sudo aptitude install python-dev python-pysqlite2 python-celementtree subversion bzip2 g++ curl</code></p>
+<p>We&#8217;re now going to install the other software packages required by Pootle. First, select the directory where you want to download and compile your software, for example:<br />
+<code>cd /usr/src</code></p>
+<p>To get the source code of the packages and extract them, run the following commands:<br />
+<code>curl http://www.kid-templating.org/dist/0.9.6/kid-0.9.6.tar.gz | tar xzv<br />
+curl http://dfn.dl.sourceforge.net/sourceforge/translate/translate-toolkit-1.1.1.tar.bz2 | tar xjv<br />
+curl http://garr.dl.sourceforge.net/sourceforge/translate/Pootle-1.1.0.tar.bz2 | tar xjv<br />
+curl http://jtoolkit.sourceforge.net/snapshots/jToolkit-0.7.8/jToolkit-0.7.8.tar.gz | tar xzv<br />
+</code></p>
+<p>Installing the applications:<br />
+<code>sudo python translate-toolkit-1.1.1/setup.py install<br />
+sudo python kid-0.9.6/setup.py install<br />
+sudo Pootle-1.1.0/pootlesetup.py install<br />
+sudo jToolkit-0.7.8/jToolkitSetup.py install<br />
+</code></p>
+<h3>Do not install PyLucene</h3>
+<p>Pootle is supposed to work better with PyLucene, but if you (like me) hate headaches, you won&#8217;t install PyLucene on Debian Etch. If you try to install it, you&#8217;d get this error:<br />
+<code>install: cannot stat `/usr/lib/security/libgcj.security': No such file or directory<br />
+make: *** [install] Error 1</code></p>
+<p>There&#8217;s nothing you could install that would create that file; don&#8217;t you even try to create it as an empty file: You&#8217;d be able to install PyLucene, but Pootle won&#8217;t work and you&#8217;d get this error when you&#8217;ll try to run it:<br />
+<code>GC Warning: Repeated allocation of very large block (appr. size 65536):<br />
+May lead to memory leak and poor performance.</code></p>
+<p>If it&#8217;s too late, and you&#8217;ve already installed PyLucene with <em>libgcj.security</em> as an empty file (as suggested in some mailing-lists), you may fix it by running the following commands:<br />
+<code>sudo mv /usr/lib/python2.4/site-packages/_PyLucene.so /usr/lib/python2.4/site-packages/_PyLucene.so.old<br />
+sudo mv /usr/lib/python2.4/site-packages/PyLucene.py /usr/lib/python2.4/site-packages/PyLucene.py.old<br />
+sudo mv /usr/lib/python2.4/site-packages/PyLucene.pyc /usr/lib/python2.4/site-packages/PyLucene.pyc.old</code></p>
+<h3>Don&#8217;t you have a mail server?</h3>
+<p>If your mail server is not in the same host as Pootle, you&#8217;ll need to install one. Just run the command below to install <a href="http://en.wikipedia.org/wiki/Postfix_%28software%29" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Postfix_%28software%29', 'Postfix');">Postfix</a> and then select &#8220;Internet website&#8221; when asked about what you&#8217;ll use postfix for:<br />
+<code>sudo apt-get install postfix</code></p>
+<h2>Configuring Pootle</h2>
+<p>To make it easy for you to configure and play with Pootle, I suggest you create softlinks to Pootle&#8217;s configuration files in a folder like <em>/etc/pootle</em>:<br />
+<code>sudo mkdir /etc/pootle<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/pootle.prefs -s /etc/pootle/pootle.conf<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/users.prefs -s /etc/pootle/users.conf<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/html -s /etc/pootle/html<br />
+sudo ln /usr/lib/python2.4/site-packages/Pootle/templates -s /etc/pootle/templates</code></p>
+<p>This way, any file you might ever need to edit will be in /etc/pootle.</p>
+<p>Now let&#8217;s edit the main configuration file in Pootle: <code>sudo nano /etc/pootle/pootle.conf</code></p>
+<p>It&#8217;s well-documented, so I won&#8217;t talk a lot about it. I just suggest you only set the following parameters accordingly:</p>
+<ul>
+<li><em>description</em>: Describe your website powered by Pootle, with a text aimed at (potential) translators.</li>
+<li><em>fromaddress</em>.</li>
+<li><em>supportaddress</em>: The email address for translators to make questions. This might be a mailing list.</li>
+<li><em>defaultrights</em>: I suggest you set it to <code>defaultrights = "view, suggest, archive, pocompile, translate, commit"</code></li>
+<li><em>podirectory</em>: It&#8217;s the path to your translation files. For this HOWTO I&#8217;ll use <em>/var/translations</em>.</li>
+</ul>
+<h2>Your <em>pootle</em> user</h2>
+<p>I suggest you create a user for running <em>pootle</em>:<br />
+<code>sudo adduser --disabled-password --disabled-login pootle</code></p>
+<h2>Setting up service scripts for Pootle</h2>
+<p>Create the file <em>/etc/init.d/pootle</em> as root with the following contents:<br />
+<code>#!/bin/bash<br />
+# /etc/init.d/pootle: start and stop the Pootle Server<br />
+# Pootle runs as user -pootle- via sudo<br />
+# This script is based on the one published here http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+PREFIX=/usr/local/pootle<br />
+test -x /usr/bin/PootleServer || exit 0<br />
+. /lib/lsb/init-functions<br />
+case "$1" in<br />
+start)<br />
+log_begin_msg "Starting Pootle Server..."<br />
+/usr/bin/sudo -u pootle $PREFIX/start_pootle &amp;<br />
+log_end_msg 0<br />
+;;<br />
+stop)<br />
+log_begin_msg "Stopping Pootle Server..."<br />
+$PREFIX/stop_pootle &gt;/dev/null 2&gt;&amp;1<br />
+log_end_msg 0<br />
+;;<br />
+restart)<br />
+log_begin_msg "Stopping Pootle Server..."<br />
+$PREFIX/stop_pootle &gt;/dev/null 2&gt;&amp;1<br />
+log_end_msg 0<br />
+log_begin_msg "Starting Pootle Server..."<br />
+sudo -u pootle $PREFIX/start_pootle &amp;<br />
+log_end_msg 0<br />
+;;<br />
+status)<br />
+$PREFIX/status_pootle<br />
+;;<br />
+*)<br />
+log_success_msg "Usage: /etc/init.d/pootle {start|stop|restart|status}"<br />
+exit 1<br />
+esac<br />
+exit 0</code></p>
+<p>Now let&#8217;s create, as root, the auxiliary scripts required by the script above:</p>
+<h3>/usr/local/pootle/start_pootle</h3>
+<p><code>#!/bin/bash<br />
+# $PREFIX/start_pootle<br />
+# Start script in port 8080, separates errors from normal logs<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+export HOME="/home/pootle"<br />
+/usr/bin/PootleServer -p 8080 $@ &gt;&gt; /var/log/pootle/`date "+%F"` 2&gt;&gt; /var/log/pootle/`date "+%F"`.err</code></p>
+<h3>/usr/local/pootle/stop_pootle</h3>
+<p><code><br />
+#!/bin/bash<br />
+# Stop script $PREFIX/stop_pootle<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+echo "Killing Pootle"<br />
+pidpootle=`ps -ef |grep PootleServer |grep python | awk '{print $2}'`<br />
+pidpootle2=`ps -ef |grep start_pootle |grep bin | awk '{print $2}'`<br />
+kill $pidpootle2 &gt;/dev/null 2&gt;&amp;1<br />
+kill $pidpootle &gt;/dev/null 2&gt;&amp;1</code></p>
+<h3>/usr/local/pootle/status_pootle</h3>
+<p><code>#!/bin/bash<br />
+# Pootle Status $PREFIX/status_pootle<br />
+# based on a script published here: http://translate.sourceforge.net/wiki/pootle/service_scripts<br />
+pidpootle=`ps -ef |grep PootleServer |grep python | awk '{print $2}'`<br />
+if [ "$pidpootle" != "" ]<br />
+then<br />
+echo "Pootle Server running in pid ($pidpootle)"<br />
+else<br />
+echo "Pootle Server is not running"<br />
+fi</code></p>
+<h3>Make them work!</h3>
+<p>Now we have to make these scripts <em>useful</em>:<br />
+<code>sudo chmod +x /etc/init.d/pootle<br />
+sudo chmod +x /usr/local/pootle/s*<br />
+sudo update-rc.d pootle</code></p>
+<h2>Configuring Pootle to use your repository</h2>
+<p>Pootle supports several <a href="http://en.wikipedia.org/wiki/Revision_control" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Revision_control', 'VCSs');">VCSs</a>, but I&#8217;ll only teach you how to setup a Subversion working copy that Pootle may update and commit. If you don&#8217;t use a version control system, I recommend you do so. If you&#8217;re sure you don&#8217;t need it, you may skip this section. If you&#8217;re using another VCS, you&#8217;ll need to go to the Pootle&#8217;s website to <a href="http://translate.sourceforge.net/wiki/pootle/version_control" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/version_control', 'learn how to configure it with Pootle');" title="Version control in Pootle">learn how to configure it with Pootle</a>.</p>
+<h3>Setup your working copy</h3>
+<p>Let&#8217;s create the working copy at, say, <em>/var/translations</em>. To do that in GNU/Linux Matters, we would run:<br />
+<code>sudo svn co https://svn.gnulinuxmatters.org:81/i18n /var/translations</code><br />
+You should replace the URL by yours.<br />
+And don&#8217;t forget to set the <em>pootle</em> user as the owner:<br />
+<code>sudo chown pootle -R /var/translations</code></p>
+<h3>Create basic cronjobs</h3>
+<p>We should run from time to time two scripts:</p>
+<ul>
+<li>One to commit the changes made by translators; ideally, these changes would be committed by translators themselves, but from my experience you should not count on that (most of them forget about it or just don&#8217;t know they can do that).</li>
+<li>Another to update your PO templates from the repository.</li>
+</ul>
+<p>So we&#8217;re going to ask our <em>pootle</em> user to do this by creating cronjobs. First, <em>become pootle</em>:<br />
+<code>sudo su - pootle</code><br />
+Then run <code>crontab -e</code> and add the following two lines:<br />
+<code>*/15 * * * * /usr/bin/svn update /var/translations &gt;&gt; /dev/null 2&gt;&gt; /home/pootle/update.err<br />
+0 0,8,16 * * * /usr/bin/svn commit -m "Uncommitted translations in the last 8 hours" /var/translations &gt;&gt; /dev/null 2&gt;&gt; /home/pootle/commit.err</code></p>
+<h2>Pootle is running on port 8080</h2>
+<p>For security reasons, if you followed this HOWTO you&#8217;ll be running as the <em>pootle</em> user, not as root. And due to a UNIX misfeature, only root may open ports below 1024. So, unless you love appending the port number to your URLs, and if port 80 is available on your system, you&#8217;d <a href="http://translate.sourceforge.net/wiki/pootle/apache" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://translate.sourceforge.net/wiki/pootle/apache', 'proxy Pootle through a webserver');" title="Proxying Pootle through Apache">proxy Pootle through a webserver</a>.</p>
+<p>The proxy trick is recommended, but if you cannot do that or just don&#8217;t want, you can use iptables to redirect traffic from port 8080 to 80. My suggestion would be to use the next iptables ruleset:<br />
+<code># Generated by iptables-save v1.3.6 on Thu Jan 24 16:40:59 2008<br />
+*nat<br />
+:PREROUTING ACCEPT [0:0]<br />
+:POSTROUTING ACCEPT [0:0]<br />
+:OUTPUT ACCEPT [0:0]<br />
+-A PREROUTING -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080<br />
+COMMIT<br />
+# Completed on Thu Jan 24 16:40:59 2008<br />
+# Generated by iptables-save v1.3.6 on Thu Jan 24 16:40:59 2008<br />
+*filter<br />
+:INPUT ACCEPT [0:0]<br />
+:FORWARD ACCEPT [0:0]<br />
+:OUTPUT ACCEPT [495:60715]<br />
+-A INPUT -i lo -j ACCEPT<br />
+-A INPUT -m state --state INVALID -j DROP<br />
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT<br />
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT<br />
+-A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT<br />
+-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT<br />
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7<br />
+-A INPUT -p tcp -j REJECT --reject-with tcp-reset<br />
+-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable<br />
+-A INPUT -j REJECT --reject-with icmp-proto-unreachable<br />
+-A FORWARD -j REJECT --reject-with icmp-port-unreachable<br />
+COMMIT<br />
+# Completed on Thu Jan 24 16:40:59 2008</code></p>
+<p>For more information about this basic iptables-based firewall, you may read my <a href="/blog/posts/setting-up-your-first-server/">Setting up your first server</a> HOWTO.</p>
+<h2>Criticism? Suggestions? Complaints?</h2>
+<p>Leave a comment!</p>
+		
+		
+			</div>
+</article><article id="post-48" class="clearfix post-48 post type-post status-publish format-standard hentry category-gnulinux-matters category-howtos tag-debian tag-glm tag-gutsy tag-hardy tag-istanbul tag-recordmydesktop tag-screencast tag-ubuntu tag-xvidcap">
+	<header class="entry-header">
+		<h1 class="entry-title">
+						<a  href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/" rel="bookmark">The only screencasting software that doesn&#8217;t crash in Ubuntu Hardy</a>
+		</h1>
+	</header>
+	
+	
+	<footer class="entry-meta">
+		<span class="post-category">
+			posted in <a href="/blog/topics/gnulinux-matters/" rel="category tag">GNU/Linux Matters</a>, <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>		</span>
+		
+		
+		<span class="post-date">
+			on <a href="/blog/posts/the-only-screencasting-software-that-doesnt-crash-in-ubuntu-hardy/" title="5:07 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">May 19, 2008</time></a>
+		</span>
+		
+		
+		<span class="by-author"> by			<span class="author vcard">
+				<a class="url fn n" href="/blog/posts/author/admin/" title="View all posts by Gustavo" rel="author">Gustavo</a>
+			</span>
+		</span>
+		
+		
+				
+		
+			</footer>
+	
+	
+		
+	
+	<div class="entry-content clearfix">
+		<p>I&#8217;ve spent a lot of time trying to <a href="https://tracker.gnulinuxmatters.org/ticket/139" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://tracker.gnulinuxmatters.org/ticket/139', 'record some screencasts for GLM');">record some screencasts for GLM</a>, but every screencasting software I tried crashed under Ubuntu Hardy (and Gutsy too):</p>
+<ul>
+<li>XVidCap: The workaround is supposed to be disabling sound, but didn&#8217;t work.</li>
+<li>RecordMyDesktop (plus its two front-ends): Crashes with no error message. From time to time I was able to record videos.</li>
+<li>Istanbul: Crashes if you select a window to be recorded.</li>
+</ul>
+<p>So, the only solution is to install a newer version of Istanbul for Debian:<br />
+<code>http://ftp.fr.debian.org/debian/pool/main/i/istanbul/istanbul_0.2.2-4_i386.deb</code><br />
+or, if you have a 64-bit box, <code>http://ftp.fr.debian.org/debian/pool/main/i/istanbul/istanbul_0.2.2-4_amd64.deb</code></p>
+<p>After making the appropriate bug reports, I can finally start recording the screencasts with Istanbul!</p>
+<p>PS: Forget about the above. That Debian package doesn&#8217;t work either. I&#8217;m installing KDE4 to check whether I can record the screencast with it; I think I saw such an option when I tried it out.</p>
+<p>PPS: The KDE4 built-in screencasting component uses a weird format (cps?) which cannot be opened with VLC, Mplayer nor Kaffeine (<a href="http://ubuntuforums.org/showpost.php?p=4717105&amp;postcount=2" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ubuntuforums.org/showpost.php?p=4717105&amp;postcount=2', 'but there&#8217;s a dirty workaround');">but there&#8217;s a dirty workaround</a>). Anyways, it records the whole screen and I just want to record a single window.</p>
+<p>PPPS: <a href="http://ubuntuforums.org/showthread.php?p=5016504" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ubuntuforums.org/showthread.php?p=5016504', 'I&#8217;m not alone');">I&#8217;m not alone</a>.</p>
+		
+		
+			</div>
+</article>			
+						<nav class="navigation" role="navigation">
+				<div class="nav-previous">
+					<a href="/page/4/" >&#8592; Older posts</a>				</div>
+				
+				<div class="nav-next">
+					<a href="/page/2/" >Newer posts &#8594;</a>				</div>
+			</nav>
+				</div>
+	</div>
+</div>
+
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

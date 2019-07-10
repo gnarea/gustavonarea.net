@@ -1,0 +1,22 @@
+from repoze.what.predicates import NotAuthorizedError
+from decorator import decorator
+
+def require(predicate):
+    """
+    Make repoze.what verify that the predicate is met.
+
+    :param predicate: A repoze.what predicate.
+    :return: The decorator that checks authorization.
+
+    """
+
+    @decorator
+    def check_auth(func, *args, **kwargs):
+        environ = get_wsgi_environ_from_somewhere()
+        try:
+            predicate.check_authorization(environ)
+        except NotAuthorizedError, reason:
+            display_notification(reason)
+            return HTTPUnauthorized()
+        return func(*args, **kwargs)
+    return check_auth

@@ -1,0 +1,60 @@
+from logging import getLogger
+
+from repoze.who.plugins.auth_tkt import AuthTktCookiePlugin
+from repoze.who.plugins.sa import (SQLAlchemyUserMDPlugin, 
+                            SQLAlchemyAuthenticatorPlugin)
+from repoze.who.plugins.friendlyform import \
+                                       FriendlyFormPlugin
+
+from repoze.what.middleware import setup_auth
+from repoze.what.plugins.sql import SqlGroupsAdapter, \
+                                    SqlPermissionsAdapter
+
+from classifieds.model import User, Group, Permission, \
+                              DBSession
+
+def add_auth(app):
+    """Add Repoze auth middleware to ``app``"""
+    # --- Configuring repoze.who:
+    who_args = {}
+    # Adding the identifier plugins:
+    cookie = AuthTktCookiePlugin(secret='secret',
+                                 cookie_name='authtkt')
+    form = FriendlyFormPlugin(
+        login_form_url='/login',
+        login_handler_path='/login_handler',
+        post_login_url='/post_login',
+        logout_handler_path='/logout_handler',
+        post_logout_url='/post_logout',
+        rememberer_name='cookie')
+    who_args['identifiers'] = [
+        ('cookie', cookie),
+        ('main_identifier', form)]
+    # Adding authenticators:
+    sql_authn = SQLAlchemyAuthenticatorPlugin(User,
+                                              DBSession)
+    who_args['authenticators'] = [
+        ('sql_authn', sql_authn)]
+    # Our form is also a challenger:
+    who_args['challengers'] = [
+        ('form', form)]
+    # Adding metadata providers:
+    sql_user_md = SQLAlchemyUserMDPlugin(User, DBSession)
+    who_args['mdproviders'] = [
+        ('sql_user', sql_user_md)]
+    # Setting the logs up:
+    who_args['log_stream'] = getLogger('auth')
+    
+    # --- Configuring repoze.what:
+    # Adding group source adapters:
+    groups_in_db = SqlGroupsAdapter(Group, User, DBSession)
+    group_adapters = {'sql_groups': groups_in_db}
+    # Adding permission source adapters:
+    perms_in_db = SqlPermissionsAdapter(Permission, Group,
+                                        DBSession)
+    permission_adapters = {'sql_perms': perms_in_db}
+    
+    app_with_mw = setup_auth(app, group_adapters, 
+                             permission_adapters, 
+                             **who_args)
+    return app_with_mw

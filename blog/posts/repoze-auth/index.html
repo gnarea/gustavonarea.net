@@ -1,0 +1,771 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>Web Site Security With repoze.who and repoze.what | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Web Site Security With repoze.who and repoze.what Comments Feed" href="/blog/posts/repoze-auth/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='&#8220;WSGI from Start to Finish&#8221; at EuroPython 2010' href='/blog/posts/wsgi-from-start-to-finish-at-europython-2010/' />
+<link rel='next' title='&#8220;WSGI from Start to Finish&#8221; materials available' href='/blog/posts/wsgi-from-start-to-finish-materials-available/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/repoze-auth/" />
+<link rel='shortlink' href='/?p=294' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Frepoze-auth%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Frepoze-auth%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="Web Site Security With repoze.who and repoze.what">
+<meta property="og:description" content="&lt;em&gt;This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-294 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-294" class="clearfix post-294 post type-post status-publish format-standard hentry category-howtos category-publications category-software-development category-tg tag-python tag-python-magazine tag-repoze-what tag-repozewho tag-turbogears tag-wsgi">
+								<header class="entry-header">
+																		<h1 class="entry-title" >Web Site Security With repoze.who and repoze.what</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/howtos/" rel="category tag">HOWTOs</a>, <a href="/blog/topics/publications/" rel="category tag">Publications</a>, <a href="/blog/topics/software-development/" rel="category tag">Software development</a>, <a href="/blog/topics/tg/" rel="category tag">Turbo Gears</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="2:41 pm" href="/blog/posts/repoze-auth/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">June 1, 2010</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/repoze-auth/&media=&description=Web Site Security With repoze.who and repoze.what" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p><em>This article first appeared in the May 2009 issue of Python Magazine and has been slightly updated. The contents of the article are only applicable to repoze.who 1.0 and repoze.what 1.0, <strong>not</strong> repoze.who 2 and repoze.what 1.1 which are under development as of this writing.</em></p>
+<p>Have you ever created a Web application? If so, it&#8217;s very likely that you have at one time or another faced &#8220;the security problem&#8221;; whether to create and maintain a homegrown security sub-system, or to learn to use framework-specific security mechanisms (which may not be as flexible as you wish).</p>
+<p><strong>Securing Web applications shouldn&#8217;t be a problem</strong>. This article explores a highly extensible alternative which you can learn once and use in arbitrary applications, regardless of the Web framework used (if any!).<br />
+<span id="more-294"></span><br />
+Application security is a broad field within software development, covering topics ranging from low-level network transmission security and encryption, up to application-level data security and input validation. In this article, we will focus on two of the most basic elements of application security: authentication and authorization.</p>
+<h2>Authentication vs. Authorization</h2>
+<p>Even experienced software developers often confuse these two related but not equivalent terms, so we&#8217;ll start by explaining what they are.</p>
+<p><em>Authentication</em>, often shortened as &#8220;authn&#8221;, is what you do when you check the credentials provided by the user to verify that he&#8217;s really who he claims to be. The most widely-used credentials are a set made up of a user identifier (like user name, or email address) and a password.</p>
+<p><em>Authorization</em>, often shortened as &#8220;authz&#8221;, is what you do when you check whether the user has permission to make the request or perform the transaction he&#8217;s currently making. Most of the time this depends on <strong>who</strong> the subject is, but it may also depend on <strong>what</strong> is requested, <strong>when</strong> it is requested, and/or <strong>how</strong> it is requested.</p>
+<p>A common shortening for &#8220;authentication and authorization&#8221; is &#8220;auth&#8221;.</p>
+<p>And there&#8217;s one more related term that comes into play: <em>Identification</em>, which is to check whether he was successfully authenticated previously to avoid challenging him again unnecessarily.</p>
+<h2>Authentication, identification and authorization in Python Web applications</h2>
+<p>Web applications powered by Python may take advantage of <a href="http://docs.repoze.org/who/1.0/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://docs.repoze.org/who/1.0/', 'repoze.who');">repoze.who</a> to handle authentication and identification, and <a href="http://what.repoze.org/docs/1.0/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://what.repoze.org/docs/1.0/', 'repoze.what');">repoze.what</a> to handle authorization. Both are security frameworks that can be used on top of your application, or integrated with your application&#8217;s Web framework if you are using one.</p>
+<p>You can use them as long as your application is WSGI-compliant. WSGI is a Python standard which defines an interface between HTTP servers and Python applications, similar to <a href="http://en.wikipedia.org/wiki/Common_Gateway_Interface" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Common_Gateway_Interface', 'CGI');">CGI</a>, which eases the writing of cross Web server libraries (which can be framework-independent) and applications.</p>
+<p>The WSGI standard mandates the availability of a Python dictionary,  referred to as the &#8220;WSGI environment&#8221;.  This dictionary stores CGI environment variables, as well as others specific to the WSGI standard; other components used by your application may also use the WSGI environment to store data.</p>
+<p>Any framework or raw application that exposes the WSGI environment dictionary can use both repoze.who and repoze.what.  The popular WSGI-compliant frameworks <a href="http://www.cherrypy.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.cherrypy.org/', 'CherryPy');">CherryPy</a>, <a href="http://www.djangoproject.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.djangoproject.com/', 'Django');">Django</a>, <a href="http://pylonshq.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://pylonshq.com/', 'Pylons');">Pylons</a>, <a href="http://turbogears.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://turbogears.org/', 'TurboGears');">TurboGears</a> and <a href="http://werkzeug.pocoo.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://werkzeug.pocoo.org/', 'Werkzeug');">Werkzeug</a> expose this variable.</p>
+<h2>How repoze.who and repoze.what work</h2>
+<p>Figure 1 illustrates how a typical request is processed in WSGI and when repoze.who comes into play.</p>
+<div id="attachment_310" style="width: 810px" class="wp-caption alignnone"><img class="size-full wp-image-310" title="Figure 1" src="//media.gustavonarea.net/Figure1.png" alt="Figure 1" width="800" height="566" /><p class="wp-caption-text">Figure 1</p></div>
+<p>repoze.who is a WSGI middleware. A WSGI middleware is a layer that wraps your application, processing each request before your application does. WSGI middleware can also post-process your application&#8217;s response. WSGI applications can have zero or more of these middleware layers.</p>
+<p>As shown in Figure 2, when a request is made and before it reaches your application, repoze.who will try to check if the user is already logged in or if he&#8217;s currently trying to log in. If the user is trying to log in and has supplied the right credentials, authentication will succeed and the user will be &#8220;remembered&#8221; in future requests by default. The request is then passed to the next WSGI middleware, if any, and eventually on to your WSGI application.</p>
+<div id="attachment_313" style="width: 576px" class="wp-caption alignnone"><img class="size-full wp-image-313" title="Figure 2" src="//media.gustavonarea.net/Figure2.png" alt="Figure 2" width="566" height="800" /><p class="wp-caption-text">Figure 2</p></div>
+<p>The following fully customizable components can be used at this stage:</p>
+<ul>
+<li>The request classifier: It matters if the agent is a browser, a Subversion client or a library which access a Web Service; you wouldn&#8217;t want to display a login form if the agent is a Subversion client, for example. Thus, this component classifies the current request so that only the appropriate plugins (out of your pre-selected ones) are used.</li>
+<li>Identifier plugins: These are the components that &#8220;identify&#8221; the user. That is, they are able to tell if the user is already logged from in a previous request, or if he is trying to log in in the current request. When authentication succeeds, these plugins are in charge of &#8220;remembering&#8221; the user for future requests (e.g., by defining a session cookie). Likewise, when a challenge is required, they &#8220;forget&#8221; the user (discarding a session cookie).</li>
+<li>Authenticator plugins: When the user is trying to log in in the current request, these components verify the user-supplied credentials (such as username and password) against a database, LDAP server, .htaccess file, etc.</li>
+<li>Metadata provider plugins: If the user was authenticated, metadata providers can load data about the current user (email address, full name, etc.) so that such data is ready to be used by your application.</li>
+</ul>
+<p>After your application issues a response and before it reaches the HTTP server, as shown in Figure 3, repoze.who will check if a challenge is necessary; that is, ask the user in some way to identify himself.  If so and the user was previously authenticated, the previous authentication will be forgotten, and the related session cookie will be discarded. After the challenge is complete, your application&#8217;s response will be replaced with a new response which will allow the user to log in (for example, sending a &#8220;WWW-Authenticate&#8221; header or displaying a login form).</p>
+<p><img class="alignnone size-full wp-image-365" title="Figure 3" src="//media.gustavonarea.net/Figure3.png" alt="repoze.who on egress" width="566" height="800" /></p>
+<p>repoze.who&#8217;s response-handling functionality is also driven by customizable components:</p>
+<ul>
+<li>The challenge decider: This is the component which will determine whether a challenge is required. The default challenge decider will order a challenge if and only if the response&#8217;s HTTP status code is 401.</li>
+<li>Challenger plugins: When a challenge is required, those challenger plugins which support the current request type will be run until the first of them returns a valid response.</li>
+</ul>
+<p>repoze.who may seem hard to use at first sight, with all its components and terminology; so much flexibility comes at the cost of being a little hard to understand. But one of the goals of this article is to help people who had never heard of repoze.who to deal with basic and advanced authentication settings.</p>
+<h2>And how does repoze.what work?</h2>
+<p>repoze.what is mostly used inside of your application, where you define the access rules that must be met for a given routine to be performed.</p>
+<p>Access rules in repoze.what are made of atomic units called &#8220;predicate checkers&#8221;, re-usable objects that check whether a given condition is met.  Predicate checkers can be single or compound to form complex access rules. For example, a single condition (or predicate) might be &#8220;The user is not anonymous&#8221;, while a compound predicate could be &#8220;The user is not anonymous <em>and</em> their IP address is X.X.X.X&#8221;. You can write your own predicate checkers, usually in just a few lines of code.</p>
+<p>repoze.what has built-in support for the widely-used authorization pattern whereby you assign groups to your users and then grant permissions to such groups; it ships with a comprehensive set of checkers for the relevant predicates (e.g., &#8220;The current user belongs to the &#8216;directors&#8217; group&#8221;, &#8220;The current user is allowed to edit user accounts&#8221;).  If you use this authorization pattern, the groups and permissions for the authenticated user will be loaded by a repoze.who metadata provider; in repoze.what 1.1, they&#8217;ll be loaded on demand by repoze.what itself, so you wouldn&#8217;t need repoze.who.  Nevertheless, it is entirely optional and you can use any authorization pattern that best suits your needs.</p>
+<p>Predicate checkers allow you to control access based not only on <em>who</em> makes the request, but also on <em>how</em> the request is made and <em>what</em> exactly is requested. For example, if you have a blog application, you might use the simple predicate &#8220;The user is allowed to remove posts&#8221;, focusing on who the user is to control access to the post edition routine. Or you can have the more specific compound predicate &#8220;The user is allowed to remove posts, as long as the user is the post&#8217;s author&#8221;.  This predicate focuses on both <em>who</em> makes the request and <em>what</em> is requested. You can have an even more complex access rule for the article edition routine, such as &#8220;The user is allowed to remove posts, as long as the user is the post&#8217;s author &#8212; except post #1 which nobody can remove&#8221;.</p>
+<p>repoze.what 1.0.X supports only blacklist-based authorization, that is, authorization is granted unless explicitly denied. Whitelist-based authorization, in which authorization is denied unless explicitly granted, will be supported as of version 1.1 (under development as of this writing).</p>
+<h2>Creating a Web application protected with repoze.who and repoze.what</h2>
+<p>It&#8217;s time to go practical!  We&#8217;re going to create a WSGI application powered by repoze.who and repoze.what.</p>
+<p>I&#8217;ll use the TurboGears 2 Web Application framework to make this simple application, but after reading the article you should be able to put what you just learned into practice in other frameworks, or standalone applications.</p>
+<p>(For the sake of demonstration, we will skip typical overhead features such as input validation, so we can focus the examples on the repoze.who and repose.what&#8217;s integration of authentication and authorization.)</p>
+<p>Let&#8217;s get started!</p>
+<p>We&#8217;re going to develop this application using an isolated Python environment using a rather famous utility called &#8220;virtualenv&#8221;. This is very handy because everything you install or remove won&#8217;t affect your system-wide Python environment. To install it, run:</p>
+<p><code>easy_install virtualenv</code></p>
+<p>You may need administration rights to install it, depending on where you install it.</p>
+<p>Next, create an environment for our application and activate it; on Unix systems, the commands for this are:</p>
+<p><code>virtualenv --no-site-packages appenv<br />
+source appenv/bin/activate</code></p>
+<p>On Windows systems, enter the following in a directory whose path doesn&#8217;t contain spaces:</p>
+<p><code>C:\Python25\python.exe "C:\Path-to-VE\virtualenv.py" appenv<br />
+C:\Path-to-newly-created-environment\Scripts\activate.bat</code></p>
+<p>When you&#8217;re done and want to deactivate it, you should run the command &#8220;deactivate&#8221; on Unix systems. For Windows, use &#8220;C:\Path-to-newly-created-environment\Scripts\deactivate.bat&#8221;.</p>
+<p>I&#8217;ve called my virtual environment &#8220;appenv&#8221;, but you can use any name you like.</p>
+<p>For help installing virtualenv, you can check its documentation at  <a href="http://pypi.python.org/pypi/virtualenv" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://pypi.python.org/pypi/virtualenv', 'http://pypi.python.org/pypi/virtualenv');">http://pypi.python.org/pypi/virtualenv</a>.</p>
+<p>Now to install TurboGears 2:</p>
+<p><code>easy_install -i http://www.turbogears.org/2.0/downloads/current/index tg.devtools</code></p>
+<h2>Generating an application</h2>
+<p>TurboGears allows you to start coding using a minimal application, so that you don&#8217;t have to start from scratch (unless you really want to).  We&#8217;ll use just that minimal application so that we can get off to a quick start, which you can optionally <a href="/files/articles/pymag-repoze-09/classifieds.zip" title="Download the sample classifieds application">download</a>.</p>
+<p>The Web application we&#8217;re going to create is a classifieds service, like craiglist.org or gumtree.com; for lack of imagination, I&#8217;ll call it &#8220;classifieds&#8221;. To start coding it from a minimal application, we&#8217;ll ask TurboGears to generate it with the following command:</p>
+<p><code>paster quickstart classifieds</code></p>
+<p>Then you&#8217;ll be asked a couple of questions.  The first will ask you for the package name to be generated in this project; hit ENTER to accept &#8220;classifieds&#8221; as the default package name.  The second question will ask if you need authentication and authorization features for this project, hit ENTER to accept the default answer of &#8220;yes&#8221;.  By answering &#8220;yes&#8221; to the second question, repoze.who and repoze.what will be used in the application by default. Now switch to the application&#8217;s directory, install it in development mode and set it up:</p>
+<p><code>cd classifieds<br />
+python setup.py develop<br />
+paster setup-app development.ini<br />
+</code></p>
+<p>We&#8217;re not going to start coding yet &#8212; I&#8217;d like you to try the generated application, so that you can see repoze.who and repoze.what in action. So, start the application (the &#8220;reload&#8221; switch will restart the application whenever one of its files is modified):</p>
+<p><code>paster serve --reload development.ini</code></p>
+<p>and then open the following URL in your browser: <a href="http://localhost:8080/" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/');">http://localhost:8080/</a>.</p>
+<p>You should keep this simple procedure in mind because we&#8217;ll use it very often. Then, when you need to stop the development server, you have to hit Ctrl+C.</p>
+<p>Now try, at least, the following (in order):</p>
+<ol>
+<li><strong>Log in</strong>: Visit <a href="http://localhost:8080/login" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/login');">http://localhost:8080/login</a> or click on the &#8220;Login&#8221; link in the upper-right side of any Web page of our application. Enter &#8220;manager&#8221; and &#8220;managepass&#8221; in the login and password fields. You&#8217;ll get redirected to the main page and a welcome message will be displayed.</li>
+<li><strong>Visit a page you shouldn&#8217;t see</strong>: Like <a href="http://localhost:8080/editor_user_only" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/editor_user_only');">http://localhost:8080/editor_user_only</a>; you should get a 403 page and a message which reads &#8220;Only for the editor&#8221;.</li>
+<li><strong>Log out</strong>: Visit <a href="http://localhost:8080/logout_handler" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/logout_handler');">http://localhost:8080/logout_handler</a> or click on the &#8220;Logout&#8221; link in the upper-right side of any Web page of our application. You&#8217;ll get redirected to the main page and a goodbye message will be displayed.</li>
+<li><strong>Visit a private page as anonymous</strong>: If you&#8217;re currently logged in, log out first. Then visit <a href="http://localhost:8080/manage_permission_only" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/manage_permission_only');">http://localhost:8080/manage_permission_only</a>; you should be redirected to the login form, where also the message &#8220;Only for managers&#8221; is displayed. Log in with the previous credentials (&#8220;manager&#8221;/&#8221;managepass&#8221;) and you&#8217;ll be redirected to the page you requested initially.</li>
+</ol>
+<p>What you&#8217;ve seen is repoze.who, repoze.what and some of their official plugins in action; those notification messages are TurboGears-specific, though, but it shouldn&#8217;t be hard to port them to other frameworks or raw applications.</p>
+<p>Before moving forward, I&#8217;ll describe some of the files and directories that the &#8220;paster quickstart&#8221; command above generated:</p>
+<ul>
+<li>devdata.db: The sqlite database file used for development.</li>
+<li>classifieds/: Your application&#8217;s package itself.</li>
+<li>classifieds/config/middleware.py: The file where the extra WSGI middleware for your application is added.</li>
+<li>classifieds/controllers/root.py: Your application&#8217;s root controller. Sub-controllers should be attached to the one defined in this file; below I&#8217;ll explain how.</li>
+<li>classifieds/model/: The application&#8217;s model definitions powered by <a href="http://www.sqlalchemy.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.sqlalchemy.org/', 'SQLAlchemy');">SQLAlchemy</a>.</li>
+<li>classifieds/model/auth.py: The model definitions specific to authentication, identification and authorization.</li>
+<li>classifieds/templates/: The application&#8217;s XHTML templates powered by <a href="http://genshi.edgewall.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://genshi.edgewall.org/', 'Genshi');">Genshi</a>.</li>
+<li>classifieds/websetup.py: Contains the function which will get run when the application is set up (used by the <em>paster setup-app</em> command). By default it just adds rows to the database.</li>
+</ul>
+<p>On the other hand, this is how authentication, identification and authorization is configured right now:</p>
+<ul>
+<li>We have a table for our application&#8217;s users (<em>tg_user</em>), which contains the self-explanatory fields <em>user_name</em> and <em>password</em>, among others. repoze.who is configured to authenticate by using these two fields.</li>
+<li>repoze.what is configured to use its groups/permission-based pattern. The groups and permissions are stored in the database, in the <em>tg_group</em> and <em>tg_permission</em> tables.</li>
+<li>One user can belong to zero or more groups; one group can be granted zero or more permissions.</li>
+<li>Right now we have two users, &#8220;manager&#8221; and &#8220;editor&#8221; (with passwords &#8220;managepass&#8221; and &#8220;editpass&#8221;). &#8220;manager&#8221; belongs to the only group defined so far, &#8220;managers&#8221;. The  group &#8220;managers&#8221; is granted the only permission defined so far, &#8220;manage&#8221;.</li>
+</ul>
+<h2>Let&#8217;s start coding</h2>
+<p>&#8220;At last!&#8221;, I heard you say.</p>
+<p>While implementing repoze.who and repoze.what in an application which doesn&#8217;t come with them enabled out-of-the-box, the first thing you have to do is add their middleware to your application.</p>
+<p>However, we&#8217;ll skip that part and keep the default settings for now, so that we can go to fun part right away: Learning how to protect areas in your Web application. The setup will be addressed later on, where you&#8217;ll learn how to configure repoze.who and repoze.what the TurboGears-independent way.</p>
+<p>This is what we&#8217;re going to implement in our classifieds application:</p>
+<ul>
+<li>A simple user registration system.</li>
+<li>A classified visualization mechanism, for any user (anonymous or authenticated).</li>
+<li>A classified addition mechanism, for registered users.</li>
+<li>A classified edition mechanism, for registered users to edit their own classifieds.</li>
+</ul>
+<p>So it&#8217;s finally time to fire up your Python editor, a terminal and a window of your browser!</p>
+<p>First of all, let&#8217;s add groups and permissions for authorization in our application, instead of sticking to the ones created by default. We&#8217;re going to add one more group called &#8220;posters&#8221; and the &#8220;add-classifieds&#8221; permission to be granted to posters. (Before continuing, you should stop the server running in the terminal &#8212; With Ctrl+C).</p>
+<p>To add the posters group, add this code to the <em>setup_app()</em> function, defined in <em>classifieds/websetup.py</em>:</p>
+<p><code>posters = model.Group(group_name=u'posters', display_name=u'Classified posters')<br />
+model.DBSession.add(posters)</code></p>
+<p>The addclassifieds permission is created with this code:</p>
+<p><code>addclassifieds = model.Permission(permission_name=u'add-classifieds', description=u'Allowed to add classifieds')<br />
+addclassifieds.groups.append(posters)<br />
+model.DBSession.add(addclassifieds)</code></p>
+<p>Add these sections <strong>right before</strong> the following lines:</p>
+<p><code>model.DBSession.flush()<br />
+transaction.commit()</code></p>
+<p>Now, since we have a classifieds application, we have to define the SQLAlchemy model for the classifieds. To keep things simple, we&#8217;ll define just four columns:</p>
+<ul>
+<li><em>classified_id</em>: The classified&#8217;s identifier.</li>
+<li><em>poster_id</em>: The poster&#8217;s user id.</li>
+<li><em>classified_title</em>: The classified title.</li>
+<li><em>classified_contents</em>: The classified contents.</li>
+</ul>
+<p><a href="/files/articles/pymag-repoze-09/Listing1.py.txt">Listing 1</a> implements this model definition. You have to create <em>classifieds/model/posts.py</em> and store that definition in there. Then you have to import that model at the end of <em>classifieds/model/__init__.py</em>:</p>
+<p><code>from classifieds.model.posts import Classified</code></p>
+<p>To apply the changes, let&#8217;s remove the development database, re-create it with our new model and rows, and finally start the server again:</p>
+<p><code>rm devdata.db<br />
+paster setup-app development.ini<br />
+paster serve --reload development.ini<br />
+</code></p>
+<p>That&#8217;s it, now we have the model definition for the classifieds. Let the fun part begin!</p>
+<h2>Creating a user registration system</h2>
+<p>We&#8217;re going to create a simple registration system made up of two controller actions: One to display the registration form and another to process the submitted form.</p>
+<p>We&#8217;re going to implement them in the root controller for our application, the class <em>RootController</em> found in the source file <em>classifieds/controllers/root.py</em>.</p>
+<p>To define the action for the registration form, first import the repoze.what predicate checker that verifies that the current user is anonymous:</p>
+<p><code>from repoze.what.predicates import is_anonymous</code></p>
+<p>Next, add the following method in <em>RootController</em>:</p>
+<p><code>@expose('classifieds.templates.register')<br />
+@require(is_anonymous(msg='Only one account per user is allowed'))<br />
+def register(self):<br />
+    """Display the user registration form"""<br />
+    return {'page': 'user registration'}</code></p>
+<p>What the two decorators above do is specify that the template for the &#8220;register&#8221; action is <em>classifieds/templates/register.html</em> and that access is granted to users who don&#8217;t have an account, respectively.</p>
+<p><em>@require</em> is a TurboGears-specific decorator that evaluates a repoze.what predicate before calling the action in question. When such a predicate is not met, the action is not called and a 401 response is returned (403 if the user is already logged in). Then repoze.who&#8217;s default challenge decider will find the 401 response and will replace it with the challenge.</p>
+<p>Internally, the predicate is evaluated by calling its <em>check_authorization()</em> method (which raises the <em>repoze.what.predicates.NotAuthorizedError</em> exception if the predicate isn&#8217;t met, whose message is the user-friendly explanation) or <em>is_met()</em> (which returns a boolean).  <a href="/files/articles/pymag-repoze-09/Listing2.py.txt">Listing 2</a> illustrates a fictitious implementation, using the <em>decorator</em> package; you&#8217;d find it useful if you want to use repoze.what in another framework or raw application (Pylons users may want to check <a title="The Pylons plugin for repoze.what" href="http://code.gustavonarea.net/repoze.what-pylons/">repoze.what-pylons</a>).</p>
+<p>Going back to the creation of the action, you&#8217;ll have to create the template that will display the form: Create <em>classifieds/templates/register.html</em> with the contents of <a href="/files/articles/pymag-repoze-09/Listing3.html.txt">Listing 3</a>.</p>
+<p>Now it&#8217;s time to create the action which will process the contents of the submitted form by adding the user to the database, including them in the &#8220;posters&#8221; group and finally redirecting them to the login form so that they can use the newly created account. For that, you have to define the <em>add_user</em> method shown in <a href="/files/articles/pymag-repoze-09/Listing4.py.txt">Listing 4</a> (in <em>RootController</em>).</p>
+<p>That&#8217;s it! Our registration system is done. Now you can try it by visiting <a href="http://localhost:8080/register" onclick="__gaTracker('send', 'event', 'download', 'http://localhost:8080/register');">http://localhost:8080/register</a>.</p>
+<h2>The classifieds visualization mechanism</h2>
+<p>We&#8217;re going to write the part of the interface which will allow us to see the classifieds hosted by our service. This will be accomplished by means of two controller actions: One to see all the classifieds available, in the main page of the application, and another to see individual classifieds.</p>
+<p>For the first, we have to re-write the &#8220;index&#8221; action of the root controller, to make it look like this:</p>
+<p><code>@expose('classifieds.templates.index')<br />
+def index(self):<br />
+    query = DBSession.query(model.Classified)<br />
+    all_classifieds = query.all()<br />
+    return dict(page='index', classifieds=all_classifieds)</code></p>
+<p>Then its template, <em>classifieds/templates/index.html</em>, should be replaced with the contents of <a href="/files/articles/pymag-repoze-09/Listing5.html.txt">Listing 5</a>, which lists the available classifieds with a link to their individual pages.</p>
+<p>The second action, the one to show the classifieds individually, will be implemented as &#8220;view&#8221; and will be defined in the root controller too:</p>
+<p><code>@expose('classifieds.templates.view')<br />
+def view(self, classified):<br />
+    query = DBSession.query(model.Classified)<br />
+    classified_obj = query.get(classified)<br />
+    # Is the user allowed to edit the classified?<br />
+    checker = user_is_poster()<br />
+    can_edit = checker.is_met(request.environ)<br />
+    return {'page': 'Classified page', 'classified': classified_obj, 'classified_id': classified, 'can_edit': can_edit}</code></p>
+<p>Note that in the &#8220;view&#8221; action we do something new: Handle a predicate checker directly. Sometimes it is necessary to evaluate them directly and get a boolean result to know whether it&#8217;s met or not thanks to the <em>is_met()</em> method of the predicate checker. For example, right now we use it to display a link to edit that predicate, if and only if the current user is allowed to edit it.</p>
+<p>Then the template for &#8220;view&#8221;, <em>classifieds/templates/index.html</em>, is defined as shown in <a href="/files/articles/pymag-repoze-09/Listing6.html.txt">Listing 6</a>.</p>
+<h2>Implementing the classified submission mechanism</h2>
+<p>To allow users publish classifieds, we&#8217;ll write two controller actions (once again, one to display the form and the other to process it).</p>
+<p>The action that will display the form should first check that the user is allowed to add a classified; this is, we should use repoze.what&#8217;s <em>has_permission</em> predicate so that it checks whether they are granted the &#8220;add-classified&#8221; permission. You have to import it at the top of <em>classifieds/controllers/root.py</em>:</p>
+<p><code>from repoze.what.predicates import has_permission</code></p>
+<p>And then write the action as shown below:</p>
+<p><code>@expose('classifieds.templates.add')<br />
+@require(has_permission('add-classifieds'))<br />
+def add(self):<br />
+    return {'page': 'Classified submission'}<br />
+</code></p>
+<p>This action uses the template <em>classifieds/templates/add.html</em>, which we have to create with the contents of <a href="/files/articles/pymag-repoze-09/Listing7.html.txt">Listing 7</a>.</p>
+<p>Finally, <a href="/files/articles/pymag-repoze-09/Listing8.py.txt">Listing 8</a> shows how the action that processes the submitted form is implemented. There we use something we hadn&#8217;t used before: The repoze.who identity dictionary. Do you remember that I said that repoze.who optionally uses so-called &#8220;metadata providers&#8221;, which are plugins that load data about the current user into the request? Well, that data is kept in the WSGI environment dictionary, under the <em>repoze.who.identity</em> key.</p>
+<p>Then we use one of the items of that dictionary, &#8220;user&#8221;, which contains the database object for the current user. It is loaded by the metadata provider defined in the repoze.who SQLAlchemy plugin (repoze.who.plugins.sa), a component that is enabled by default in TurboGears.</p>
+<h2>Implementing the classified edition mechanism with custom predicate checkers</h2>
+<p>So far we&#8217;ve used a few repoze.what predicate checkers, which are all very basic. Very often you have to write your own checkers. For example, if the URL where classifieds are edited looks like <q>http://localhost:8080/edit/<em>X</em></q> (where &#8220;X&#8221; represents the classified identifier), and we want that classifieds can only be edited by their posters, we&#8217;ll need a predicate checker that finds the poster of the &#8220;X&#8221; classified and checks if it is the current user.</p>
+<p>This predicate checker is implemented in <a href="/files/articles/pymag-repoze-09/Listing9.py.txt">Listing 9</a>, which should be stored in <em>classifieds/lib/authz.py</em> (a file you should create). That&#8217;s a good sample checker, which helps us to understand how a predicate checker is defined:</p>
+<ul>
+<li>It must extend the <em>repoze.what.predicates.Predicate</em> class.</li>
+<li>It must define a user-friendly explanation in the <em>message</em> attribute, which may be shown to the user when the predicate is not met.</li>
+<li>Its logic is defined in the <em>evaluate()</em> instance method, which must call the <em>unmet()</em> method when the predicate is not met; keyword arguments passed to this method will replace the placeholders defined in <em>message</em> (if any), although that message can be replaced on-the-fly with a string passed as the first positional argument. <em>evaluate()</em> receives the WSGI environment and the repoze.what credentials dictionaries as arguments.</li>
+<li>If the checker relies on arguments such as GET or POST variables, or other arguments available in the URL, the <em>parse_variables()</em> method should be used to retrieve them. It will return a dictionary whose items are: &#8220;get&#8221; for variables in the query string and &#8220;post&#8221; for POST variables, plus &#8220;named_args&#8221; and &#8220;positional_args&#8221; for named and positional arguments in the URL (which must be set by a routing software like Selector or Routes).</li>
+</ul>
+<p>Because this predicate relies on a named argument in the URL (&#8220;classified&#8221;), we have to use a URL router software compliant with the <a href="http://wsgi.org/wsgi/Specifications/routing_args" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://wsgi.org/wsgi/Specifications/routing_args', 'wsgiorg.routing_args');">wsgiorg.routing_args</a> standard; we&#8217;ll use Routes. To configure Routes in TurboGears 2, you have to insert the following contents in <em>classifieds/config/app_cfg.py</em> (right after the imports) and then replace the line <em>base_config = AppConfig()</em> with <em>base_config = ClassifiedsConfig()</em>:</p>
+<p><code>class ClassifiedsConfig(AppConfig):<br />
+def setup_routes(self):<br />
+    """Customize routing"""<br />
+    from tg import config<br />
+    from routes import Mapper<br />
+    dir = config['pylons.paths']['controllers']<br />
+    map = Mapper(directory=dir, always_scan=config['debug'])<br />
+    # Defining our custom routes:<br />
+    map.connect('/{action}/{classified:\d+}', controller='root')<br />
+    # Required by TurboGears:<br />
+    map.connect('*url', controller='root', action='routes_placeholder')<br />
+    config['routes.map'] = map<br />
+</code></p>
+<p>At this point we&#8217;re ready to use the <em>user_is_poster</em> checker.</p>
+<p>Now import the custom checker into <em>classifieds/controllers/root.py</em>:</p>
+<p><code>from classifieds.lib.authz import user_is_poster</code></p>
+<p>Next, use the following contents to define the &#8220;edit&#8221; action and the contents of <a href="/files/articles/pymag-repoze-09/Listing10.html.txt">Listing 10</a> for its template (<em>classifieds/templates/edit.html</em>):</p>
+<p><code>@expose('classifieds.templates.edit')<br />
+@require(user_is_poster())<br />
+def edit(self, classified):<br />
+    query = DBSession.query(model.Classified)<br />
+    classified_obj = query.get(classified)<br />
+    return {'page': 'Classified edition page', 'classified': classified_obj, 'classified_id': classified}</code></p>
+<p>Finally, for the action that processes the submitted form, we can use:</p>
+<p><code>@expose()<br />
+@require(user_is_poster())<br />
+def edit_classified(self, classified, title, contents):<br />
+    # Fetching and updating the classified object:<br />
+    query = DBSession.query(model.Classified)<br />
+    classified_obj = query.get(classified)<br />
+    classified_obj.classified_title = title<br />
+    classified_obj.classified_contents = contents<br />
+    DBSession.update(classified_obj)<br />
+    # Notifying the user:<br />
+    flash('Classified "%s" updated!' % title)<br />
+    redirect(url('/view/%s' % classified))<br />
+</code></p>
+<p>You can now play with the classifieds edition mechanism, to see by yourself how authorization is denied when somebody tries to edit somebody else&#8217;s classified, thanks to our &#8220;user_is_poster&#8221; checker.</p>
+<h2>Configuring it all by ourselves</h2>
+<p>At this point you&#8217;re able to deal with identification (using the repoze.who identity dictionary, which contains user data) and control authorization in your application with repoze.what predicate checkers (even how to write your own!), and you should also be able to put this knowledge to the test in frameworks other than TurboGears.</p>
+<p>What we&#8217;re missing now is to know how to configure repoze.who and repoze.what by ourselves, since we skipped that part initially because TurboGears configures them for us. But you have to know this to use both packages with other frameworks or even to continue with TurboGears in a more advanced setup.</p>
+<p>Therefore we&#8217;re going to stop TurboGears from configuring repoze.who and repoze.what, so that we have full control on how they are configured and learn how to do it in other frameworks.</p>
+<p>To disable the automatic setup of repoze.who and repoze.what, go to <em>classifieds/config/app_cfg.py</em> and set the variable <em>base_config.auth_backend</em> to <em>None</em>. Then all those variables that start by <em>base_config.sa_auth</em> will be ignored, so you can remove them if you want.</p>
+<p>Now let&#8217;s handle the configuration by adding the middleware to our WSGI application. I&#8217;ll use a function called <em>add_auth()</em> (defined in <em>classifieds/config/auth.py</em>) which receives the WSGI application as the only argument and returns it with the middleware added, as shown in <a href="/files/articles/pymag-repoze-09/Listing11.py.txt">Listing 11</a>.</p>
+<p>Because <em>add_auth()</em> configures repoze.who and repoze.what the same way we&#8217;ve been using them, but with the hidden details revealed, we&#8217;ll be able to identify their components.</p>
+<p>In this function we see that repoze.who is configured with the following plugins:</p>
+<ul>
+<li><em>AuthTktCookiePlugin</em>, an identifier which remembers and forgets authenticated users using cookies (using the string &#8220;secret&#8221; as the encryption key and &#8220;authtkt&#8221; as the cookie name).</li>
+<li><em>FriendlyFormPlugin</em>, the component that handles our login form and logouts. As an identifier, when the user is logging in it extracts the &#8220;login&#8221; and &#8220;password&#8221; from the request so that the authenticator(s) can use such data, and when the user tries to log out, it asks <em>AuthTktCookiePlugin</em> to forget the user. As a challenger, it redirects the user to the login form (at &#8220;/login&#8221;).</li>
+<li><em>SQLAlchemyAuthenticatorPlugin</em>, as the only authenticator used. It connects to the &#8220;tg_user&#8221; table to check if there&#8217;s a match for the supplied &#8220;login&#8221; and &#8220;password&#8221;.</li>
+<li><em>SQLAlchemyUserMDPlugin</em>, the metadata provider that loads the current user&#8217;s SQLAlchemy object into the repoze.who identity item &#8220;user&#8221;.</li>
+<li>Because we didn&#8217;t specified request classifiers or challenge deciders, the default ones will be used.</li>
+</ul>
+<p>Meanwhile, repoze.what is configured using the groups/permissions-based authorization pattern, where the groups and permissions are retrieved thanks to the following adapters:</p>
+<ul>
+<li><em>SqlGroupsAdapter</em>, which loads the groups from the &#8220;tg_group&#8221; table.</li>
+<li><em>SqlPermissionsAdapter</em>, which loads the groups from the &#8220;tg_permission&#8221; table.</li>
+</ul>
+<p>If we don&#8217;t use this authorization pattern, our <em>app_with_mw</em> variable would have been defined without passing groups/permission adapters:</p>
+<p><code>app_with_mw = setup_auth(app, **who_args)</code></p>
+<p>And what about using repoze.who but not repoze.what? <a href="/files/articles/pymag-repoze-09/Listing12.py.txt">Listing 12</a> shows how to configure repoze.who just like we did above, but without repoze.what. Note that this time we had to pass the request classifier and challenge decider explicitly.</p>
+<p>The opposite, using repoze.what without repoze.who, is not yet possible as of this writing because repoze.what 1.0&#8217;s credentials are loaded through a repoze.who metadata provider. repoze.what 1.1 will be completely repoze.who-independent, optionally.</p>
+<p>Finally, it&#8217;s time to use <em>add_auth()</em>. It can be used like any other WSGI middleware, so in the case of this TurboGears 2 application, it is in <em>classifieds/config/middleware.py</em>; if using another framework, consult the relevant documentation to find the equivalent. First, you should import the function:</p>
+<p><code>from classifieds.config.auth import add_auth</code></p>
+<p>And then use it inside the <em>make_app()</em> function, under the specified line:</p>
+<p><code># Wrap your base TurboGears 2 application with custom (...)<br />
+app = add_auth(app)</code></p>
+<p>And voila! Now our classifieds service behaves the same way as before, with its authentication, identification and authorization settings now being controlled by our own code instead of the generated defaults.</p>
+<h2>Going beyond with repoze.who and repoze.what</h2>
+<p>The topics covered in this article are just the tip of the iceberg. Both Repoze packages are created with extensibility in mind; their core is minimalist but they already have many ready-to-use plugins, not only the repoze.who and repoze.what SQLAlchemy plugins we used here.</p>
+<p>There are repoze.who plugins for OpenId, LDAP, <em>.htaccess</em> and RADIUS authentication, as well as a built-in challenger plugin for HTTP authentication &#8212; just to name some of the available plugins. And you can easily create your own plugins, following the patterns described in this article.</p>
+<p>Although repoze.what is a relatively new piece of software as of this writing, it has several ready-to-use plugins as well. It has plugins to store the groups and permissions in XML files or .ini files, not only in databases, as well as a plugin called <em>repoze.what-quickstart</em> which allows us to have repoze.who and repoze.what working quickly (that&#8217;s what TurboGears uses to set them up).</p>
+<p>Although they were not used in our classifieds service, just mentioned in the beginning, you can have so-called <strong>compound predicates</strong>. Access rules aren&#8217;t always as simple as &#8220;The user must be logged in&#8221; or &#8220;The user belongs to the &#8216;posters&#8217; group&#8221;. For example, in our classified edition mechanism we way want to allow administrators to edit classifieds, even those not posted by themselves; to do so, instead of using our <em>user_is_poster</em> checker alone, we could use it along with the <em>Any</em> and <em>in_group</em> checkers:</p>
+<p><code>from repoze.what.predicates import Any, in_group<br />
+p = Any(in_group('manager'), user_is_poster())</code></p>
+<p>In this article we didn&#8217;t even use half of the built-in repoze.what predicate checkers. A full list is available in the repoze.what manual.</p>
+<p>Settings are very flexible. It is even possible to configure repoze.who and repoze.what through .ini files, so that those settings can be adjusted while deploying the application (which would be a replacement for our <em>add_auth()</em> function defined above).</p>
+<p>It is also worth noting that both projects are actively developed, well documented, well tested and supported by the Repoze community. As a result, it is most likely that you&#8217;ll have a good experience using them.</p>
+<p>repoze.who and repoze.what aim to solve &#8220;the security problem&#8221; we Web developers face so often, and they have proved to be the right choice in many scenarios. The likelihood of them being the right choice for your next Web application is strong, specially now that you&#8217;re familiar with them!</p>
+<p><em>To ask questions about <a href="http://docs.repoze.org/who/1.0/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://docs.repoze.org/who/1.0/', 'repoze.who');">repoze.who</a> and/or <a href="http://what.repoze.org/docs/1.0/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://what.repoze.org/docs/1.0/', 'repoze.what');">repoze.what</a>, please use the <a href="http://lists.repoze.org/listinfo/repoze-dev" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://lists.repoze.org/listinfo/repoze-dev', 'repoze-dev');">repoze-dev</a> mailing list. For everything else that is related to this article, please leave a comment below.</em></p>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+																			<footer class="entry-meta post-tags">
+												<a href="/blog/tags/python/" rel="tag">Python</a>, <a href="/blog/tags/python-magazine/" rel="tag">Python Magazine</a>, <a href="/blog/tags/repoze-what/" rel="tag">repoze.what</a>, <a href="/blog/tags/repozewho/" rel="tag">repoze.who</a>, <a href="/blog/tags/turbogears/" rel="tag">TurboGears</a>, <a href="/blog/tags/wsgi/" rel="tag">WSGI</a>											</footer>
+											<!-- end .entry-meta -->
+																	</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/wsgi-from-start-to-finish-at-europython-2010/" rel="prev"><span class="meta-nav">&#8592;</span> &#8220;WSGI from Start to Finish&#8221; at EuroPython 2010</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/wsgi-from-start-to-finish-materials-available/" rel="next">&#8220;WSGI from Start to Finish&#8221; materials available <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+					<h2 class="comments-title">
+					6 Comments <span class="on">&#8594;</span> <span>Web Site Security With repoze.who and repoze.what</span>				</h2>
+				<!-- end .comments-title -->
+				
+				<ol class="commentlist">
+											<li id="comment-72183" class="pingback even thread-even depth-1">
+							<p>
+								Pingback: <a href='http://tipsonsecurity.com/blog/security/gustavo-on-information-technology-%c2%bb-web-site-security-with-repoze.html' rel='external nofollow' class='url'>Gustavo on Information Technology » Web Site Security With repoze &#8230; &laquo; Tips On Security</a> 							</p>
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-72581">
+						<article id="comment-72581" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/0ccf55cd45fd18ea041ce91f23291a3f?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/0ccf55cd45fd18ea041ce91f23291a3f?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">vbuell </cite><a href="/blog/posts/repoze-auth/#comment-72581"><time datetime="2010-06-10T09:07:43+00:00">June 10, 2010 at 9:07 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Thanks! The article is just superb! Very clear and popular.</p>
+<p>What tool did you use to produce such a cute diagrams?</p>
+<p>BTW: Pressing on &#8220;Older posts&#8221; (<a href="/page/2/" rel="nofollow">/page/2/</a>) of your blog gives &#8220;404 &#8211; Not Found&#8221;</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-72596">
+						<article id="comment-72596" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/70c64e0d3dbcb155fe6b8cf2889f742d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/70c64e0d3dbcb155fe6b8cf2889f742d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://biosinteractive.com/' rel='external nofollow' class='url'>William Chambers</a> </cite><a href="/blog/posts/repoze-auth/#comment-72596"><time datetime="2010-06-10T18:47:00+00:00">June 10, 2010 at 6:47 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Really good post. It&#8217;s great to find some good information on actually &#8216;using&#8217; repoze since there&#8217;s really not much out there besides the docs.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-72624">
+						<article id="comment-72624" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> <span></span></cite><a href="/blog/posts/repoze-auth/#comment-72624"><time datetime="2010-06-11T20:13:59+00:00">June 11, 2010 at 8:13 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@vbuell: I used <a href="http://www.inkscape.org/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.inkscape.org/', 'Inkscape');" rel="nofollow">Inkscape</a> and some <a href="http://www.openclipart.org/detail/19707" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.openclipart.org/detail/19707', 'flowchart symbols');" rel="nofollow">flowchart symbols</a> from the <a href="http://www.openclipart.org/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.openclipart.org/', 'Open Clip Art Library');" rel="nofollow">Open Clip Art Library</a>.</p>
+<p>And thanks for reporting the broken link, I just fixed it! <img src="/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-74125">
+						<article id="comment-74125" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/013a23e64bae7cc1ad24fcd3d15df7ce?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/013a23e64bae7cc1ad24fcd3d15df7ce?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Jonas Propperig </cite><a href="/blog/posts/repoze-auth/#comment-74125"><time datetime="2010-07-17T23:47:29+00:00">July 17, 2010 at 11:47 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Thanks Gustavo, this is great.</p>
+<p>What if we wanted to automatically sign the user in after they successfully register? Should we create a wsgi app to forward a the request to? </p>
+<p>I&#8217;m new to wsgi, pylons, repoze.who/what and am not really sure the best point to insert this type of functionality.</p>
+<p>Thanks,<br />
+Jonas</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-74182">
+						<article id="comment-74182" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> <span></span></cite><a href="/blog/posts/repoze-auth/#comment-74182"><time datetime="2010-07-20T22:39:37+00:00">July 20, 2010 at 10:39 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>@Jonas: You could redirect the user to a URL where a repoze.who identifier would authenticate the user automatically.</p>
+<p>In other words, you could write an identifier which only works in a given URL path (e.g., &#8220;/autologin/&#8221;) and when that page is visited, the plugin checks that the user can certainly be logged in and then logs him in.</p>
+<p>Fortunately this will be a lot easier in repoze.who 2.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+				</ol>
+				<!-- end .commentlist -->
+				
+								
+											<p class="nocomments">Comments are closed.</p>
+										
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: The Software Practitioner&#8217;s Digest: October 2011</title>
+	<atom:link href="/blog/posts/tspd-2011-10/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/tspd-2011-10/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: davidk</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112917</link>
+		<dc:creator><![CDATA[davidk]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2011 19:32:18 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112917</guid>
+		<description><![CDATA[@Gustavo Thanks to the reference to the EUROMICRO paper.  Although I only skimmed the paper it seems to me looser-coupling is the main difference.   I take away that SOSE is a subset of CBSE with some design flexibility removed by sticking to the same choice for certain thing (like location independence). If SOSE is a &#039;good&#039; paradigm then the removed flexibility was in areas where people frequently made poor choices or always he same choice.  Hopefully we&#039;ve learned something from CBSE and taken the best parts/practices forwards to make SOSE. [Although personally I think it&#039;s just a new name for making the obviously correct choices when building software.]]]></description>
+		<content:encoded><![CDATA[<p>@Gustavo Thanks to the reference to the EUROMICRO paper.  Although I only skimmed the paper it seems to me looser-coupling is the main difference.   I take away that SOSE is a subset of CBSE with some design flexibility removed by sticking to the same choice for certain thing (like location independence). If SOSE is a &#8216;good&#8217; paradigm then the removed flexibility was in areas where people frequently made poor choices or always he same choice.  Hopefully we&#8217;ve learned something from CBSE and taken the best parts/practices forwards to make SOSE. [Although personally I think it&#8217;s just a new name for making the obviously correct choices when building software.]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Gustavo</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112781</link>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 21:49:52 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112781</guid>
+		<description><![CDATA[@davidk, you&#039;re correct in that the differentiation I offered is is limited, hence I started by saying that my explanation was inaccurate. I was afraid to diverge too much by offering a more accurate explanation and I thought that binding time was the most significant difference.
+
+In the EUROMICRO paper I mentioned above, the authors point out that late binding is also possible in CBSE and cite &lt;a href=&quot;http://en.wikipedia.org/wiki/Component_Object_Model&quot; rel=&quot;nofollow&quot;&gt;COM&lt;/a&gt; as an example. They cover other differences which, in my opinion, are not as significant as binding time.
+
+Looked from another perspective, services in SOSE are black boxes for their clients, while CBSE allows components to be used as white, gray or black boxes. I&#039;d imagine this distinction can be useful in areas like critical systems development, where redundancy and diversity strategies like &lt;a rel=&quot;nofollow&quot; href=&quot;http://en.wikipedia.org/wiki/N-version_programming&quot; rel=&quot;nofollow&quot;&gt;NVP&lt;/a&gt; are used and SOSE could potentially be deemed the only acceptable paradigm.]]></description>
+		<content:encoded><![CDATA[<p>@davidk, you&#8217;re correct in that the differentiation I offered is is limited, hence I started by saying that my explanation was inaccurate. I was afraid to diverge too much by offering a more accurate explanation and I thought that binding time was the most significant difference.</p>
+<p>In the EUROMICRO paper I mentioned above, the authors point out that late binding is also possible in CBSE and cite <a href="http://en.wikipedia.org/wiki/Component_Object_Model" rel="nofollow">COM</a> as an example. They cover other differences which, in my opinion, are not as significant as binding time.</p>
+<p>Looked from another perspective, services in SOSE are black boxes for their clients, while CBSE allows components to be used as white, gray or black boxes. I&#8217;d imagine this distinction can be useful in areas like critical systems development, where redundancy and diversity strategies like <a rel="nofollow" href="http://en.wikipedia.org/wiki/N-version_programming" rel="nofollow">NVP</a> are used and SOSE could potentially be deemed the only acceptable paradigm.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: davidk</title>
+		<link>/blog/posts/tspd-2011-10/comment-page-1/#comment-112763</link>
+		<dc:creator><![CDATA[davidk]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 15:48:10 +0000</pubDate>
+		<guid isPermaLink="false">/?p=440#comment-112763</guid>
+		<description><![CDATA[Your SOSE vs CBSE differentiation is only describing late vs early binding.  Component based systems often use late-binding (ex. plug-ins).  So either there is something else important about SOSE or folks are just recycling the same old ideas to write new papers.]]></description>
+		<content:encoded><![CDATA[<p>Your SOSE vs CBSE differentiation is only describing late vs early binding.  Component based systems often use late-binding (ex. plug-ins).  So either there is something else important about SOSE or folks are just recycling the same old ideas to write new papers.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

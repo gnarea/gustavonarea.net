@@ -1,0 +1,53 @@
+from logging import getLogger
+
+from repoze.who.middleware import \
+                          PluggableAuthenticationMiddleware
+from repoze.who.classifiers import \
+     default_challenge_decider, default_request_classifier
+
+from repoze.who.plugins.auth_tkt import AuthTktCookiePlugin
+from repoze.who.plugins.sa import (SQLAlchemyUserMDPlugin, 
+                            SQLAlchemyAuthenticatorPlugin)
+from repoze.who.plugins.friendlyform import \
+                                       FriendlyFormPlugin
+
+from classifieds.model import User, DBSession
+
+def add_auth(app):
+    """Add repoze.who middleware to ``app``"""
+    # Adding the identifier plugins:
+    cookie = AuthTktCookiePlugin(secret='secret',
+                                 cookie_name='authtkt')
+    form = FriendlyFormPlugin(
+        login_form_url='/login',
+        login_handler_path='/login_handler',
+        post_login_url='/post_login',
+        logout_handler_path='/logout_handler',
+        post_logout_url='/post_logout',
+        rememberer_name='cookie')
+    identifiers = [
+        ('cookie', cookie),
+        ('main_identifier', form)]
+    # Adding authenticators:
+    sql_authn = SQLAlchemyAuthenticatorPlugin(User,
+                                              DBSession)
+    authenticators = [('sql_authn', sql_authn)]
+    # Our form is also a challenger:
+    challengers = [('form', form)]
+    # Adding metadata providers:
+    sql_user_md = SQLAlchemyUserMDPlugin(User, DBSession)
+    mdproviders = [('sql_user', sql_user_md)]
+    # Setting the logs up:
+    log_stream = getLogger('auth')
+    
+    app_with_mw = PluggableAuthenticationMiddleware(
+        app,
+        identifiers,
+        authenticators,
+        challengers,
+        mdproviders,
+        default_request_classifier,
+        default_challenge_decider,
+        log_stream,
+        )
+    return app_with_mw

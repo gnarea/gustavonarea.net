@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Conferences &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/topics/conferences/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>&#8220;WSGI from Start to Finish&#8221; materials available</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-materials-available/</link>
+		<comments>/blog/posts/wsgi-from-start-to-finish-materials-available/#comments</comments>
+		<pubDate>Tue, 20 Jul 2010 16:03:25 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Conferences]]></category>
+		<category><![CDATA[europython]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=387</guid>
+		<description><![CDATA[I&#8217;ve just uploaded the materials for my tutorial at EuroPython 2010, &#8220;WSGI from Start to Finish&#8221;. You can also get the slides and the WSGI cheat-sheet individually. I&#8217;ve updated the slides so that they make sense even without me speaking; so now they have references to the code examples. The tutorial was recorded and should... <a class="more-link" href="/blog/posts/wsgi-from-start-to-finish-materials-available/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/wsgi-from-start-to-finish-materials-available/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>&#8220;WSGI from Start to Finish&#8221; at EuroPython 2010</title>
+		<link>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/</link>
+		<comments>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/#comments</comments>
+		<pubDate>Tue, 25 May 2010 23:03:49 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Conferences]]></category>
+		<category><![CDATA[Turbo Gears]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[WSGI]]></category>
+
+		<guid isPermaLink="false">/?p=336</guid>
+		<description><![CDATA[If you&#8217;re a Web Application Developer using Python, you may be very interested in the tutorial I am presenting at EuroPython 2010: &#8220;WSGI from Start to Finish: How to use the power of WSGI to solve problems your framework cannot solve&#8221;. Your favorite Web framework is not able to meet all your needs, all the... <a class="more-link" href="/blog/posts/wsgi-from-start-to-finish-at-europython-2010/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/wsgi-from-start-to-finish-at-europython-2010/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

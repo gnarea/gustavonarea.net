@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DaemonTools &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/daemontools/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>How to install setlock on Debian?</title>
+		<link>/blog/posts/how-to-install-setlock-on-debian/</link>
+		<pubDate>Wed, 14 May 2008 17:33:45 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[DaemonTools]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[IRC]]></category>
+		<category><![CDATA[Setlock]]></category>
+
+		<guid isPermaLink="false">/?p=47</guid>
+		<description><![CDATA[That&#8217;s the only question Google and IRC don&#8217;t answer &#8211; but after this post Google will. About two hours wasted to find out the freaking stupid solution: aptitude install daemontools-installer build-daemontools And hit ENTER for every question.]]></description>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,1246 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+			    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<title>The Big Failure of the FSF | Gustavo on Software Development</title>
+    
+    <!--[if lte IE 9]>
+        <script src="/wp-content/themes/read-v4-3-1/js/html5shiv.js"></script>
+        <script src="/wp-content/themes/read-v4-3-1/js/selectivizr-min.js"></script>
+    <![endif]-->
+	
+		
+	<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gustavo on Software Development &raquo; The Big Failure of the FSF Comments Feed" href="/blog/posts/the-big-failure-of-the-fsf/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.16"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='unifrakturmaguntia-css'  href='//fonts.googleapis.com/css?family=UnifrakturMaguntia&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='coustard-css'  href='//fonts.googleapis.com/css?family=Coustard&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='lora-css'  href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='/wp-content/themes/read-v4-3-1/css/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='grid-css'  href='/wp-content/themes/read-v4-3-1/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='/wp-content/themes/read-v4-3-1/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/read-v4-3-1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-code-prettify-css'  href='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='/wp-content/themes/read-v4-3-1/css/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/wp-content/themes/read-v4-3-1/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gamma-gallery-css'  href='/wp-content/themes/read-v4-3-1/css/gamma-gallery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='/wp-content/themes/read-v4-3-1/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='/wp-content/themes/read-v4-3-1/css/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='/wp-content/themes/read-v4-3-1/css/wp-fix.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-22641273-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='&#8220;Non-free&#8221; and &#8220;proprietary&#8221; are OK, but it is Freedom-depriving software' href='/blog/posts/non-free-and-proprietary-are-ok-but-it-is-freedom-depriving-software/' />
+<link rel='next' title='I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much' href='/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/' />
+<meta name="generator" content="WordPress 4.4.16" />
+<link rel="canonical" href="/blog/posts/the-big-failure-of-the-fsf/" />
+<link rel='shortlink' href='/?p=13' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Fthe-big-failure-of-the-fsf%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fblog%2Fposts%2Fthe-big-failure-of-the-fsf%2F&#038;format=xml" />
+
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/read-v4-3-1/style.css">
+
+		<meta property="og:title" content="The Big Failure of the FSF">
+<meta property="og:description" content="Explaining what freedom in computing is about, is also talk about the &lt;a href=&quot;http://www.fsf.org/&quot; title=&quot;The Free ">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock Salt&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coustard&subset=latin">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora&subset=latin">
+<style type="text/css">
+a { color: #ce6607; }
+
+a:hover { color: #a35208; }
+
+.main-navigation ul .current_page_item > a, .main-navigation ul .current-menu-item > a { color: #cc3300; }
+
+h1.site-title, h1.site-title a { font-family: "Rock Salt", Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Coustard", Georgia, serif; }
+
+.main-navigation ul li { font-family: "Coustard", Georgia, serif; }
+
+html { font-family: "Lora", Georgia, serif; }
+</style>
+		<style type="text/css">
+h1.site-title {
+  font-size: 2.8em;
+  }
+
+h1.site-title a {
+  border-bottom: 0;
+  }
+
+h2.site-description {
+  font-style: italic;
+  }
+
+article.post {
+  padding-bottom: 0;
+  }
+
+article h2 {
+  text-align: center;
+  }
+
+aside.about-author {
+  padding-top: 0;
+  }
+
+code {
+  white-space: pre;
+  width: 90%;
+  overflow: auto;
+  }
+
+.prettyprint {
+  padding: 0 1em;
+  }
+
+code br {
+  display: none;
+  }
+</style>
+</head>
+
+<body class="single single-post postid-13 single-format-standard">
+
+    <div id="page" class="hfeed site"> 
+        <header class="site-header wrapper" role="banner">
+			<div class="row deprecation-notice">
+                            <strong>This website is now archived</strong>. <a href="https://gustavo.engineer/" title="Gustavo Narea">gustavo.engineer</a> is my new professional website.
+			</div>
+
+			<div class="row">
+			    <hgroup>
+					<h1 class="site-title">
+															<a href="/" rel="home">Gustavo on Software Development</a>
+													</h1>
+					<!-- end .site-title -->
+					
+					<h2 class="site-description">
+						Notes from a disciplined software developer					</h2>
+					<!-- end .site-description -->
+			    </hgroup>
+				
+								
+			    <nav id="site-navigation" class="main-navigation" role="navigation">
+					<ul id="nav" class="menu-custom"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="/">Home</a></li>
+<li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972"><a href="/work/">Portfolio</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="/about/">About</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="/contact/">Contact</a></li>
+</ul>			    </nav>
+			    <!-- end #site-navigation -->
+			</div>
+			<!-- end .row -->
+        </header>
+        <!-- end .site-header -->
+		
+				
+        <section id="main" class="middle wrapper">
+			<div class="row row-fluid">
+<div id="primary" class="site-content">
+	<div id="content" role="main">
+		<div class="readable-content blog-single">
+										<article id="post-13" class="clearfix post-13 post type-post status-publish format-standard hentry category-free-software tag-advocacy tag-average-computer-user tag-failures tag-fsf tag-glm tag-gnu tag-rms tag-techies">
+								<header class="entry-header">
+																		<h1 class="entry-title" >The Big Failure of the FSF</h1>
+								</header>
+								<!-- end .entry-header -->
+								
+								<div class="entry-meta">
+									<span class="post-category">
+										posted in <a href="/blog/topics/free-software/" rel="category tag">Freedomware</a>									</span>
+									<!-- end .post-category -->
+									
+									<span class="post-date">
+										on <a rel="bookmark" title="11:05 am" href="/blog/posts/the-big-failure-of-the-fsf/"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">August 27, 2007</time></a>
+									</span>
+									<!-- end .post-date -->
+									
+									<span class="by-author"> by										<span class="author vcard">
+											<a class="url fn n" rel="author" title="View all posts by Gustavo" href="/blog/posts/author/admin/">Gustavo</a>
+										</span>
+										<!-- end .author -->
+									</span>
+									<!-- end .by-author -->
+									
+									<div class="share-links">
+	<a>SHARE</a>
+	
+	
+	<div class="share-wrap">
+		<div class="facebook-wrap">
+			<div id="fb-root"></div>
+			
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-share-button" data-layout="button_count"></div>
+		</div>
+		
+		
+		<div class="twitter-wrap">
+						
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			
+			<script>
+				!function(d, s, id)
+				{
+					var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		
+		
+		<div class="google-wrap">
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+			
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function()
+			  {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+		
+		
+		<div class="pinterest-wrap">
+						
+			<a href="http://pinterest.com/pin/create/button/?url=/blog/posts/the-big-failure-of-the-fsf/&media=&description=The Big Failure of the FSF" class="pin-it-button" count-layout="horizontal"><img src="//assets.pinterest.com/images/PinExt.png" alt="Pin It" title="Pin It"></a>
+			
+			<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		</div>
+	</div>
+</div>									
+																	</div>
+								<!-- end .entry-meta -->
+								
+																
+								<div class="entry-content clearfix">
+									<p>Explaining what freedom in computing is about, is also talk about the <a href="http://www.fsf.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/', 'FSF');" title="The Free Software Foundation">FSF</a> and/or the <a href="http://www.gnu.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnu.org/', 'GNU');" title="GNU's Not Unix">GNU</a> project; they&#8217;re nothing less than the flagship of the free software movement and they&#8217;ve made huge steps toward freedom in computing, but <strong>they have missed a key point</strong>: If the average computer user is not on our side, we&#8217;ll get nowhere.</p>
+<p>Ours is a wonderful, well-founded philosophy, <em>just like many others</em>. So why would a friend of mine try to find out what <em>yet another philosophy</em> is all about? After all, there are many things that hurt societies and everyone doesn&#8217;t have enough time to support/learn about everything that&#8217;s going wrong nor how to solve it. Therefore, <strong>our most important concern must be how to approach people</strong>.</p>
+<p>Getting people&#8217;s attention is even more important than trying to develop <a href="http://www.fsf.org/campaigns/free-bios.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/campaigns/free-bios.html', 'a free BIOS');" title="Free BIOS">a free BIOS</a> or <a href="http://www.gnu.org/software/gnash/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnu.org/software/gnash/', 'a free flash player');" title="Gnash">a free flash player</a>. The industry offers technology and people accept/reject it, this is how things work and this is why having people on our side is the way to go (<a href="http://www.fsf.org/resources/hw/how_hardware_vendors_can_help.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fsf.org/resources/hw/how_hardware_vendors_can_help.html', 'instead of begging the industry for mercy');" title="The road to hardware free from restrictions">instead of begging the industry for mercy</a>). <strong>There would be no need to develop a free alternative to the Google Earth client in a Free Software-aware society</strong>, for example.</p>
+<p>What&#8217;s worst, the Free Software Foundation doesn&#8217;t even seem to have a plan to solve this situation, after 23 years spreading the word about Freedom-respectful software: <a href="http://www.gnu.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnu.org/', 'GNU.org');">GNU.org</a> is supposed to be the main resource on Free Software, but it is <em>not</em> aimed at everyday computer users. Let&#8217;s have a look at GNU.org:</p>
+<ul>
+<li>A <a href="http://en.wikipedia.org/wiki/Nerd" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Nerd', 'nerdy');">nerdy</a> introduction:<br />
+<blockquote><p> What is the GNU project? The GNU Project was launched in 1984 to develop a complete Unix-like operating system which is free software: the GNU system. Variants of the GNU operating system, which use the kernel called Linux, are now widely used; though these systems are often referred to as “Linux”, they are more accurately called GNU/Linux systems. GNU is a recursive acronym for “GNU&#8217;s Not Unix”; it is pronounced guh-noo, approximately like canoe.</p></blockquote>
+</li>
+<li>It&#8217;s overloaded:  It&#8217;s full of links everywhere and they mix resources for people to know what Free Software is all about and those for potential volunteers.</li>
+<li><strong>It provides no guidance on how to make the switch to a free computing environment.</strong></li>
+</ul>
+<p>It&#8217;s definitely not the place I&#8217;d recommend my friends to learn about Free Software, as <em>you only get one chance to make a first impression</em> and I wouldn&#8217;t waste it that way.</p>
+<p><a href="http://www.nuxified.org/topic/richard_m_stallman_liked_getgnulinux_what_happened_in_libremeeting" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.nuxified.org/topic/richard_m_stallman_liked_getgnulinux_what_happened_in_libremeeting', 'I&#8217;ve talked with Stallman');">I&#8217;ve talked with Stallman</a> about this and he knows they haven&#8217;t been approaching everyday computer users the right way (he told me many people say that it&#8217;s not easy to know how to make the switch by following GNU.org and they wanted to change that). Anyways, redesigning the whole GNU.org website wouldn&#8217;t be enough, as there are other <em>features</em> of the FSF that make it harder to have the average computer user on our side:</p>
+<ul>
+<li><strong>Their strictness:</strong> On one hand, they expect people to make the switch to a fully free computing environment in one go by only recommending fully free distributions, but we all know that people fear unknown things, so if you spread the word about the wonderful Free Software philosophy and the only option you give to make the switch is using a fully free operating system, you are making it harder for people to take Free Software seriously because there must be a <em>trasition </em><em>period</em>. On the other hand, they put much effort into making people <em>understand</em> that <a href="/blog/posts/gnu-with-linux-plus-kde-gnome-etc/" title="GNU with Linux… Plus KDE, Gnome, etc">&#8220;GNU/Linux&#8221; is the right name of the operating system</a>.</li>
+<li><strong>Lack of interest in the average computer user:</strong> The FSF has only been focused on two important, but not-so-useful target audiences: Techies and politicians. Techies are definitely useful to make software, but <strong>how could you rely on techies to do <a href="http://en.wikipedia.org/wiki/Marketing" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Marketing', 'marketing');">marketing</a>? </strong>Politicians, on the other hand, rule a nation/state/whatever, but they go and come, so you shouldn&#8217;t rely on a given politician/party; <strong>focusing on the population is a safe bet</strong>, though.</li>
+</ul>
+<p>However, <a href="http://www.libervis.com/article/understanding_the_free_software_foundation" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.libervis.com/article/understanding_the_free_software_foundation', 'it&#8217;s very unlikely that the FSF is going to change');">it&#8217;s very unlikely that the FSF is going to change</a> and I understand their position and their crucial role in the free software movement, so I&#8217;ll keep supporting them. But then, a <em><a href="http://en.wikipedia.org/wiki/Fork_(software)" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://en.wikipedia.org/wiki/Fork_(software)', 'fork');" title="What I mean by 'Fork'">fork</a> organization</em> is urgently required to meet the need for an effective advocacy for Freedom-respectful software among everyday computing users and this is why <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GNU/Linux Matters');" title="GNU/Linux Matters!">GNU/Linux Matters</a> exists.</p>
+<p>PS: This blog post&#8217;s aim is <em>not</em> to blame the FSF and promote <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gnulinuxmatters.org/', 'GLM');">GLM</a>, but to express how disappointed I&#8217;m in the poor effort to spread the word about free software on behalf of the Free Software Foundation.</p>
+<p>PPS: This blog post does <em>not</em> represent the position of GNU/Linux Matters, just like the rest of the website.</p>
+									
+																	</div>
+								<!-- end .entry-content -->
+								
+																			<footer class="entry-meta post-tags">
+												<a href="/blog/tags/advocacy/" rel="tag">advocacy</a>, <a href="/blog/tags/average-computer-user/" rel="tag">average computer user</a>, <a href="/blog/tags/failures/" rel="tag">failures</a>, <a href="/blog/tags/fsf/" rel="tag">fsf</a>, <a href="/blog/tags/glm/" rel="tag">glm</a>, <a href="/blog/tags/gnu/" rel="tag">gnu</a>, <a href="/blog/tags/rms/" rel="tag">rms</a>, <a href="/blog/tags/techies/" rel="tag">techies</a>											</footer>
+											<!-- end .entry-meta -->
+																	</article>
+							<!-- end .hentry -->
+							
+							<aside class="about-author">
+	<h3>ABOUT THE AUTHOR</h3>
+	
+	<div class="row-fluid author-bio">
+		<div class="span2 author-img">
+			<a href="/blog/posts/author/admin/">
+				<img alt='Gustavo' src='//secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=226&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/fcef945bf4f723ec01c084c130edfc7d?s=452&amp;d=retro&amp;r=g 2x' class='avatar avatar-226 photo' height='226' width='226' />			</a>
+		</div>
+		<!-- end .author-img -->
+		
+		<div class="span10 author-info">
+			<h4 class="author-name">Gustavo</h4>
+			
+			<p>
+				Gustavo is a software developer based in Oxford, England. He works for <a href="https://www.2degreesnetwork.com/" rel="nofollow">2degrees</a> full-time, while also reading for a Software Engineering master at the University of Oxford.
+
+<a href="/about/">Learn more</a>.			</p>
+		</div>
+		<!-- end .author-info -->
+	</div>
+	<!-- end .author-bio -->
+</aside>
+<!-- end .about-author -->							
+							<nav class="row-fluid nav-single">
+								<div class="span6 nav-previous">
+									<h4>PREVIOUS POST</h4><a href="/blog/posts/non-free-and-proprietary-are-ok-but-it-is-freedom-depriving-software/" rel="prev"><span class="meta-nav">&#8592;</span> &#8220;Non-free&#8221; and &#8220;proprietary&#8221; are OK, but it is Freedom-depriving software</a>								</div>
+								<!-- end .nav-previous -->
+								
+								<div class="span6 nav-next">
+									<h4>NEXT POST</h4><a href="/blog/posts/ive-seen-the-light-gnulinux-does-not-matter-that-much/" rel="next">I&#8217;ve seen the light: GNU/Linux Does Not Matter That Much <span class="meta-nav">&#8594;</span></a>								</div>
+								<!-- end .nav-next -->
+							</nav>
+							<!-- end .nav-single -->
+							
+							
+<div id="comments" class="comments-area">
+					<h2 class="comments-title">
+					37 Comments <span class="on">&#8594;</span> <span>The Big Failure of the FSF</span>				</h2>
+				<!-- end .comments-title -->
+				
+				<ol class="commentlist">
+										
+					<li class="comment even thread-even depth-1" id="li-comment-25">
+						<article id="comment-25" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/1eb396eeded2c753def6c39cf3f1200a?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/1eb396eeded2c753def6c39cf3f1200a?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Iestyn Pryce // dylunio </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-25"><time datetime="2007-08-27T13:37:46+00:00">August 27, 2007 at 1:37 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I must agree with what you have said, the FSF have done great work with lobbying government and spreading their message in the very tech savvy crowd, however they have failed to pass their message across to the mass population.</p>
+<p>For large changes in how society views something like software there will have to be a vast movement of people pushing for change, just at is was in the late 1800s and early 1900s with labour movements campaigning for the 8 hour working day etc.</p>
+<p>Until we get this popular support any gain from the spread of free software is likely to go unnoticed or wasted as people will not know the difference between what they had then and what they have now, except that it now doesn&#8217;t cost a penny.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+						<li id="comment-27" class="pingback odd alt thread-odd thread-alt depth-1">
+							<p>
+								Pingback: <a href='http://meneame.net/story/gran-fracaso-fundacion-para-software-libre-ingles' rel='external nofollow' class='url'>El gran fracaso de la Fundación para el Software Libre (en inglés) // men&eacute;ame</a> 							</p>
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-26">
+						<article id="comment-26" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/ebbb0ed38b1b4584aa96296c56248e1a?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/ebbb0ed38b1b4584aa96296c56248e1a?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.libervis.net/' rel='external nofollow' class='url'>libervisco</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-26"><time datetime="2007-08-27T16:34:28+00:00">August 27, 2007 at 4:34 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>You are making a point that goes along the same lines as my last couple of articles on Libervis (<a href="http://www.libervis.com/article/time_for_a_free_software_business_initiative" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.libervis.com/article/time_for_a_free_software_business_initiative', 'http://www.libervis.com/article/time_for_a_free_software_business_initiative');" rel="nofollow">http://www.libervis.com/article/time_for_a_free_software_business_initiative</a> and <a href="http://www.libervis.com/article/merging_open_source_and_free_software" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.libervis.com/article/merging_open_source_and_free_software', 'http://www.libervis.com/article/merging_open_source_and_free_software');" rel="nofollow">http://www.libervis.com/article/merging_open_source_and_free_software</a>).</p>
+<p>While their goals are noble, they have failed to be very attractive to the common user and they are because of that at least partly to blame for the founding of Open Source. However, as I also pointed out in those articles, Open Source went overboard. They saw a real problem, but they offered the wrong solution.</p>
+<p>Just as the point of my articles was to convey that it may be time to repaint the Free Software message in a way that will attract mainstream business, but without leaving out the message of freedom like Open Source did, your blog basically offers the same meme, only for all desktop users.</p>
+<p>And I completely and utterly agree with you on that!</p>
+<p>I believe we both will do our part in solving this issue. GLM already does it and I plan on launching a site similar to GGL, but as a friendly introduction to freedom, not just an OS.</p>
+<p>Cheers</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-29">
+						<article id="comment-29" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-29"><time datetime="2007-08-27T17:07:44+00:00">August 27, 2007 at 5:07 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Hi, dylunio and libervisco!</p>
+<p>I agree with both of you (and thank you for commenting, by the way).</p>
+<p>Libervisco, please have a look at <a href="http://www.nuxified.org/topic/reaching_a_milestone" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.nuxified.org/topic/reaching_a_milestone', 'Unconstrained.info and UndeclaredRight.info');" rel="nofollow">Unconstrained.info and UndeclaredRight.info</a>&#8230; If you&#8217;re planning on making something like that, it would be a pleassure for us that you joined us&#8230; Anyways, we&#8217;ll talk about it very soon on NXFD.</p>
+<p>Cheers!</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-30">
+						<article id="comment-30" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://wakizaki.wordpress.com/' rel='external nofollow' class='url'>Christopher Baluyut</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-30"><time datetime="2007-08-28T01:09:05+00:00">August 28, 2007 at 1:09 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>One cannot put all the blame on the FSF, it&#8217;s the average computer joe&#8217;s mindset and more largely, the computing culture conditioned by the whole proprietary software movement are the usual suspects&#8230;</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-33">
+						<article id="comment-33" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/0cc30f6dd077dacc4fe6163d979093d6?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/0cc30f6dd077dacc4fe6163d979093d6?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Praveen P.P. </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-33"><time datetime="2007-08-28T06:22:31+00:00">August 28, 2007 at 6:22 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I think we are all jumping to conclusions far too easily. FSF has done a great job and they are still doing it.</p>
+<p>The crux of the problem is as far the desktop goes, it does not leave the factory without the O/S getting preloaded. Basically, We as a customer do not have the choice of getting a PC/laptop without that ubiquitous O/S.</p>
+<p>How do we solve this?. Now we are forced to buy the system with the money paid already for this O/S. We will have to find means of educating or helping normal users load GNU/Linux.</p>
+<p>Each and every member of the FSF community has to take it on themselves the task of advocating the use of GNU/LINUX and other software.</p>
+<p>While the big-wigs continue to do their share, let each one of us contribute in our own little way.</p>
+<p>If you take history, No Movement has started en-masse  and FSF is also no exception. It will evolve and snowball into a movement with far reaching implications in day-to-day life of the people all over the world.</p>
+<p>Let us keep doing what we are doing now. Result will follow without fail.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-34">
+						<article id="comment-34" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c93201c4e1dc334e8488f844026e1d9?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c93201c4e1dc334e8488f844026e1d9?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://none/' rel='external nofollow' class='url'>Ben Kadams</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-34"><time datetime="2007-08-28T08:28:44+00:00">August 28, 2007 at 8:28 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I must agree with Christopher Baluyut who nicely put it &#8220;the average Joe&#8217;s mindset&#8221; which, let&#8217;s be honest, is a large portion of &#8220;people&#8221; who expect and treat a PC as a  homme appliance.<br />
+MSWindows operating system has had success only by banking on this type of behavior on exactly that &#8220;average Joe&#8217;s mindset&#8221;.<br />
+Which, it is in my opinion &#8220;cheating&#8221; the end user.<br />
+(Too much sugar and sweets, please the average Joe who does not know that in the background it makes him a good candidate for diabetes &#8211; if is to give a mundanae analogy)<br />
+If FSF is at fault, the only fault is that it tries to correct this problem, and help users elevate their knowledge about how to skilfully manage their Operating System and software giving at the same time the fredom to inspect and even become creative with the software.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-35">
+						<article id="comment-35" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-35"><time datetime="2007-08-28T09:14:09+00:00">August 28, 2007 at 9:14 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Christopher: You&#8217;re talking about those who are aware of the free software philosophy and keep using Windows/Mac OS&#8230; But the question is, has the FSF ever been committed to approach everyday computer users? I don&#8217;t think so.</p>
+<p>Praveen: Yes, they have done a great job, but they have forgotten about <strong>nothing less than the average computer user</strong>.</p>
+<blockquote><p>
+If you take history, No Movement has started en-masse and FSF is also no exception. It will evolve and snowball into a movement with far reaching implications in day-to-day life of the people all over the world.
+</p></blockquote>
+<p>Yes, but if it&#8217;s ever going to happen, it would be thanks to people who really care about the average computer user. That&#8217;s never going to happen if you only count on techies and politicians.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-36">
+						<article id="comment-36" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://wakizaki.wordpress.com/' rel='external nofollow' class='url'>Christopher Baluyut</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-36"><time datetime="2007-08-28T10:41:46+00:00">August 28, 2007 at 10:41 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&#8220;You’re talking about those who are aware of the free software philosophy and keep using Windows/Mac OS… But the question is, has the FSF ever been committed to approach everyday computer users? I don’t think so.&#8221;</p>
+<p>Not exactly. One can evangelize FOSS all they want, the hard reality is that there will be pockets of resistance, most especially the average Joe computing type s, because most of the time, they don&#8217;t really care. And dealing with these &#8220;pockets of resistance&#8221;, if they don&#8217;t like me advocating/evangelizing FOSS, I don&#8217;t really give a damn. It&#8217;s their loss, not mine.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-37">
+						<article id="comment-37" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/778ef4b1a52d4603616702bb808e0299?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/778ef4b1a52d4603616702bb808e0299?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.syntaktisk.dk/' rel='external nofollow' class='url'>Morten Juhl Johansen</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-37"><time datetime="2007-08-28T11:59:17+00:00">August 28, 2007 at 11:59 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>The question is whether it is reasonable to lay this task on the shoulders of the FSF.<br />
+The foundation should have a very strict internal policy, but I find that sometimes it is more useful to have independent free software advocates than to hear the FSF people, particularly RMS himself &#8211; even if I have tremendous respect for his achievements and abilities.<br />
+I personally find it very encouraging to see the many startup companies working with free software, selling their support services &#8211; much more than listening to the n&#8217;th rant about &#8220;Digital Restrictions Management&#8221;(sic).</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-38">
+						<article id="comment-38" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/eefc4c3d333d82f34ae336206f21c958?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/eefc4c3d333d82f34ae336206f21c958?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">gus </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-38"><time datetime="2007-08-28T13:29:03+00:00">August 28, 2007 at 1:29 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>It&#8217;s the job of the FSF to defend our software freedoms. It&#8217;s your job to start a business to market and sell computers and IT solutions based on free software.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-39">
+						<article id="comment-39" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/ebbb0ed38b1b4584aa96296c56248e1a?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/ebbb0ed38b1b4584aa96296c56248e1a?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.libervis.net/' rel='external nofollow' class='url'>Danijel Orsolic</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-39"><time datetime="2007-08-28T13:51:01+00:00">August 28, 2007 at 1:51 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>[quote]Libervisco, please have a look at Unconstrained.info and UndeclaredRight.info… If you’re planning on making something like that, it would be a pleassure for us that you joined us… Anyways, we’ll talk about it very soon on NXFD.[/quote]</p>
+<p>That slipped my mind, but thanks for reminding me. It could very well be something quite similar to that and if it turns out to be too similar then it may indeed make more sense to join with you on it. We&#8217;ll see.</p>
+<p>[quote]One can evangelize FOSS all they want, the hard reality is that there will be pockets of resistance, most especially the average Joe computing type s, because most of the time, they don’t really care.[/quote]</p>
+<p>It may be true that they don&#8217;t care initially, but that doesn&#8217;t mean that we can&#8217;t possibly get them to care. Besides how many of us actually cared about Free Software before we really understood what it was all about? They can&#8217;t care about something they don&#8217;t understand.</p>
+<p>So the job is to approach the average Joe in a way that will be attractive to him/her. &#8211; speak their language basically.</p>
+<p>Maybe FSF didn&#8217;t do that so far and we may or may not blame them for this. They have their focus and they&#8217;re doing a good job at it. But as Morten Juhl Johansen said we, the rest of the community, can do something about the problem we see, to the service of the larger cause.</p>
+<p>Cheers</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-40">
+						<article id="comment-40" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/a390936e6a09af94bfc6e11b6313bc00?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/a390936e6a09af94bfc6e11b6313bc00?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">alex </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-40"><time datetime="2007-08-28T15:20:19+00:00">August 28, 2007 at 3:20 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I don&#8217; think it&#8217;s a fair criticism. Things take time. Look at another vaguely comparable movement which is Fair Trade. The original labels for that appeared in the late 1980s and it is only now starting to be a regular thing shoppers in some countries pay attention to.</p>
+<p>The bulk of shoppers still don&#8217;t give a smelly thing for others. I think the same is true for Free Software and they began with a handicap that Fair Trade didn&#8217;t, the need to actually create products along the way rather than just label and certify others.</p>
+<p>Given that as a comparable benchmark I think progress has been good.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-41">
+						<article id="comment-41" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-41"><time datetime="2007-08-28T16:41:29+00:00">August 28, 2007 at 4:41 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Christopher: Please have a look at <a href="#comment-50" rel="nofollow">Danijel&#8217;s answer</a>.</p>
+<p>Morten: To answer your question, I think we shouldn&#8217;t lay this task on the shoulders of the FSF anymore. I agree with the rest of your comment.</p>
+<p>gus:</p>
+<blockquote><p>
+It’s the job of the FSF to defend our software freedoms
+</p></blockquote>
+<p>As well as promote the use of free software and if the average computer user is not your priority, you&#8217;ll get nowhere.</p>
+<p>alex: Sure, they&#8217;ve made huge steps toward freedom in computing and they&#8217;re always moving forward, but everyday computer users are not a priority for them. If the average computer user was a priority for them since day one, we&#8217;d be <em>much</em> better now&#8230; but the FSF loves to be surrounded by hackers (have you ever attended a FSF&#8217;s event? You&#8217;ll know what I mean).</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-42">
+						<article id="comment-42" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/463565b4c6c926ae71f5bed96a130874?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/463565b4c6c926ae71f5bed96a130874?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">candtalan </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-42"><time datetime="2007-08-28T17:13:41+00:00">August 28, 2007 at 5:13 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>The subject is &#8216;Marketing&#8217;, something that Microsoft does very well. If Linux is available pre installed, then support it by buying it. Inform others that there *is* an alternative which has advantages. Support those who are not technically expert, patiently. FSF gives the message. Help focus FOSS activities through Marketing channels. If you have good technical skills it is likely you are inexperienced about Marketing. Research and make use of new skills. Software Freedom Day 2007 is soon!  Good luck!</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-43">
+						<article id="comment-43" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://wakizaki.wordpress.com/' rel='external nofollow' class='url'>Christopher Baluyut</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-43"><time datetime="2007-08-29T01:46:26+00:00">August 29, 2007 at 1:46 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&#8220;Christopher: Please have a look at Danijel’s answer.&#8221;</p>
+<p>Not according to personal experience, especially the gaming types&#8230;</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-44">
+						<article id="comment-44" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/67d10114c66dbefe2132b4bb3961ae87?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/67d10114c66dbefe2132b4bb3961ae87?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://larrythefreesoftwareguy.wordpress.com/' rel='external nofollow' class='url'>Larry Cafiero</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-44"><time datetime="2007-08-29T02:13:48+00:00">August 29, 2007 at 2:13 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Hola, Gustavo &#8212;</p>
+<p>I find I agree with most of what everyone has said &#8212; from your article on down the line to my response &#8212; but I want to emphasize what Praven P.P. said about FSF not failing, per se; but more importantly what Praven P.P says about movements gaining ground.</p>
+<p>We actually DO have the power to start getting GNU/Linux into the mindset of the &#8220;average computer joe&#8221; (and &#8220;josephine&#8221;) and it&#8217;s happening with efforts like GLM &#8212; which I plan to get more active in (if you&#8217;ll have me) &#8212; and that of The Tux Project in the U.S., which is just getting its organizational footing and moving forward. Thomas Holbrook&#8217;s *Nixed Report effort on getting air time on talk radio in the U.S. is also gaining ground as well.</p>
+<p>It would be great for GLM and The Tux Project &#8212; and any other promotional entities &#8212; to work together in their unified and common goal of bringing GNU/Linux to the &#8220;average joe and josephine&#8221; behind their screen, enlightening them to the fact that they having nothing to lose but their digital chains to Vista and OS X.</p>
+<p>I think it can be done, and I ask those on this list &#8212; who&#8217;s ready? What do you say?</p>
+<p>Larry Cafiero<br />
+&#8220;Larry the Free Software Guy&#8221;<br />
+<a href="http://larrythefreesoftwareguy.wordpress.com/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://larrythefreesoftwareguy.wordpress.com', 'http://larrythefreesoftwareguy.wordpress.com');" rel="nofollow">http://larrythefreesoftwareguy.wordpress.com</a></p>
+<p>PS &#8212; Don&#8217;t forget: 9/15 is Software Freedom Day 2007. Promote free software in your area.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+						<li id="comment-45" class="pingback odd alt thread-odd thread-alt depth-1">
+							<p>
+								Pingback: <a href='http://boycottnovell.com/2007/08/28/gplv3-strengths/' rel='external nofollow' class='url'>Boycott Novell &raquo; GPLv3 &#8212; From Strength to Strength</a> 							</p>
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-47">
+						<article id="comment-47" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-47"><time datetime="2007-08-29T09:46:09+00:00">August 29, 2007 at 9:46 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Hi, everyone.</p>
+<p>Christopher: Most popular games (which many people is waiting to be available in GNU/Linux to make the switch) are Freedom-depriving software, just like Windows, they aren&#8217;t any better than MS Office, Google Earth&#8230; If someone <strong>really</strong> understands the importance of freedom in computing, games won&#8217;t be a reason to stick to Windows.</p>
+<p>Larry: Your suggestion is quite interesting. I&#8217;m very busy these days with GLM-related stuff and my studies, but I promise that I&#8217;ll try to find out how we might join forces; it won&#8217;t be easy because some well-known projects focus on Linux and &#8220;open source&#8221; being cool, while Freedom is GLM&#8217;s flagship. If someone has a concrete proposal, please <a href="http://www.gnulinuxmatters.org/about/contact/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.gnulinuxmatters.org/about/contact/', 'bring it forward');" rel="nofollow">bring it forward</a>. By the way, your contributions are always welcome!</p>
+<p>Cheers.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-50">
+						<article id="comment-50" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/6347192d69b97ef04fa00a4db67c7097?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://wakizaki.wordpress.com/' rel='external nofollow' class='url'>Christopher Baluyut</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-50"><time datetime="2007-08-29T16:51:22+00:00">August 29, 2007 at 4:51 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&#8220;Christopher: Most popular games (which many people is waiting to be available in GNU/Linux to make the switch) are Freedom-depriving software, just like Windows, they aren’t any better than MS Office, Google Earth… If someone really understands the importance of freedom in computing, games won’t be a reason to stick to Windows.&#8221;</p>
+<p>And that&#8217;s the point: People have differing values. No matter how well one explain the Freedom side of Free Software, most, if not all, just don&#8217;t really care.  And for those types of people, my official stance will be &#8220;put up or shut up&#8221;.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-51">
+						<article id="comment-51" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/2ef774a637946534a7100fd110d77921?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/2ef774a637946534a7100fd110d77921?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://kavlon.org/' rel='external nofollow' class='url'>MikeFM</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-51"><time datetime="2007-08-30T01:05:45+00:00">August 30, 2007 at 1:05 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I think the FSF is doing a fine job. They don&#8217;t have to fight the entire fight themselves. They&#8217;ve done the work of giving direction to us geeks and left it to us geeks to give direction to others. Free code has been an example to the world that the concepts the FSF preaches can work and slowly the software world has been revolutionized and now other forms of IP are being exposed to our philosophy. It&#8217;s slow in coming but the change is changing our society deeply and permanently. Such is the way of a real grassroots movement.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-52">
+						<article id="comment-52" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/8f18101cc955d8a521ecebdcc412426c?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/8f18101cc955d8a521ecebdcc412426c?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">jasper roy rebong </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-52"><time datetime="2007-08-30T01:10:40+00:00">August 30, 2007 at 1:10 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&gt; but they have missed a key point: If the average computer user is not on our side, we’ll get nowhere.</p>
+<p>Where does this get nowhere coming from? Five years ago you would not have heard about the FSF nor would anyone care about them.. and look at it now. The reality is despite not having the &#8220;average&#8221; computer on our side, the FSF and all that it stands for has grown by leaps and bounds.</p>
+<p>Things can be better I know..  but this sentence does does not bear the facts..</p>
+<p>and also,</p>
+<p>&gt; Therefore, our most important concern must be how to approach people.</p>
+<p>huh? I dont know about that.. To make this more important than freedom is dangerous. I mean when you approach people, what do you say to them?  If you aim to please.. You might end up like the guy who tried to please everybody..</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-53">
+						<article id="comment-53" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/0ac9ec73f8186f7f18f203e3620278d8?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/0ac9ec73f8186f7f18f203e3620278d8?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">cies breijs </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-53"><time datetime="2007-08-30T01:18:18+00:00">August 30, 2007 at 1:18 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&gt; If the average computer user is not on our side, we’ll get nowhere.</p>
+<p>you sound like you think the average user is currently not on &#8216;our&#8217; side; so do you really think &#8216;we&#8217; (the free software movement) got nowhere?</p>
+<p>&gt; Getting people’s attention is even more important [&#8230;]<br />
+&gt; There would be no need to develop a free alternative to the Google Earth [&#8230;]</p>
+<p>says who? this is your opinion, but in the free software movement everyone contributes what ever they contribute for their own reasons. there is no boss to choose for more budget on clever marketing (and less on development of &#8211;in your eyes&#8211; unnecessary software).</p>
+<p>i think RMS is considering the &#8216;the users&#8217; on a different level than you.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-54">
+						<article id="comment-54" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/0bf580ff6c675973fa1589aa42535ae0?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/0bf580ff6c675973fa1589aa42535ae0?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Jose </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-54"><time datetime="2007-08-30T01:25:05+00:00">August 30, 2007 at 1:25 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>It&#8217;s not your surgeon&#8217;s job to fly you to the moon. What we need are more astronauts.</p>
+<p>Or is someone volunteering to prepare for and write the GPLv4 to free the FSF for more important matters?</p>
+<p>Are we still asking momma to brush our teeth? Must momma do everything?</p>
+<p>Isn&#8217;t the material on the FSF website freely accessible to anyone?</p>
+<p>The FSF is so naughty. No. Actually, if the FSF did nothing more from here on out, and you blamed them, you would be a fool.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-55">
+						<article id="comment-55" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/92696fd2b445089be0ffc7bc65fea57c?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/92696fd2b445089be0ffc7bc65fea57c?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://unmukt-hindi.blogspot.com/' rel='external nofollow' class='url'>उन्मुक्त</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-55"><time datetime="2007-08-30T03:07:38+00:00">August 30, 2007 at 3:07 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I am not technical man but often  wriite about FOSS in HIndi. Often FOSS enthsiast do not bother about ordinary user. Unless they feel are interested it will be difficult for FOSS to be popular.<br />
+फॉस में काम करने वाले, समान्य उपभोक्ता के बारे में नहीं सोचते हैं यही उनकी सबसे बड़ी कमी है।</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-56">
+						<article id="comment-56" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4874f0d265c4147a46a39ba182c7e4f7?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4874f0d265c4147a46a39ba182c7e4f7?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Robuka Kenderle </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-56"><time datetime="2007-08-30T03:11:14+00:00">August 30, 2007 at 3:11 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Fair Trade is a marketing scheme which is useful for the campaigns of the big multinational NGO&#8217;s like OXFAM (hey, it takes lots of money to pay for the nice office space and staff).<br />
+I asked once an OXFAM staffer why their shirts werent using a a known Fair Trade company and they responded that it was done by some old nun who runs some social program which was all fine and dandy but pretty hypocritical.</p>
+<p>The business of helping people is an expensive one, thank god it allows lots of people to make a nice salary doing it.</p>
+<p>Oh, FSF?<br />
+Blah, blah, its their fault, everyone is a click whore  on the net.<br />
+I think taht the FSF does what it does well and am more worried that it continues this work after RMS and Moglen are gone.<br />
+THAT I think is more pressing.<br />
+If Linus died tomorrow I dont think it would change much  technically speaking.<br />
+Could the FSF survive effectively if RMS had died in Peru?<br />
+Not so sure.<br />
+Before giving them more things to do, I would like them to have a more visible team past RMS (this is not any kind of bashing, ive seen him speak about 6-7 times in 3 countries and in 3 different languages)</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-57">
+						<article id="comment-57" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4028784d4bb60f369bb22f15249241e9?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4028784d4bb60f369bb22f15249241e9?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Soyuz </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-57"><time datetime="2007-08-30T04:13:29+00:00">August 30, 2007 at 4:13 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&#8220;But then, a fork organization is urgently required to meet the need for an effective advocacy for Freedom-respectful software among everyday computing users and this is why GNU/Linux Matters exists.&#8221;</p>
+<p>Ok, lets see if you have done your homework.</p>
+<p>The power to &#8220;fork&#8221; is really a fork in a child&#8217;s hand. inevitable destruction!! It&#8217;s not the tool, it&#8217;s the tool being in the wrong hand. We have seen thousands of &#8220;fork&#8221; in FOSS (in ideology and product) and theres only few good outcome came of it.</p>
+<p>So my point being, whenever a &#8220;fork&#8221; is mentioned we need to check &#8211;</p>
+<p>1) Why is the fork should happen?<br />
+2) Does the group doing the fork has any specific plan rather then the whole plan being &#8220;we will make it batter&#8221; (Ok, understood, tell me how?)</p>
+<p>Without going to if your raised issues make much sence, lets say we all agree a fork is needed, then,</p>
+<p>can you please tell me what this &#8220;fork&#8221; will do? Like any specific  philosophy, ideology, product, activity plan, you name it &#8230;..</p>
+<p>I am unhappy or I see room for improvement should not guide me to naively use the most powerful toll of FOSS &#8211; &#8220;fork&#8221;.</p>
+<p>Also the more you fork, the more you become weaker. AND the most important thing, not sure, if you will understand, is that you will confuse the group of people you are trying to attract. The 1000000 distribution of Linux out there is already doing enough harm.</p>
+<p>I would say its time to &#8220;unite&#8221; rather than &#8220;fork&#8221;</p>
+<p>Also given the words going around in the net, from the message you are trying to spread, one would conclude that you are an anti-fsf (you know who they are)  recruit, doing cyber propaganda. They want FOSS world to be cluttered, forked, weak, confusing to rest  of the world.</p>
+<p>&#8212; Soyuz</p>
+<p>&#8212; Soyuz</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-58">
+						<article id="comment-58" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/3faeff1d0c452e9a87bdeafcaf666dae?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/3faeff1d0c452e9a87bdeafcaf666dae?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Whydoyou Needan Emailladdress </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-58"><time datetime="2007-08-30T08:12:39+00:00">August 30, 2007 at 8:12 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Lock: Goddamnit, Morpheus! Not everyone believes what you believe!<br />
+Morpheus: My beliefs do not require them to.</p>
+<p>Neo: I can&#8217;t go back, can I?<br />
+Morpheus: No. But if you could, would you really want to? I feel I owe you an apology. We have a rule. We never free a mind once it&#8217;s reached a certain age. It&#8217;s dangerous, the mind has trouble letting go.</p>
+<p>Perhaps normal users cant be freed on their own&#8230; the matrix has to be remade around them.</p>
+<p>Software freedom is something that just developers need to believe in.  Monkey boy Balmer knows what im talking about.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-59">
+						<article id="comment-59" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/d73fee2e7177e78252f3cfa911c391ba?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/d73fee2e7177e78252f3cfa911c391ba?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">SPM </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-59"><time datetime="2007-08-30T09:21:35+00:00">August 30, 2007 at 9:21 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I can&#8217;t really understand this blog. There is nothing to stop anyone evangalising GNU, and there is no need to fork anything. Is you feel FSF isn&#8217;t doing enough about appealing to the common computer, why don&#8217;t you and everybody else who feels like this  do something about this at grass roots level.</p>
+<p>Maybe you can organise to speak about GNU and GPL products at schools and colleges, and hand out copies of OpenCD after explaining to teachers and students how you can get the same functionality of MS Office Pro for zero cost, how you can install it on as many PCs as you want for zero cost. That will be a real eye opener for a lot of people.</p>
+<p>You could also start a charity, and collect money from businesses on the basis of giving school children free Office suite,  image manipulation, web page authoring software and DTP software etc. (OpenOffice, GIMP, Nvu, Scribus, etc.) at $1.50 per set (the cost of CD burning.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-60">
+						<article id="comment-60" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-60"><time datetime="2007-08-30T12:33:02+00:00">August 30, 2007 at 12:33 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>jasper:</p>
+<blockquote><p>
+&gt; but they have missed a key point: If the average computer user is not on our side, we’ll get nowhere.</p>
+<p>Where does this get nowhere coming from? Five years ago you would not have heard about the FSF nor would anyone care about them.. and look at it now. The reality is despite not having the “average” computer on our side, the FSF and all that it stands for has grown by leaps and bounds.<br />
+Things can be better I know.. but this sentence does does not bear the facts..
+</p></blockquote>
+<p>What&#8217;s getting famous exponentially is Ubuntu=Linux being cool, not the <a href="http://www.fsf.org/licensing/essays/free-sw.html" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.fsf.org/licensing/essays/free-sw.html', 'Free Software philosophy');" rel="nofollow">Free Software philosophy</a> per se. Have a look at Digg, UbuntuForums, etc&#8230; How many of them support the <a href="http://www.fsf.org/licensing/essays/free-sw.html" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.fsf.org/licensing/essays/free-sw.html', 'Free Software philosophy');" rel="nofollow">Free Software philosophy</a> over the &#8216;coolness&#8217; of Ubuntu?</p>
+<blockquote><p>
+&gt; Therefore, our most important concern must be how to approach people.</p>
+<p>huh? I dont know about that.. To make this more important than freedom is dangerous. I mean when you approach people, what do you say to them? If you aim to please.. You might end up like the guy who tried to please everybody..
+</p></blockquote>
+<p>I&#8217;m afraid you missunderstood what I said: I meant our most important objective must be to introduce the Free Software philosophy the user-friendly way.</p>
+<p>cies:</p>
+<blockquote><p>
+&gt; If the average computer user is not on our side, we’ll get nowhere.</p>
+<p>you sound like you think the average user is currently not on ‘our’ side; so do you really think ‘we’ (the free software movement) got nowhere?
+</p></blockquote>
+<p>Yes, I think <em>the average computer user is not on our side</em>. <em>Some</em> average computer users have made the switch to Ubuntu because it and <em><a href="http://www.gnu.org/philosophy/free-software-for-freedom.html" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.gnu.org/philosophy/free-software-for-freedom.html', 'Open Source');" rel="nofollow">Open Source</a></em> are cool and then look forward to pollute again their system by installing Freedom-depriving games, codecs, applications&#8230; Again, have a look at Digg and UbuntuForums.  So, no, <strong>the average computer user is definitely not on our side</strong>.</p>
+<p>Many technicians and politicians are on our side, though. And most of our milestones are thanks to them.</p>
+<p>We&#8217;ve just won many battles, but to win the war everyday computer users must be on our side.</p>
+<blockquote><p>
+&gt; Getting people’s attention is even more important […]<br />
+ &gt; There would be no need to develop a free alternative to the Google Earth […]<br />
+says who? this is your opinion, but in the free software movement everyone contributes what ever they contribute for their own reasons. there is no boss to choose for more budget on clever marketing (and less on development of –in your eyes– unnecessary software).
+</p></blockquote>
+<p>I&#8217;m only talking about <em>advocacy</em> for Free Software and you&#8217;re talking about <em>general</em> contributions. Of course everybody contributes the way they want, but in the case of the FSF, it defines itself as an organization that &#8220;promotes the development and <strong>use</strong> of free software, particularly the GNU operating system, used widely in its GNU/Linux variant&#8221;. Just think coldly and tell me if you think that getting people attention is more important than trying to develop free alternatives to successful Freedom-depriving software? Again, there would be no need to develop free software alternatives in a free software-aware society, as software would always be free.</p>
+<p>Jose: I am disappointed on the lack of interest in the average computer user, while they define themselves as an organization that &#8220;promotes the development and <strong>use</strong> of free software&#8221;.</p>
+<p>Soyuz: I fully agree with you about fork projects. GLM and the FSF <em>might</em> team up to develop/endorse a given project, but it&#8217;s very unlikely that we&#8217;re going to give up <a href="http://www.gnulinuxmatters.org/about/bylaws#6.1" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.gnulinuxmatters.org/about/bylaws#6.1', 'our differences with the FSF');" rel="nofollow">our differences with the FSF</a>.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-48">
+						<article id="comment-48" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-48"><time datetime="2007-08-30T12:49:17+00:00">August 30, 2007 at 12:49 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Robuka Kenderle and SPM: Sorry for publishing your comments so late, but they were caught as spam.</p>
+<p>Robuka: I agree with you.</p>
+<p>SPM: I&#8217;ve never said that we should not support GNU anymore, nor something similar. Yes, I feel the FSF isn&#8217;t doing enough about approaching the common computer user and the best I can do to solve this is keep working on <a href="http://www.gnulinuxmatters.org/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://www.gnulinuxmatters.org/', 'GLM');" rel="nofollow">GLM</a>.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-49">
+						<article id="comment-49" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/a233f5df2fba3b16d959f3937a82aa0f?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/a233f5df2fba3b16d959f3937a82aa0f?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Wonderbird </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-49"><time datetime="2007-08-30T16:57:52+00:00">August 30, 2007 at 4:57 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>I think we need to come up with several catchy logos / variations on a common logo.</p>
+<p>A &#8220;software freedom&#8221; rating.   Diamond / Gold / Silver / Bronze / Wooden Nickel&#8230;  Have only one body that &#8220;authorizes&#8221; use of a particular logo&#8230;  Blanket authorization could be given to various licenses&#8230;  Just get people into the habit of looking for how high the software &#8220;freedom rating&#8221; is&#8230;   Closed software with no free trial / test environment options would be &#8220;wooden nickel&#8221; &#8211; If they have a full time-limited version free without restrictions they could be one step up from wooden nickel.  Onerous restrictions like not being able to discuss performance or run benchmarks would put them back in &#8220;wooden nickel&#8221; territory again&#8230;</p>
+<p>Debian could be &#8220;diamond&#8221;  Distros like Red Hat / Mandriva / Ubuntu that make all source for everything they create could be &#8220;Gold&#8221;    Linspire and distros with proprietary stuff mixed in without source available could be labeled &#8220;Silver&#8221;  Bronze could be something like embedded systems based on open source where there is little you can do&#8230;   (tivo / media players / pdas, smart phones, etc&#8230;)</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-46">
+						<article id="comment-46" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/577accfaced065e3b9dd02d263dfe455?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/577accfaced065e3b9dd02d263dfe455?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://jastiv.blogspot.com/' rel='external nofollow' class='url'>Jastiv</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-46"><time datetime="2007-08-30T20:13:12+00:00">August 30, 2007 at 8:13 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Why don&#8217;t we target the free software philosophy at the people who get people to use proprietary software in the first place?  What I mean is, the game developers, the artists, the makers of the “hot new applications” that users want.  The problem with the current marketing of the free software philosophy as it stands, is it does not appeal directly to kids who just want to create the next Final Fantasy or 2d platformer.  For them, the most important thing is having a lot of fun games that you can modify and redistribute.  You shouldn&#8217;t have to deal with the headaches caused by the proprietary software distributions model. You should not have to fight with removing the DRM, hex editors, take down notices, warez, product keys, no cd cracks, monthly fees for single player games, windows update breaking your favorite game, bad game design flaws that you have to beg the company to fix, etc.  Free Software could fix all of these and more problems, such as games that are considered too expensive to produce so they don&#8217;t get made although they have a large target audience.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-31">
+						<article id="comment-31" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-31"><time datetime="2007-08-30T20:57:10+00:00">August 30, 2007 at 8:57 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Jastiv: I think the &#8220;industry&#8221; does what people wants and changes if people want it to change, so we should focus on people.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-32">
+						<article id="comment-32" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/7a6344df6709b5c4e7b40c19e7e9ca60?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/7a6344df6709b5c4e7b40c19e7e9ca60?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn">Matt </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-32"><time datetime="2007-09-01T01:02:38+00:00">September 1, 2007 at 1:02 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>&gt; After all, there are many things that hurt societies and everyone doesn’t have enough time to support/learn about everything that’s going wrong nor how to solve it.</p>
+<p>Well, yes. After all, there are much bigger issues in the world.</p>
+<p>The principle of freedom is an important one, but  if we look at the actual real-world effects of software &#8220;slavery&#8221;, we find that most of the evils caused by non-free software are limited to relatively minor inconveniences for well-fed, well-housed, literate, healthy people who are rich enough to afford computer hardware in the first place.</p>
+<p>While thousands of people die every day of hunger, for example.</p>
+<p>A wider perspective on the world suggests that, while free software is a very good thing, the attention of people is needed elsewhere.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-28">
+						<article id="comment-28" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4c661f339cb53a69801aaa16a4a75f6d?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='/' rel='external nofollow' class='url'>Gustavo</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-28"><time datetime="2007-09-01T10:30:11+00:00">September 1, 2007 at 10:30 am</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Matt: Yes, indeed the way Freedom-depriving software hurts societies is not so tangible (if compared to wars, for example), but I believe that many of the biggest global problems would be solved if societies adopted the <em>Free Knowledge</em> philosophy (<a href="http://blog.jimmywales.com/index.php/archives/2004/10/21/free-knowledge-requires-free-software-and-free-file-formats/" onclick="__gaTracker('send', 'event', 'outbound-comment', 'http://blog.jimmywales.com/index.php/archives/2004/10/21/free-knowledge-requires-free-software-and-free-file-formats/', 'and Free Knowledge requires Free Software');" title="Free Knowledge requires Free Software and Free File Formats" rel="nofollow">and Free Knowledge requires Free Software</a>).</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+					
+					<li class="comment even thread-even depth-1" id="li-comment-19615">
+						<article id="comment-19615" class="comment">
+							<header class="comment-meta comment-author vcard">
+								<img alt='' src='//secure.gravatar.com/avatar/907268049e910e4426828aba38022b1e?s=75&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/907268049e910e4426828aba38022b1e?s=150&amp;d=retro&amp;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' /><cite class="fn"><a href='http://www.publicvictory.org/' rel='external nofollow' class='url'>Balzac</a> </cite><a href="/blog/posts/the-big-failure-of-the-fsf/#comment-19615"><time datetime="2008-07-19T22:32:45+00:00">July 19, 2008 at 10:32 pm</time></a>							</header>
+							<!-- end .comment-meta -->
+							
+														
+							<section class="comment-content comment">
+								<p>Gustavo, I disagree. The audience of the FSF and GNU websites was mainly developers and IT professionals for many years. </p>
+<p>That&#8217;s because the state of the software usability for most users was pretty far behind proprietary products, so it made sense to focus on developers, IT professionals, and other power-users rather than everyday users.</p>
+<p>Nowadays free software has advanced to the point where it is extremely competitive as a choice for those with little to no experience with computers.</p>
+<p>It&#8217;s a good time to take your concerns into account, but I wouldn&#8217;t call it &#8220;The Big Failure of the FSF&#8221;. I&#8217;m more focused on the big triumph of the FSF.</p>
+								
+															</section>
+							<!-- end .comment-content -->
+							
+							<div class="reply">
+															</div>
+							<!-- end .reply -->
+						</article>
+						<!-- end #comment-## -->
+					</li><!-- #comment-## -->
+				</ol>
+				<!-- end .commentlist -->
+				
+								
+											<p class="nocomments">Comments are closed.</p>
+										
+	</div>
+<!-- end #comments -->								</div>
+		<!-- end .blog-single -->
+	</div>
+	<!-- end #content -->
+</div>
+<!-- end #primary -->
+
+			</div>
+        </section>
+		
+		
+        <footer class="site-footer wrapper" role="contentinfo">
+			<div class="row">
+				<div id="supplementary" class="row-fluid">
+									</div>
+				
+				<div class="site-info">
+					Copyright 2007-2017 by Gustavo Narea. You may copy, distribute and build upon this work, under some conditions. <a href="/about/legal/">Read Terms of Use</a>. 				</div>
+			</div>
+        </footer>
+    </div>
+	
+	
+	<script>
+  var codeElements = document.querySelectorAll("code");
+ 
+  for (var i = 0; i < codeElements.length; i++) {
+    codeElements[i].classList.add("prettyprint");
+  }
+</script><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.4.16'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/detectmobilebrowser.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/modernizr.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.imagesloaded.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.fancybox-1.3.4.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.history.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/js-url.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquerypp.custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/gamma.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/main.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/read-v4-3-1/js/send-mail.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.16'></script>
+</body>
+</html>

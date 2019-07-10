@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: We need German translators to promote Linux! And others are welcome too</title>
+	<atom:link href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: Alexander</title>
+		<link>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/comment-page-1/#comment-31054</link>
+		<dc:creator><![CDATA[Alexander]]></dc:creator>
+		<pubDate>Fri, 07 Nov 2008 16:21:42 +0000</pubDate>
+		<guid isPermaLink="false">/?p=57#comment-31054</guid>
+		<description><![CDATA[I am a native German speaker with Unix/Linux experience.
+
+I can help you with the translation. 
+
+My email address is aschunk@gmail.com.
+
+Best Regards
+
+Alexander]]></description>
+		<content:encoded><![CDATA[<p>I am a native German speaker with Unix/Linux experience.</p>
+<p>I can help you with the translation. </p>
+<p>My email address is <a href="mailto:aschunk@gmail.com">aschunk@gmail.com</a>.</p>
+<p>Best Regards</p>
+<p>Alexander</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

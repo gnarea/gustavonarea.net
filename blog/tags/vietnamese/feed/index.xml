@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Vietnamese &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/vietnamese/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>The Linux homepage now in Arabic, Russian, Vietnamese and Ukrainian</title>
+		<link>/blog/posts/the-linux-homepage-now-in-arabic-russian-vietnamese-ukrainian/</link>
+		<pubDate>Thu, 04 Sep 2008 22:41:06 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Arabic]]></category>
+		<category><![CDATA[GGL.o]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[Russian]]></category>
+		<category><![CDATA[translations]]></category>
+		<category><![CDATA[Ukrainian]]></category>
+		<category><![CDATA[Vietnamese]]></category>
+
+		<guid isPermaLink="false">/?p=113</guid>
+		<description><![CDATA[The awesome international Linux homepage is now available in Arabic, Russian, Vietnamese and Ukrainian! Check the official announcement. Are you missing your language? Translate it and help us promote freedomware!]]></description>
+		</item>
+	</channel>
+</rss>

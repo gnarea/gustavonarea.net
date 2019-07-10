@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Poliglota &#8211; Gustavo on Software Development</title>
+	<atom:link href="/blog/tags/poliglota/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Fri, 01 Sep 2017 10:27:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>We need German translators to promote Linux! And others are welcome too</title>
+		<link>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/</link>
+		<comments>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/#comments</comments>
+		<pubDate>Wed, 25 Jun 2008 16:49:31 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Poliglota]]></category>
+
+		<guid isPermaLink="false">/?p=57</guid>
+		<description><![CDATA[We need people to bring the first GNU/Linux website that doesn&#8217;t suck to all possible languages. Until last year, translations were hard to setup and manage, so we created an special multi-website CMS focused on internationalization, which makes it really easy for translators to preview their work and release websites with a few clicks, and... <a class="more-link" href="/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		<wfw:commentRss>/blog/posts/we-need-german-translators-to-promote-linux-and-others-are-welcome-too/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>A silly yet killer feature in Poliglota</title>
+		<link>/blog/posts/a-silly-yet-killer-feature-in-poliglota/</link>
+		<pubDate>Thu, 12 Jun 2008 23:02:46 +0000</pubDate>
+		<dc:creator><![CDATA[Gustavo]]></dc:creator>
+				<category><![CDATA[GNU/Linux Matters]]></category>
+		<category><![CDATA[Internationalization]]></category>
+		<category><![CDATA[Poliglota]]></category>
+
+		<guid isPermaLink="false">/?p=52</guid>
+		<description><![CDATA[Just a quick post to highlight a new feature in Poliglota: While most CMSs around have a lot of trouble with non-Western languages and cross-linking the different language editions accordingly, Poliglota has a solid support for these features since day one! And it&#8217;s just one of the features. By the way, want to get involved... <a class="more-link" href="/blog/posts/a-silly-yet-killer-feature-in-poliglota/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+		</item>
+	</channel>
+</rss>

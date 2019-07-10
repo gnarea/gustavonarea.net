@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Backing up and restoring your Subversion repository</title>
+	<atom:link href="/blog/posts/backing-up-and-restoring-your-subversion-repository/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/posts/backing-up-and-restoring-your-subversion-repository/</link>
+	<description>Notes from a disciplined software developer</description>
+	<lastBuildDate>Wed, 10 Dec 2014 13:07:23 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.4.16</generator>
+	<item>
+		<title>By: vadim</title>
+		<link>/blog/posts/backing-up-and-restoring-your-subversion-repository/comment-page-1/#comment-38236</link>
+		<dc:creator><![CDATA[vadim]]></dc:creator>
+		<pubDate>Thu, 25 Dec 2008 14:28:08 +0000</pubDate>
+		<guid isPermaLink="false">/?p=51#comment-38236</guid>
+		<description><![CDATA[Gustavo, please help me
+
+I filter my repository using &quot;svndumpfilter2.py&quot; script like following:
+cat dump1Renew.dump &#124; python.exe svndumpfilter2.py --drop-empty-revs --renumb
+er-revs Rep1 trunk
+
+next i create repository manually using a tortoise SVN
+
+then i try to load my filtered dump to new repository type following command:
+
+$ svnadmin load --ignore-uuid CopyRep1  ./repository.clear-dump&quot; thw same problem occurr]]></description>
+		<content:encoded><![CDATA[<p>Gustavo, please help me</p>
+<p>I filter my repository using &#8220;svndumpfilter2.py&#8221; script like following:<br />
+cat dump1Renew.dump | python.exe svndumpfilter2.py &#8211;drop-empty-revs &#8211;renumb<br />
+er-revs Rep1 trunk</p>
+<p>next i create repository manually using a tortoise SVN</p>
+<p>then i try to load my filtered dump to new repository type following command:</p>
+<p>$ svnadmin load &#8211;ignore-uuid CopyRep1  ./repository.clear-dump&#8221; thw same problem occurr</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: being (no)body &#187; m3talink for June 4th</title>
+		<link>/blog/posts/backing-up-and-restoring-your-subversion-repository/comment-page-1/#comment-14464</link>
+		<dc:creator><![CDATA[being (no)body &#187; m3talink for June 4th]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2008 00:47:59 +0000</pubDate>
+		<guid isPermaLink="false">/?p=51#comment-14464</guid>
+		<description><![CDATA[[...] Gustavo on Information Technology &#187; Backing up and restoring your Subversion repository is Most tutorials around show how to backup your Subversion repository and how to restore it. But don?t tell you what to do to solve the problem that will arise when you try to restore it. The solution is too simple. [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Gustavo on Information Technology &raquo; Backing up and restoring your Subversion repository is Most tutorials around show how to backup your Subversion repository and how to restore it. But don?t tell you what to do to solve the problem that will arise when you try to restore it. The solution is too simple. [&#8230;]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
